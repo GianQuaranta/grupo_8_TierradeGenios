@@ -98,8 +98,19 @@ Participación en el proceso de selección.
     
     Argentino, 24 años, vengo del mundo del marketing, y el marketing digital, mi orientación profesional es en datos, me gusta la programación, es mi primer contacto con ella, y creía que era el siguiente paso en mi etapa profesional. Soy emprendedor desde los 16 años, y actualmente dirijo la organización que fundé llamada Tierra de Genios, donde nos dedicamos a la captación y administración de fondos, los cuales los destinamos a la financiación de becas de estudio para todas las personas que quieren estudiar y su situación económica no se los permite.
 
-## *** Tipos de logos ***
+## Logos a utilizar:
+
+1 - Logo Completo
 
 ![](imgREADME/LogoCompleto.jpeg)
+
+2 - Texto del logo
+
+![](imgREADME/LogoTexto.jpeg)
+
+3- Imagen del logo
+
+![](imgREADME/LogoImg.jpeg)
+
 
 
