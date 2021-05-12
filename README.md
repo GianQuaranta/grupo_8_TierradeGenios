@@ -1,30 +1,29 @@
-¿Qué productos o servicios brindará nuestro sitio? 
+# ¿Qué productos o servicios brindará nuestro sitio? 
+
 Vendemos suscripciones a nuestra plataforma, contamos con 3 niveles de suscriptores, todos poseen acceso a funcionalidades básicas, y se diferencian en la segunda y la tercera con una funcionalidad exclusiva de cada nivel superior. Cada usuario suscriptor compra una suscripción mensual, y según el valor que defina que quiere aportar por mes, obtiene un rango dentro de nuestra comunidad de donantes, los mismos son: 
-Ciudadano Emblema.
-Ciudadano Ilustre.
-Patriota.
-Icónico/a.
-Eminencia.
-Prócer.
-Magno.
-Egregio.
+- Ciudadano Emblema.
+- Ciudadano Ilustre.
+- Patriota.
+- Icónico/a.
+- Eminencia.
+- Prócer.
+- Magno.
+- Egregio.
 
-Las funcionalidades disponibles se detallan a continuación:  (Falta definir el nombre de cada suscripción).
+Las funcionalidades disponibles se detallan a continuación:
 
-Bronce: 
+* Bronce: 
 Acceso al tablero de becados propio.
 Embudo de flujo de dinero para ver a dónde va el dinero de todos.
 Certificado digital para las personas que ayudaron a becar a alguien.
 
-Plata: 
+* Plata: 
 Acceso al tablero de becados propio.
 Embudo de flujo de dinero para ver a dónde va el dinero de todos.
 Certificado digital para las personas que ayudaron a becar a alguien.
 Acceso a un tablero de becados universal, donde, además de ver sus propios becados, puede ver los becados de todos. 
 
-
-
-Oro: 
+* Oro: 
 Acceso al tablero de becados.
 Embudo de flujo de dinero para ver a dónde va el dinero de todos. 
 Certificado digital para las personas que ayudaron a becar a alguien.
