@@ -81,6 +81,10 @@ Participación en el proceso de selección.
 ### ***Descripción integrantes del equipo:***
 
 ***Joaquin Rodriguez:***
+
+
+
+
     
     Uruguayo , 30 años, vivo en Montevideo y me desempeño en el área de la logística. Amante de mundo, viajero.
 
@@ -93,5 +97,9 @@ Participación en el proceso de selección.
 ***Gianfranco Quaranta:***
     
     Argentino, 24 años, vengo del mundo del marketing, y el marketing digital, mi orientación profesional es en datos, me gusta la programación, es mi primer contacto con ella, y creía que era el siguiente paso en mi etapa profesional. Soy emprendedor desde los 16 años, y actualmente dirijo la organización que fundé llamada Tierra de Genios, donde nos dedicamos a la captación y administración de fondos, los cuales los destinamos a la financiación de becas de estudio para todas las personas que quieren estudiar y su situación económica no se los permite.
+
+## *** Tipos de logos ***
+
+![](imgREADME/LogoCompleto.jpeg)
 
 
