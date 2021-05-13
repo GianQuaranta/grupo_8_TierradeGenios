@@ -208,10 +208,23 @@ Link: https://drive.google.com/file/d/1GtdHuKCFKCluFAkMIxt8BLHieZuwb62t/view?usp
 
 
 - #20405d
-![](public/img/color-20405d-tierra-de-genios.jpg)
+  
+![Imagen método de pago con tarjetas](public/img/color-20405d-tierra-de-genios.jpg)
 
 
 
 
 
-  - Tipografías:  FALTA
+  - Tipografías: 
+
+- Noto reemplazando Times New Roman: 
+  
+    https://fonts.google.com/specimen/Noto+Serif+JP?category=Serif,Sans+Serif&subset=latin 
+
+- Saira reemplazando Arial: 
+  
+    https://fonts.google.com/specimen/Saira+Condensed#pairings
+
+- Roboto como 3er tipografía: 
+    
+    https://fonts.google.com/specimen/Roboto?category=Serif,Sans+Serif&subset=latin
