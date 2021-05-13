@@ -192,7 +192,7 @@ Link: https://drive.google.com/file/d/1GtdHuKCFKCluFAkMIxt8BLHieZuwb62t/view?usp
   
   - Logotipo:
   
-  ![Imagen método de pago con tarjetas](public/img/logotipo-tierra-de-genios.jpg)
+  ![Logotipo](public/img/logotipo-tierra-de-genios.jpg)
 
 
 
@@ -200,16 +200,16 @@ Link: https://drive.google.com/file/d/1GtdHuKCFKCluFAkMIxt8BLHieZuwb62t/view?usp
   - Colores: 
 - #10131a
 
-![Imagen método de pago con tarjetas](public/img/color-10131a-tierra-de-genios.jpg)
+![Color1](public/img/color-10131a-tierra-de-genios.jpg)
 
 - #DC2D2D
 
-![Imagen método de pago con tarjetas](public/img/color-DC2D2D-tierra-de-genios.jpg)
+![Color2](public/img/color-DC2D2D-tierra-de-genios.jpg)
 
 
 - #20405d
   
-![Imagen método de pago con tarjetas](public/img/color-20405d-tierra-de-genios.jpg)
+![Color3](public/img/color-20405d-tierra-de-genios.jpg)
 
 
 
