@@ -1,6 +1,6 @@
 # **Proyecto:** **Tierra de Genios**
 
-<img src="public/img/logo-fondo-blanco-largo.jpg" alt="Logotipo Tierra de Genios">
+![Logotipo Tierra de Genios](public/img/logo-fondo-blanco-largo.jpg)
 
 
 ## Presentación de Proyecto
@@ -131,58 +131,60 @@ Link: https://drive.google.com/file/d/1GtdHuKCFKCluFAkMIxt8BLHieZuwb62t/view?usp
     1. **[Hostinger](https://www.hostinger.com.ar/)** 
             → Sacamos la forma de presentar las suscripciones, y las animaciones que se van activando a medida que vamos alcanzando su posición en la página).
 
-<img src="public/img/productos-hostinger.jpg" alt="Imagen presentación de producto suscripción hostinger.">
+![Imagen presentación de producto suscripción hostinger.](public/img/productos-hostinger.jpg)
 
     1. **[Wayra](https://hispam.wayra.com/)**   
             → Nos gusta un poco del estilo de la presentación visual del principio hasta el “quienes somos”. (Nos gustó la imagen de presentación que se ve la imagen desde arriba, y nos gusta el cómo se activa el contador de los números de la imagen de abajo).
 
-<img src="public/img/imagen-inicio-wayra-ejemplo.jpg" alt="Imagen inicio de Wayra que nos gustó.">
+![Imagen inicio de Wayra que nos gustó.](public/img/imagen-inicio-wayra-ejemplo.jpg)
             
   
-    2. **[Henry](https://www.soyhenry.com/)**  
+    1. **[Henry](https://www.soyhenry.com/)**  
             → Nos gustó la forma de empezar la página con una imagen a la derecha y un texto con botón de llamada a la acción al inicio, y el cartelito de texto que le sigue, el cual imitamos pero lo haremos con imágenes y movimiento.
 
-<img src="public/img/inicio-soy-henry.jpg" alt="Imagen inicio soy henry.">
-<img src="public/img/cartel-soy-henry-nos-gusto.jpg" alt="Imagen cartelito de soy henry que nos gustó para hacerlo con un mapa con movimiento.">
+![Inicio de soy henry](public/img/inicio-soy-henry.jpg)
+![Cartelito de soy henry que nos gustó para hacerlo con un mapa con movimiento.](public/img/cartel-soy-henry-nos-gusto.jpg)
 
-    3. **[Lambda](http://lambda.com.ar/)**  
+    1. **[Lambda](http://lambda.com.ar/)**  
             → Me mostró que tenemos que ver de poner las carreras de a las que pueden acceder los solicitantes, es como que necesitamos dos posibles inicios, y que, por ejemplo, se aparezca un popup que pregunte si estamos pensando en solicitar una beca, si pone que sí, el inicio se adapta para el becado, sino se adapta para el donante. **No lo realizamos aún, por ahora es solo una idea**
 
-<img src="public/img/inicio-lambda-nos-gusto.jpg" alt="Imagen inicio lambda que nos gustó, no lo utilizamos al final.">
+![Imagen inicio lambda que nos gustó, no lo utilizamos al final.](public/img/inicio-lambda-nos-gusto.jpg)
 
-    4. **[Lambda School](https://lambdaschool.com/)**  
+
+    1. **[Lambda School](https://lambdaschool.com/)**  
             → El cómo muestran la formación académica.
 
-<img src="public/img/lambda-school-inicio.jpg" alt="Imagen Lambda School que nos gustó cómo presentan su propuesta.">
+![Imagen Lambda School que nos gustó cómo presentan su propuesta.](public/img/lambda-school-inicio.jpg)
 
-    5. **[Go Fund Me](https://es.gofundme.com/)**  
+
+    1. **[Go Fund Me](https://es.gofundme.com/)**  
             → Plataforma de financiamiento colectivo para causas benéficas, está bueno cómo habla de qué es el financiamiento colectivo social, y cómo muestra más información sobre las causas que apoyan.
 
-
-<img src="public/img/go-fund-me-inicio.jpg" alt="Imagen recaudación de fondos por proyecto de go fund me.">
+![Imagen recaudación de fondos por proyecto de go fund me.](public/img/go-fund-me-inicio.jpg)
 
 
 ***Carrito que nos inspiró***
     El de mercado libre, simple minimalista, y a eso le agregamos las opciones de pago.
 
-<img src="public/img/carrito-que-nos-inspiro.jpg" alt="imagen carrito de compra de mercado libre">
+![imagen carrito de compra de mercado libre](public/img/carrito-que-nos-inspiro.jpg)
 
 
 ***Presentación métodos de pago que nos gustó***
     El de Hostinger.
 
-<img src="public/img/metodo-de-pago-que-nos-gusto.jpg" alt="imagen opciones de pago de Hostinger">
+![imagen opciones de pago de Hostinger](public/img/metodo-de-pago-que-nos-gusto.jpg)
+
 
 
 **Métodos de pago que elegimos:**
 
-<img src="public/img/imagen-metodo-de-pago-tarjetas.jpg" alt="Imagen método de pago con tarjetas">
+![Imagen método de pago con tarjetas](public/img/imagen-metodo-de-pago-tarjetas.jpg)
 
-<img src="public/img/imagen-metodo-de-pago-paypal.jpg" alt="Imagen método de pago con tarjetas">
+![Imagen método de pago con tarjetas](public/img/imagen-metodo-de-pago-paypal.jpg)
 
-<img src="public/img/imagen-metodo-de-pago-rapipago.jpg" alt="Imagen método de pago con tarjetas">
+![Imagen método de pago con tarjetas](public/img/imagen-metodo-de-pago-rapipago.jpg)
 
-<img src="public/img/imagen-metodo-de-pago-cripto.jpg" alt="Imagen método de pago con tarjetas">  
+![Imagen método de pago con tarjetas](public/img/imagen-metodo-de-pago-cripto.jpg)
 
 --------------------------------------------------------------------------------------------------  
 
@@ -190,7 +192,7 @@ Link: https://drive.google.com/file/d/1GtdHuKCFKCluFAkMIxt8BLHieZuwb62t/view?usp
   
   - Logotipo:
   
-<img src="public/img/logotipo-tierra-de-genios.jpg" alt="Imagen método de pago con tarjetas">  
+  ![Imagen método de pago con tarjetas](public/img/logotipo-tierra-de-genios.jpg)
 
 
 
@@ -198,15 +200,16 @@ Link: https://drive.google.com/file/d/1GtdHuKCFKCluFAkMIxt8BLHieZuwb62t/view?usp
   - Colores: 
 - #10131a
 
-<img src="public/img/color-10131a-tierra-de-genios.jpg" alt="Imagen método de pago con tarjetas">  
+![Imagen método de pago con tarjetas](public/img/color-10131a-tierra-de-genios.jpg)
 
 - #DC2D2D
 
-<img src="public/img/color-DC2D2D-tierra-de-genios.jpg" alt="Imagen método de pago con tarjetas">
+![Imagen método de pago con tarjetas](public/img/color-DC2D2D-tierra-de-genios.jpg)
+
 
 - #20405d
+![Imagen método de pago con tarjetas](public/img/color-20405d-tierra-de-genios.jpg)
 
-<img src="public/img/color-20405d-tierra-de-genios.jpg" alt="Imagen método de pago con tarjetas">
 
 
 
