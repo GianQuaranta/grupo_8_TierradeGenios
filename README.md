@@ -131,60 +131,60 @@ Link: https://drive.google.com/file/d/1GtdHuKCFKCluFAkMIxt8BLHieZuwb62t/view?usp
     1. **[Hostinger](https://www.hostinger.com.ar/)** 
             → Sacamos la forma de presentar las suscripciones, y las animaciones que se van activando a medida que vamos alcanzando su posición en la página).
 
-![Imagen presentación de producto suscripción hostinger.](public/img/productos-hostinger.jpg)
+![Imagen presentación de producto suscripción hostinger.](Public/img/productos-hostinger.jpg)
 
     1. **[Wayra](https://hispam.wayra.com/)**   
             → Nos gusta un poco del estilo de la presentación visual del principio hasta el “quienes somos”. (Nos gustó la imagen de presentación que se ve la imagen desde arriba, y nos gusta el cómo se activa el contador de los números de la imagen de abajo).
 
-![Imagen inicio de Wayra que nos gustó.](public/img/imagen-inicio-wayra-ejemplo.jpg)
+![Imagen inicio de Wayra que nos gustó.](Public/img/imagen-inicio-wayra-ejemplo.jpg)
             
   
     1. **[Henry](https://www.soyhenry.com/)**  
             → Nos gustó la forma de empezar la página con una imagen a la derecha y un texto con botón de llamada a la acción al inicio, y el cartelito de texto que le sigue, el cual imitamos pero lo haremos con imágenes y movimiento.
 
-![Inicio de soy henry](public/img/inicio-soy-henry.jpg)
-![Cartelito de soy henry que nos gustó para hacerlo con un mapa con movimiento.](public/img/cartel-soy-henry-nos-gusto.jpg)
+![Inicio de soy henry](Public/img/inicio-soy-henry.jpg)
+![Cartelito de soy henry que nos gustó para hacerlo con un mapa con movimiento.](Public/img/cartel-soy-henry-nos-gusto.jpg)
 
     1. **[Lambda](http://lambda.com.ar/)**  
             → Me mostró que tenemos que ver de poner las carreras de a las que pueden acceder los solicitantes, es como que necesitamos dos posibles inicios, y que, por ejemplo, se aparezca un popup que pregunte si estamos pensando en solicitar una beca, si pone que sí, el inicio se adapta para el becado, sino se adapta para el donante. **No lo realizamos aún, por ahora es solo una idea**
 
-![Imagen inicio lambda que nos gustó, no lo utilizamos al final.](public/img/inicio-lambda-nos-gusto.jpg)
+![Imagen inicio lambda que nos gustó, no lo utilizamos al final.](Public/img/inicio-lambda-nos-gusto.jpg)
 
 
     1. **[Lambda School](https://lambdaschool.com/)**  
             → El cómo muestran la formación académica.
 
-![Imagen Lambda School que nos gustó cómo presentan su propuesta.](public/img/lambda-school-inicio.jpg)
+![Imagen Lambda School que nos gustó cómo presentan su propuesta.](Public/img/lambda-school-inicio.jpg)
 
 
     1. **[Go Fund Me](https://es.gofundme.com/)**  
             → Plataforma de financiamiento colectivo para causas benéficas, está bueno cómo habla de qué es el financiamiento colectivo social, y cómo muestra más información sobre las causas que apoyan.
 
-![Imagen recaudación de fondos por proyecto de go fund me.](public/img/go-fund-me-inicio.jpg)
+![Imagen recaudación de fondos por proyecto de go fund me.](Public/img/go-fund-me-inicio.jpg)
 
 
 ***Carrito que nos inspiró***
     El de mercado libre, simple minimalista, y a eso le agregamos las opciones de pago.
 
-![imagen carrito de compra de mercado libre](public/img/carrito-que-nos-inspiro.jpg)
+![imagen carrito de compra de mercado libre](Public/img/carrito-que-nos-inspiro.jpg)
 
 
 ***Presentación métodos de pago que nos gustó***
     El de Hostinger.
 
-![imagen opciones de pago de Hostinger](public/img/metodo-de-pago-que-nos-gusto.jpg)
+![imagen opciones de pago de Hostinger](Public/img/metodo-de-pago-que-nos-gusto.jpg)
 
 
 
 **Métodos de pago que elegimos:**
 
-![Imagen método de pago con tarjetas](public/img/imagen-metodo-de-pago-tarjetas.jpg)
+![Imagen método de pago con tarjetas](Public/img/imagen-metodo-de-pago-tarjetas.jpg)
 
-![Imagen método de pago con tarjetas](public/img/imagen-metodo-de-pago-paypal.jpg)
+![Imagen método de pago con tarjetas](Public/img/imagen-metodo-de-pago-paypal.jpg)
 
-![Imagen método de pago con tarjetas](public/img/imagen-metodo-de-pago-rapipago.jpg)
+![Imagen método de pago con tarjetas](Public/img/imagen-metodo-de-pago-rapipago.jpg)
 
-![Imagen método de pago con tarjetas](public/img/imagen-metodo-de-pago-cripto.jpg)
+![Imagen método de pago con tarjetas](Public/img/imagen-metodo-de-pago-cripto.jpg)
 
 --------------------------------------------------------------------------------------------------  
 
@@ -192,7 +192,7 @@ Link: https://drive.google.com/file/d/1GtdHuKCFKCluFAkMIxt8BLHieZuwb62t/view?usp
   
   - Logotipo:
   
-  ![Logotipo](public/img/logotipo-tierra-de-genios.jpg)
+  ![Logotipo](Public/img/logotipo-tierra-de-genios.jpg)
 
 
 
@@ -200,16 +200,16 @@ Link: https://drive.google.com/file/d/1GtdHuKCFKCluFAkMIxt8BLHieZuwb62t/view?usp
   - Colores: 
 - #10131a
 
-![Color1](public/img/color-10131a-tierra-de-genios.jpg)
+![Color1](Public/img/color-10131a-tierra-de-genios.jpg)
 
 - #DC2D2D
 
-![Color2](public/img/color-DC2D2D-tierra-de-genios.jpg)
+![Color2](Public/img/color-DC2D2D-tierra-de-genios.jpg)
 
 
 - #20405d
   
-![Color3](public/img/color-20405d-tierra-de-genios.jpg)
+![Color3](Public/img/color-20405d-tierra-de-genios.jpg)
 
 
 
