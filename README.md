@@ -208,7 +208,7 @@ Link: https://drive.google.com/file/d/1GtdHuKCFKCluFAkMIxt8BLHieZuwb62t/view?usp
 
 
 - #20405d
-![Imagen método de pago con tarjetas](public/img/color-20405d-tierra-de-genios.jpg)
+![](public/img/color-20405d-tierra-de-genios.jpg)
 
 
 
