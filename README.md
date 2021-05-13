@@ -1,6 +1,6 @@
 # **Proyecto:** **Tierra de Genios**
 
-![Logotipo Tierra de Genios](public/img/logo-fondo-blanco-largo.jpg)
+![Logotipo Tierra de Genios](/public/img/logo-fondo-blanco-largo.jpg)
 
 
 ## Presentación de Proyecto
