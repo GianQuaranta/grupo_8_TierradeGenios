@@ -122,6 +122,12 @@ Link: https://drive.google.com/file/d/1eyrOZxIcml1BrJQYWTrmELLUXOjT2A0Y/view?usp
   5. ***Formulario de login:***
 Link: https://drive.google.com/file/d/1GtdHuKCFKCluFAkMIxt8BLHieZuwb62t/view?usp=sharing
 
+  6. ***Página "Nosotros"***
+Link: https://drive.google.com/file/d/10368CwKjRlkfps1bUhHwYikYFg_jDN_N/view?usp=sharing
+
+  7. ***Página "Solicitar Beca***
+Link: https://drive.google.com/file/d/1-Bl5EIl5aplLoH7_kZqC-FKMGKsNBoDZ/view?usp=sharing
+
 
 
   ***Páginas que nos inspiran:***
