@@ -233,4 +233,13 @@ Link: https://drive.google.com/file/d/1-Bl5EIl5aplLoH7_kZqC-FKMGKsNBoDZ/view?usp
 
 - Roboto como 3er tipografía: 
     
-    https://fonts.google.com/specimen/Roboto?category=Serif,Sans+Serif&subset=latin
+    https://fonts.google.com/specimen/Roboto?category=Serif,Sans+Serif&subset=latin  
+      
+      
+
+
+
+
+    **Sprint 2**
+
+    ***Link tablero Trello:*** https://trello.com/b/EiuCPsiC 
