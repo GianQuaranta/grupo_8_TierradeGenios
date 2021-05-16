@@ -1,0 +1,23 @@
+{
+  "name": "grupo_8_TierradeGenios",
+  "version": "1.0.0",
+  "description": "![Logotipo Tierra de Genios](./Public/img/logo-fondo-blanco-largo.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GianQuaranta/grupo_8_TierradeGenios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GianQuaranta/grupo_8_TierradeGenios/issues"
+  },
+  "homepage": "https://github.com/GianQuaranta/grupo_8_TierradeGenios#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
