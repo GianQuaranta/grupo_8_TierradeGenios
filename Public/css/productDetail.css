@@ -1,0 +1,147 @@
+/************ MOBILE ************/ 
+
+
+/** MAIN **/
+
+h2 { 
+    text-align: center;
+}
+
+main {
+    width: 90%;
+    margin: 20px auto;
+    background-color: lightgray;
+    border: 1px black solid;
+}
+
+/* SECCION COMPLETA DE PRODUCTOS */
+.seccion-de-productos {
+    width: 90%;
+    margin: 20px auto;
+    justify-content: space-around;
+    background-color: white;
+    border: 1px black solid;
+}
+
+/* PLANTILLA DEL PRODUCTO*/
+.producto {
+    width: 100%;
+    margin: 20px auto;
+    border: 1px black solid;
+    
+    
+}
+
+ /*CONTENEDOR  DONACIONES*/
+.producto-donacion {
+    width: 100%;
+}
+
+/* CONTENEDOR DE ESTRELLAS */
+.estrellas {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    width: 60%;
+    margin: 20px auto;
+    color: red;
+    font-size: 25px;
+    border: 1px black solid;
+    padding: 5px;
+    
+}
+
+.producto-donacion p {
+    font-size: 13px;
+    width: 80%;
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* COTENEDOR DE INPUTS Y BOTONES DEL PRODUCTO*/
+.botones {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.botones p { 
+font-size: 13px;
+width: 100%;
+text-align: center;
+margin: 10px auto;}
+
+
+/* INPUT - $$ A DONAR */
+.cantidad-donacion{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    height: 30px;
+}
+
+
+.signo-dolar {
+    width: 30%;
+}
+
+
+/* GRUPO DE BOTONES*/
+.boton-group {
+    display: flex;
+    width: 100%;
+    
+    }
+
+.boton-group button {
+    height: 40px;
+    width: 15%;
+    margin: auto;
+
+} 
+/* FIN GRUPO DE BOTONES */   
+
+
+
+
+
+/************* TABLET *************/ 
+
+
+@media (min-width: 361px){
+
+/** MAIN **/
+
+.seccion-de-productos {
+    width: 100%;
+    display: flex ;
+    flex-wrap: wrap;
+}
+
+.producto {
+    display: block;
+    width: 33% ;
+}
+
+
+
+
+
+
+}
+
+
+/************* DESKTOP *************/
+
+@media (min-width: 769px){
+
+
+
+
+
+
+
+    
+}
