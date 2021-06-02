@@ -204,7 +204,7 @@ Link: https://drive.google.com/file/d/1-Bl5EIl5aplLoH7_kZqC-FKMGKsNBoDZ/view?usp
 
 
   - Colores: 
-- #10131a
+- #10131a (el color azul original del logo es el siguiente #04398c)
 
 ![Color1](Public/img/color-10131a-tierra-de-genios.jpg)
 
