@@ -8,37 +8,44 @@ h2 {
 }
 
 main {
-    width: 90%;
+    width: 100%;
     margin: 20px auto;
-    background-color: lightgray;
-    border: 1px black solid;
+    
+    
 }
 
 /* SECCION COMPLETA DE PRODUCTOS */
 .seccion-de-productos {
-    width: 90%;
+    max-width: 96%;
     margin: 20px auto;
     justify-content: space-around;
     background-color: white;
-    border: 1px black solid;
+   
 }
+
 
 /* PLANTILLA DEL PRODUCTO*/
 .producto {
     width: 100%;
+    padding: 0px 20px;
     margin: 20px auto;
     border: 1px black solid;
     
     
 }
 
- /*CONTENEDOR  DONACIONES*/
-.producto-donacion {
+ /*** FORM ***/
+
+ fieldset {
+    border: none;
+}
+
+.form-donacion {
     width: 100%;
 }
 
-/* CONTENEDOR DE ESTRELLAS */
-.estrellas {
+/* FIELDSET DE ESTRELLAS */
+.form-estrellas {
     display: flex;
     justify-content: center;
     justify-content: space-around;
@@ -51,15 +58,15 @@ main {
     
 }
 
-.producto-donacion p {
+.form-donacion p {
     font-size: 13px;
     width: 80%;
     text-align: center;
-    margin: 10px auto;
+    margin: 15px auto;
 }
 
-/* COTENEDOR DE INPUTS Y BOTONES DEL PRODUCTO*/
-.botones {
+/* FIELDSET SECCION DONACION*/
+.form-botones {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +74,7 @@ main {
     margin-top: 10px;
 }
 
-.botones p { 
+.form-botones p { 
 font-size: 13px;
 width: 100%;
 text-align: center;
@@ -77,32 +84,101 @@ margin: 10px auto;}
 /* INPUT - $$ A DONAR */
 .cantidad-donacion{
     display: flex;
-    width: 60%;
-    margin: auto;
+    width: 70%;
+    margin: 20px auto;
     height: 30px;
+    
 }
 
 
 .signo-dolar {
-    width: 30%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 }
 
 
 /* GRUPO DE BOTONES*/
-.boton-group {
+.form-boton-group {
     display: flex;
     width: 100%;
     
     }
 
-.boton-group button {
+.form-boton-group button {
     height: 40px;
     width: 15%;
     margin: auto;
 
 } 
-/* FIN GRUPO DE BOTONES */   
 
+.contribuir {
+    background-color: red;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin: 15px auto;
+    
+}
+/* FIN FIELDSET SECCION DONACION*/   
+/* FIN DEL FORM */
+
+
+.producto-descripcion {
+    width: 90%;
+    margin: 10px auto;
+    padding: 5px;
+    border: 1px black solid;
+}
+
+ul {
+    list-style: none;
+}
+
+li i {
+    margin: 10px auto;
+    
+}
+
+/* ARTICLE */
+
+section {
+    width: 100%;
+}
+
+article {
+    width: 90%;
+    margin:  10px auto;
+    margin-top: 5px;
+
+}
+figure {
+    width: 100%;
+}
+
+figure img {
+    display: none;
+    width: 100%;
+    
+}
+
+.descripcion {
+    width: 100%;
+    display: block;
+    
+
+}
+
+h2 {
+    font-size: 16px;
+}
+
+article p {
+    
+    padding: 10px;
+    font-size: 14px;
+}
 
 
 
@@ -122,8 +198,50 @@ margin: 10px auto;}
 
 .producto {
     display: block;
-    width: 33% ;
+    width: 32% ;
 }
+
+
+article {
+    display: flex;
+    width: 90%;
+    
+    margin-top: 20px;
+    justify-content: space-between;
+
+}
+
+
+
+figure {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figure img {
+    display: flex;
+    width: 100%;
+    
+}
+
+.descripcion {
+    width: 40%;
+    display: block;
+
+}
+
+h2 {
+    font-size: 17px;
+}
+
+article p {
+    display: flex;
+    padding: 10px;
+    font-size: 16px;
+}
+
 
 
 
@@ -137,8 +255,22 @@ margin: 10px auto;}
 
 @media (min-width: 769px){
 
+article {
+    padding: 15px 30px;
+    
+}
 
 
+
+h2 {
+    font-size: 22px;
+}
+
+article p {
+    display: flex;
+    font-size: 20px;
+    
+}
 
 
 
