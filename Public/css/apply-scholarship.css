@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------------------------------------------------Main-----------------------------------------------------------*/
+/*----------------------------------------------Primer Section------------------------------------------------------*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 5px 14px 14px 14px;
+    width: 90%;
+}
+
+main section article{
+    width: 95vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0;
+}
+
+main section article h2 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+main section article h3 {
+    width: 86%;
+    text-align: center;
+    margin-bottom: 10px;
+    border-top: 1px solid #DC2D2D;
+    border-bottom: 1px solid  #04398c;
+    padding: 3px;   
+}
+
+main section article figure {
+    width: 100%;
+}
+
+.article-uno {
+    display: flex;
+}
+
+main section article figure img {
+    width: 100%;
+}
+
+main > section > article > figure > img:hover {
+    box-shadow:0px 0px 10px rgba(100,100,100,0.50);
+}
+
+.textos-p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-family: "Saira", "Sans-serif";
+    text-align: left;
+    width: 100%;
+}
+
+.p-requisitos {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-family: "Saira", "Sans-serif";
+    text-decoration: underline;
+}
+
+main section article ol {
+    width: 90%;
+    margin-left: 8px;
+}
+
+
+
+/*----------------------------------------------Segundo Section----------------------------------------------------*/
+
+.h2-2do-section {
+    width: 90%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+main section form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main section form fieldset {
+    width: 100%;
+    border:none;
+    margin: 15px 0 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+}
+
+main section form fieldset legend{
+    width: 100%;
+}
+
+main section form fieldset label {
+    width: 50%;
+    margin: 15px 0 10px 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+    
+main section form fieldset label input {
+    width: 20%;
+    margin: 5px 0;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+main section form label {
+    width: 100%;
+    margin: 5px 0;
+}
+
+main section form label input{
+    width: 100%;
+    padding: 5px;
+}
+
+.fieldset-formacion-academica-actual {
+    margin: 5px 0;
+}
+
+.label-formacion-academica-actual {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.legend-formacion-academica-actual {
+    width: 100%;
+}
+
+.p-formacion-academica-actual {
+    width: 100%;
+}
+
+.input-formacion-academica-actual {
+    width: 100%;
+}
+
+.label-fecha-de-nacimiento {
+    font-size: 11px;
+}
+
+.input-label-fecha-de-nacimiento {
+    margin-top: 3px;
+}
+
+.p-label-leyenda-small {
+    margin: 3px 0 3px 5px;
+    opacity: 0.650;
+}
+
+.confirma-tu-correo-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: yellow;
+    border-radius: 4px;
+    padding: 6px;
+    margin: 20px 0 20px 0;
+    font-size: 16px;
+}
+
+.p-consentimiento-datos {
+    width: 100%;
+    font-size: 14px;
+    font-family: "Saira", "Sans-serif";
+}
+
+.label-checkbox {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.input-label-consentimiento-datos {
+    width: 10%;
+}
+
+.p-input-label-consentimiento-datos {
+    width: 90%;
+    
+}
+
+.button-form {
+    width: 70%;
+    background-color: #DC2D2D;
+    padding: 2px;
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 4px;
+    color: #ffffffff;
+    border:none;
+}
+
+.button-form:hover {
+    background-color: #04398c;
+}
+
+.imagen-como-funciona-la-beca-desktop {
+    display: none;
+}
+
+.section-form-desktop {
+    border-left: 1px solid #DC2D2D;
+    border-radius: 8px;
+    border-top: 1px solid #04398c;
+    border-right: 1px solid #04398c;  
+    border-bottom: 1px solid #DC2D2D;
+}
+
+.h2-2do-section {
+    border-bottom: 1px solid #DC2D2D;
+    width: 62%;
+}
+
+
+
+/*----------------------------------------------Medias Queries--------------------------------------------------*/
+
+/*-------------------------------1er Media Query-----------------------------------------*/
+
+@media(min-width:500px){
+
+main section article figure {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+main section article figure img {
+    width: 472px;
+}
+
+.imagen-oportunidad-que-todo-estudiante-merece {
+    width:400px;
+}
+
+main section article h3 {
+    width: 55%;
+}
+
+.h2-2do-section {
+    width: 45%;
+    max-width: 200px;
+}
+
+}
+
+/*-------------------------------2da Media Query-----------------------------------------*/
+
+@media(min-width:769px) {
+
+main section article figure img {
+    display: none;  
+}
+
+.figure-imagen-como-funciona-la-beca-desktop {
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-como-funciona-la-beca-desktop {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    max-width: 729px;
+}
+
+.section-form-desktop {
+    max-width: 65%;
+}
+
+.h2-2do-section {
+    max-width: 185px;
+    border-bottom: 1px solid #DC2D2D;
+}
+
+.p-form-desktop {
+    max-width: 844px;
+}
+
+main section form {
+    max-width: 844px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main section article{
+    margin: 23px 0;
+    max-width: 1111px;
+}
+
+main section article h3 {
+    font-size: 23px;
+    width: 43   %;
+    max-width: 455px;
+}
+
+}
