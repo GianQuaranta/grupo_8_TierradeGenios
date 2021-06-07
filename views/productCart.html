@@ -1,86 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--------------------------------------------------head------------------------------------------------------------->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Noto+Serif+JP?category=Serif,Sans+Serif&subset=latin">
+    <link rel="stylesheet"
+        href="https://fonts.google.com/specimen/Noto+Serif+JP?category=Serif,Sans+Serif&subset=latin">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Saira+Condensed#pairings">
     <link rel="stylesheet" href="/css/productCart.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <title>About-us</title>
+    <title>ProductCart</title>
 </head>
 <!--------------------------------------------------body------------------------------------------------------------->
+
 <body>
-<!-------------------------------------------------header------------------------------------------------------------>
+    <!-------------------------------------------------header------------------------------------------------------------>
     <header>
         <figure class="div-logo">
             <img class="logo" src="/img/tierra-de-genios-texto-logo-1.png" alt="Logotipo principal">
         </figure>
-        
-        
-         <div class="div-navbar">
-                <nav class="navbar">
-                    <a href="#">Nosotros</a>
-                    <a href="#" class="boton-becas">Becas</a>
-                    <a href="#" class="boton">Solicitar beca</a>
-                    <a href="#" class="boton">Ayudar a becar</a>
-                    <a href="#" class="boton">Registrarse</a> 
-                    <a href="#">Ingresar</a>
-                    <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-                </nav>
-                
-                
-            </div>  
-        
-             
-            </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-<!--------------------------------------------------main------------------------------------------------------------->
+
+
+        <div class="div-navbar">
+            <nav class="navbar">
+                <a href="#">Nosotros</a>
+                <a href="#" class="boton-becas">Becas</a>
+                <a href="#" class="boton">Solicitar beca</a>
+                <a href="#" class="boton">Ayudar a becar</a>
+                <a href="#" class="boton">Registrarse</a>
+                <a href="#">Ingresar</a>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </nav>
+        </div>
+
+
+    </header>
+
+    <!--------------------------------------------------main------------------------------------------------------------->
+
+
     <main>
+        <!--SECCION A -->
+        <section id="seccionA">
+            <h2>ARTICULOS SELECCIONADOS</h2>
+            <article class="articulo">
+                <figure>
+                    <img src="/img/estrella-producto.jpg" alt="">
+                </figure>
+                <ul>
+                    <p class="articulo-titulo-suscripcion">Usted ha seleccionado la suscripcion tipo: 'BRONCE' </p>
+                    <p>A continuacion podra ver sus principales beneficios:</p>
+                    <li><i class="fas fa-check"></i>  Acceder al tablero de becados</li>
+                    <li><i class="fas fa-check"></i>  Acceder al flujo de dinero</li>
+                    <li><i class="fas fa-check"></i>  Certificado digital</li>
+                </ul>
+             
+            </article>
+        </section>
+        <!-- FIN SECCION A -->
 
+        <!-- SECCION B -->
+        <section class="seccionB">
+            <h2>FORMA DE PAGO</h2>
+           
+                <form class="formulario-de-pago" action="" method="POST">
+                         <p>Monto de la donacion<p>
+                            <!-- FORM FIELDSET -->
+                            <fieldset class="form-fieldset">
+                                <label class="legend">Donacion</label>
+                                <output class="output">$200</output>
+                            </fieldset>
+                            <hr>
+                            <fieldset class="form-fieldset">
+                                <label>Cuotas</label>
+                                <output>3</output>
+                            </fieldset>
+                            <hr>
+                            <fieldset class="form-fieldset">
+                                <label>Total</label>
+                                <output>$900</output>
+                            </fieldset>
+                            <!--FIN FORM FIELDSET -->
+
+                            <!-- FORMULARIO PAGO ELEGIR -->
+                            <fieldset class="formulario-pago-elegir">
+                                <p>Seleciona el tipo de pago</p>
+                                <div class="formulario-pago-elegir-1"> 
+                                <label for="seleccion">Tarjeta de credito</label>
+                                <input type="radio" name="pago" id="seleccion">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                                </div>
+
+                                <div class="formulario-pago-elegir-2">
+                                <label>Deposito Paypal</label>
+                                <input type="radio" name="pago" id="">
+                                <i class="fab fa-cc-paypal"></i>
+                                </div>
+
+                                <div class="formulario-pago-elegir-3"> 
+                                <label>Deposito RapiPago</label>
+                                <input type="radio" name="" id="">
+                                <i class="fab fa-cc-apple-pay"></i>
+                                </div>
+                            </fieldset>
+                             <!--FIN FORMULARIO PAGO ELEGIR -->
+                             <button type="submit">DONAR</button>
+                </form>
+           
+        </section>
+        <!-- FIN SECCION B-->
     </main>
-<!--------------------------------------------------footer------------------------------------------------------------->
+
+
+    <!--------------------------------------------------footer------------------------------------------------------------->
     <footer>
-        
-            <div class="div-footer-nav">
-                <nav>
 
-                    <a href=""><i class="fab fa-facebook-square rrss-logos"></i></a>
-                    <a href=""><i class="fab fa-instagram rrss-logos"></i></a>
-                    <br>    
-                    <a  href="">Terminos y condiciones</a>
-                    <br>
-                    <a  href="">Contacto</a>
-                    <p >Todos los derechos reservados</p>
+        <div class="div-footer-nav">
+            <nav>
+
+                <a href=""><i class="fab fa-facebook-square rrss-logos"></i></a>
+                <a href=""><i class="fab fa-instagram rrss-logos"></i></a>
+                <br>
+                <a href="">Terminos y condiciones</a>
+                <br>
+                <a href="">Contacto</a>
+                <p>Todos los derechos reservados</p>
 
 
-                </nav>
+            </nav>
 
-            </div>
-            <div class="div-footer-logo">
-                <img class="footer-logo"  src="/img/logotipo-tdg.png">
-            </div>
-       
+        </div>
+        <div class="div-footer-logo">
+            <img class="footer-logo" src="/img/logotipo-tdg.png">
+        </div>
+
     </footer>
 
 </body>
