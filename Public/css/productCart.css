@@ -1,0 +1,350 @@
+
+main {
+    width: 100%;
+    justify-content: space-around;
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+}
+
+/*----------- SECCION A ----------*/
+#seccionA {
+    width: 95%;
+    margin: 20px auto;
+    
+}
+
+
+/*-- ARTICULO --*/ 
+.articulo {
+    width: 100%;
+    margin: 10px auto;
+    border: 2px grey solid;
+    background-color: lightgray;
+    }
+
+
+/*-- IMAGEN DEL ARTICULO --*/
+
+figure {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    
+}
+
+figure img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+
+/*-- DESCRIPCION DEL ARTICULO --*/
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    justify-content: center;
+    font-size: 14px;
+    border-top: 2px grey solid;
+}
+
+ul p {
+    width: 90%;
+}
+
+.articulo-titulo-suscripcion {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+ul li {
+    width: 80%;
+    border: 1px black dotted;
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    
+    align-items: center;
+}
+
+
+
+/*---------------- SECCION B -------------*/
+
+.seccionB {
+    width: 90%;
+    margin: 20px auto;
+}
+
+
+/*---- FROM ---*/
+
+.formulario-de-pago {
+    width: 85%;
+    border: 1px grey solid;
+    margin-top: 10px;
+    background-color: rgba(235, 226, 226, 0.753);
+    border-radius: 5px;
+
+    
+}
+
+form p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* FORM FIELDSET */
+.form-fieldset{
+    width: 100%;
+    margin: 20px auto;
+    padding-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+
+.form-fieldset label {
+    width: 40%;
+   
+    
+}
+
+.form-fieldset output {
+   width: 40%;
+   display: flex;
+   justify-content: flex-end;
+   margin-right: 15px;
+    
+}
+/* FIN FORM FIELDSET */
+
+
+/* FOMRULARIO PARA ELEGIR */
+.formulario-pago-elegir {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    border: 1px grey dotted;
+}
+
+.formulario-pago-elegir p {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+hr {
+    width: 70%;
+    margin: auto;
+}
+
+
+/* -- 1 --*/
+.formulario-pago-elegir-1{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    font-size: 17px;
+    
+}
+
+.formulario-pago-elegir-1 label {
+    width: 40%;
+}
+
+.formulario-pago-elegir-1 input {
+    width: 15%;
+}
+
+.formulario-pago-elegir-1 i {
+    width: 15%;
+    font-size: 22px;
+    color: rgb(0, 0, 192);
+}
+/* -- FIN 1 -- */
+
+
+/* -- 2 --*/ 
+.formulario-pago-elegir-2{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    font-size: 17px;
+    
+}
+
+
+.formulario-pago-elegir-2 label {
+    width: 40%;
+}
+
+.formulario-pago-elegir-2 input {
+    width: 15%;
+}
+
+.formulario-pago-elegir-2 i{
+    width: 15%;
+    font-size: 22px;
+    color: rgb(209, 2, 2);
+    
+}
+/* -- FIN 2 -- */
+
+
+/* -- 3 -- */
+.formulario-pago-elegir-3{
+    width: 100%;
+    display: flex;
+    font-family: 17px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+}
+
+.formulario-pago-elegir-3 label {
+    width: 40%;
+}
+
+.formulario-pago-elegir-3 input {
+    width: 15%;
+}
+
+.formulario-pago-elegir-3 i{
+    width: 15%;
+    font-size: 22px;
+    color: rgb(0, 0, 161);
+}
+/* -- FIN 3 -- */
+
+button {
+    width: 30%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* FIN FORMULARIO PARA ELEGIR */
+
+
+
+/* ----------------------------------- TABLET XS -------------------------*/
+
+@media (min-width: 365px) {
+   
+   
+.articulo {
+    display: flex;
+    flex-wrap: wrap;
+        }
+
+
+    
+/* DESCIPCION ARTICULO */ 
+
+    ul {
+        width: 100%;
+    }
+
+}
+
+form p {
+    
+    font-size: 17px;
+   
+}
+
+
+
+/* ---------------------- TABLET LARGE ----------------------*/
+@media (min-width: 550px) {
+
+    
+    .articulo {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* IMAGEN DEL PRODUCTO */
+
+    figure {
+        width: 25%;
+    }
+    
+    figure img {
+        width: 100%;
+    }
+    /* FIN IMAGEN DEL PRODUCTO */
+    
+    
+    /* DESCRIPCION DEL PRODUCTO */
+    ul {
+        width: 55%;
+        font-size: 16px;
+        border-top: none;
+        border-left: 2px grey solid;
+        
+    }
+
+    .formulario-de-pago {
+        width: 70%;
+    }
+}
+
+/* -------------------------------- DESKTOP --------------------------*/
+
+@media (min-width: 770px){
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #seccionA {
+        width: 65%;
+        margin: 10px 10px;
+    }
+
+    .seccionB {
+        width: 25%;
+        margin: 10px 10px;
+    }
+
+    .formulario-de-pago {
+        width: 100%;
+    }
+
+    ul {
+        font-size: 18px;
+    }
+    
+    figure {
+        margin: 30px;
+    }
+    figure img {
+        width: 100%;
+    }
+
+
+
+}
+
+
