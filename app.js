@@ -2,7 +2,7 @@ const express = require ("express");
 const app = express();
 const path = require('path');
 
-app.listen(3030, () => console.log("Servidor corriendo"));
+app.listen(3030, () => console.log("Server start in http://localhost:3030"));
 
 app.use(express.static(path.resolve(__dirname,"./Public")));
 
@@ -19,5 +19,7 @@ app.get("/login", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", 
 app.get("/about-us", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "about-us.html")));
 
 app.get("/apply-scholarship", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "apply-scholarship.html")));
+
+app.get("/contrasenia", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "contrasenia.html")));
 
 
