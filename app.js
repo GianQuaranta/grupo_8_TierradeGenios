@@ -20,4 +20,6 @@ app.get("/about-us", (req,res) => res.sendFile(path.resolve(__dirname, "./views/
 
 app.get("/apply-scholarship", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "apply-scholarship.html")));
 
+app.get("/contrasenia", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "contrasenia.html")));
+
 

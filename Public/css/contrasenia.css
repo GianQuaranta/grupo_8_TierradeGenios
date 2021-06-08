@@ -4,9 +4,6 @@
     padding: 0;
 }
 
-
-
-
 /********* HEADER ***********/
 
 header {
@@ -79,7 +76,7 @@ main{
     background-color: #dcdcdc;
 }
 
-.section-login{
+.section-original{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -94,7 +91,7 @@ text-align: center;
  
 }
 
-.form-login{
+.form-recuperar{
     width: 400px;
     padding: 40px;
     background-color: white;
@@ -114,7 +111,6 @@ text-align: center;
     padding: 10px;
     padding-bottom: 10px;
     text-align: center;
-    font-style: italic;
 }
 
 .usuario-pass{
@@ -140,28 +136,16 @@ color: white;
 
 }
 
+.button:hover{
+    background-color: #dc2d2d;
+}
 
-
-.button-login{
+.button-recuperar{
     justify-content: center;
     align-items: center;
     color: white;
     transition: background-color 450ms infinite;
 }
-
-.button:hover{
-    background-color: #dc2d2d;
-}
-
-.olvide{
-    font-size: 12px;
-    text-align: center;
-    width: 50%;
-    margin: 30px;
-    margin-left: 25%;
-
-}
-
 
 
 /****** FOOTER  *******/
@@ -212,8 +196,6 @@ footer a {
 }
 
 
-
-
 /********* MEDIA QUERYS TABLET ********/
 
 @media (min-width: 361px) {
@@ -252,16 +234,6 @@ footer a {
         margin: auto;
     }
 
-
-}
-
-
-
-
-
-
-
-
   /*** FOOTER ***/
 
   .footer-logo {
@@ -271,7 +243,7 @@ footer a {
 }
 
 
-
+}
 
  /****** MEDIA QUERY DESKTOP *****/
 
@@ -299,4 +271,22 @@ footer a {
     .boton-becas {
         display: none;
     }
+
+
+     /*** MAIN ***/
+
+
+    .usuario-pass{
+        width: 100%;
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        font-size: 18px;  
+        justify-content: center;
+    
+    }
+
+
     }
