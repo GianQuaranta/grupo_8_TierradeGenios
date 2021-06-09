@@ -3,277 +3,542 @@
 
 /** MAIN **/
 
-h2 { 
-    text-align: center;
-}
-
 main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+}
+
+/* FOURTH SECTION */ 
+.fourth-section {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 93%;
+    margin: auto;
+}
+
+.h3-fourth-section {
+    font-size: 6vw;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #04398c;
+    border-bottom: 1px solid #DC2D2D;
+}
+
+.fourth-section article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    padding:10px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius:4px;
+    margin:25px 0;
+}
+
+.fourth-section>article:hover {
+    box-shadow: 0px 10px rgba(100,100,100,0.7);  /*No está quedando bien*/
+}
+
+.fourth-section article h3 {
+    width:100%;
+    padding:5px;
+    margin:10px 0 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-family: "Noto", "Sans-serif";
+}
+
+.fourth-section article section {
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+    margin-bottom:10px;
+    border: 1px solid grey;
+    border-radius:4px;
+    padding:7px;
+}
+
+.fourth-section article section i {
+    font-size:24px;
+    text-align:center;
+    color: #cd7f32;
+}
+
+.fourth-section article p {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:"Saira","Sans-serif";
+    font-size:11px;
+    opacity:0.5;
+    text-align:center;
+    font-weight:500;
+    margin-bottom:25px;
+    margin-top: 0;
+}
+
+main section article form fieldset {
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-input-form-aporte-mensual {
+    width:60%;
+    border:1px solid rgb(128,128,128,0.5);
+    border-radius:4px;
+    padding:10px 5px;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+main section article form fieldset label input {
+    border: none;
+    width: 80%;
+}
+
+.fa-dollar-sign {
+    font-size: 18px;
+}
+
+.leyenda-cantidad-de-cuotas-a-aportar {
+    font-family: "Saira","sans-serif";
+    font-size: 11px;
+    opacity:0.50;
+    margin-bottom: 13px;
+}
+
+.radio-cantidad-de-cuotas{
+    border:1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 4px;
+    width: 23%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    overflow: hidden;
+}
+
+.radio-cantidad-de-cuotas input[type="radio"] {
+    visibility: hidden;
+    display: none;
+}  
+
+input[type="radio"]:checked + label {
+    background-color: #DC2D2D;
+    color: #FFF;
+}
+
+.label-cuotas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-cantidad-de-cuotas label {
+    background-color: #FFF;
+    flex-grow: 1;
+    height: 100%;
+    transition: all 1s;
+}
+
+.label-output-aporte-total-form {
+    width:60%;
+    border:1px solid rgb(128,128,128,0.5);
+    border-radius:4px;
+    padding:10px 5px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-bottom:5px;
+    margin-top:23px;
+}
+
+.label-output-aporte-total-form output {
+    width: 80%;
+}
+
+.leyenda-total-luego-de-output {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    opacity: 0.50;
+    margin-bottom: 20px;
+}
+
+main section article form fieldset button {
+    width:40%;
+    background-color: #DC2D2D;
+    padding: 2px;
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 8px;
+    color: #ffffffff;
+    border:none;
+    transition: all 1s;
+}
+
+main section article form fieldset button:hover {
+    background-color: #04398c;
+}
+
+
+.section-detalle-producto {
+    border: black;
+}
+
+.section-detalle-producto ul li {
+    margin: 10px 0;
+}
+
+
+.color-estrellas-plata {
+    color: #C0C0C0 !important;
+}
+
+.color-estrellas-oro {
+    color:#EABE3F !important;
+}
+
+.second-article {
+    position: relative;
+    padding-top: 0 !important;
+}
+
+.mas-elegido-suscripcion-plata {
+    width: 120% !important;
+    padding: 10px;
+    background-color: #DC2D2D;    
+    opacity: 100 !important;
+    margin: 0 -11px;
+    color: #FFFFFFFF;
+    font-family: "Saira", "Sans-serif";
+    font-size: 18px !important;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+
+
+
+.fourth-section article form {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SECTION INFO */
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+} 
+
+ul {
+    width: 80%;
+}
+
+.punto {
+    visibility: hidden;
+}
+
+.info-article {
+    width: 90%;
+    margin: 40px auto;
+    
+}
+
+.info-article figure {
+    width: 90%;
+    margin: auto;
+
+}
+
+.info-article figure img {
+    width: 100%;
+    
+    margin: auto;
+    border-radius: 5px;
+}
+
+.descripcion {
+    width: 90%;
     margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
     
     
 }
 
-/* SECCION COMPLETA DE PRODUCTOS */
-.seccion-de-productos {
-    max-width: 96%;
-    margin: 20px auto;
-    justify-content: space-around;
-    background-color: white;
+.descripcion h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
    
 }
 
-
-/* PLANTILLA DEL PRODUCTO*/
-.producto {
-    width: 100%;
-    padding: 0px 20px;
-    margin: 20px auto;
-    border: 1px black solid;
-    
-    
-}
-
- /*** FORM ***/
-
- fieldset {
-    border: none;
-}
-
-.form-donacion {
-    width: 100%;
-}
-
-/* FIELDSET DE ESTRELLAS */
-.form-estrellas {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    width: 60%;
-    margin: 20px auto;
-    color: red;
-    font-size: 25px;
-    border: 1px black solid;
-    padding: 5px;
-    
-}
-
-.form-donacion p {
-    font-size: 13px;
-    width: 80%;
-    text-align: center;
-    margin: 15px auto;
-}
-
-/* FIELDSET SECCION DONACION*/
-.form-botones {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.descripcion p {
+    font-size: 14px;
     margin-top: 10px;
-}
-
-.form-botones p { 
-font-size: 13px;
-width: 100%;
-text-align: center;
-margin: 10px auto;}
-
-
-/* INPUT - $$ A DONAR */
-.cantidad-donacion{
-    display: flex;
-    width: 70%;
-    margin: 20px auto;
-    height: 30px;
-    
-}
-
-
-.signo-dolar {
-    width: 20%;
     display: flex;
     align-items: center;
-    margin-top: 20px;
+}
+
+hr {
+    width: 60%;
+    margin: auto;
 }
 
 
-/* GRUPO DE BOTONES*/
-.form-boton-group {
-    display: flex;
-    width: 100%;
+/*---------------------------------------------------Media Query----------------------------------------------------------------*/
+
+/*----------------1er media query--------------------*/
+
+@media (min-width:376px){
+
+    /*----------------Main--------------------*/
+    
+    /*-------------------------------------------Segunda Section---------------------------------------------*/
+    
+    .img-viaje-tdg-vertical {
+        width:356px;
+    
+    }
+    
+    
+}
+
+/*----------------3er media query--------------------*/
+@media(min-width:514px){
+    /*-------------------------------------------Cuarta Section---------------------------------------------*/
+    
+        .h3-fourth-section {
+            font-size:33px;
+        }
     
     }
 
-.form-boton-group button {
-    height: 40px;
-    width: 15%;
-    margin: auto;
 
-} 
+/*----------------4ta media query--------------------*/
 
-.contribuir {
-    background-color: red;
-    padding: 10px;
-    color: white;
-    border-radius: 5px;
-    margin: 15px auto;
+@media(min-width:693px){
+    .img-viaje-tdg-desktop{
+        display: flex;
+        width: 90%;
+        transition: all 1s;
+    }
+
+    .img-viaje-tdg-desktop:hover {
+        box-shadow: 0px 0px 10px rgba(100,100,100,0.7);
+    }
+
+    .img-viaje-tdg-vertical {
+        display:none;
+    }
+
+    main section h2 {
+        text-align: left;
+    }
+}
+
+
+/*----------------5ta media query--------------------*/
+
+@media(min-width:769px){
+
+    main section {
+        position:relative;
+    }
     
-}
-/* FIN FIELDSET SECCION DONACION*/   
-/* FIN DEL FORM */
+    #article-primer-section {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
 
+   #article-primer-section h2 {
+        width:50%;
+        height: 100%;
+        position: absolute;
+        top:23px;
+        left:9px;
+        font-size: 4vw;
+    }
 
-.producto-descripcion {
-    width: 90%;
-    margin: 10px auto;
-    padding: 5px;
-    border: 1px black solid;
-}
+    #article-primer-section p {
+        width: 50%;
+        margin-bottom: 35px;
+        position:absolute;
+        top:113px;
+        left:9px;   
+        font-size: 20px;
+    }
 
-ul {
-    list-style: none;
-}
+    #article-primer-section a {
+        position:absolute;
+        top:247px;
+        left:11px;
+        width:39%;
+    }
 
-li i {
-    margin: 10px auto;
+    #figure-first-section {
+        width:50%;
+        margin-top: 70px;
+    }
+
+    .info-article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    hr { display: none;}
+
     
-}
-
-/* ARTICLE */
-
-section {
-    width: 100%;
-}
-
-article {
-    width: 90%;
-    margin:  10px auto;
-    margin-top: 5px;
-
-}
-figure {
-    width: 100%;
-}
-
-figure img {
-    display: none;
-    width: 100%;
     
-}
-
-.descripcion {
-    width: 100%;
-    display: block;
+    
+    .info-article figure {
+        width: 45%;
+        margin: auto;
+    
+    }
+    
+    
+    
+    .descripcion {
+        width: 45%;
+        display: flex;
+        flex-wrap: wrap;
+       
+        }
+    
+    .descripcion h2 {
+        font-size: 22px;
+        
+       
+    }
+    
+    .descripcion p {
+        font-size: 18px;
+        width: 100%;
+      
+    }
     
 
+
+
+/*-------------------------------------------Cuarta Section---------------------------------------------*/
+
+.article-suscription {
+    width: 33% !important;
 }
 
-h2 {
-    font-size: 16px;
+.fourth-section {
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-end;
 }
 
-article p {
-    
-    padding: 10px;
-    font-size: 14px;
+.h3-fourth-section {
+    width: 75%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+.mas-elegido-suscripcion-plata {
+    margin-bottom: 10px !important;
+}
 
+.radio-cantidad-de-cuotas {
+    width: 22%;
+}
 
-
-/************* TABLET *************/ 
-
-
-@media (min-width: 361px){
-
-/** MAIN **/
-
-.seccion-de-productos {
-    width: 100%;
-    display: flex ;
+.second-section {
+    display: flex;
     flex-wrap: wrap;
-}
-
-.producto {
-    display: block;
-    width: 32% ;
-}
-
-
-article {
-    display: flex;
-    width: 90%;
-    
-    margin-top: 20px;
-    justify-content: space-between;
-
-}
-
-
-
-figure {
-    width: 50%;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-figure img {
-    display: flex;
-    width: 100%;
+.section-detalle-producto {
+    width: 90% !important; 
+}
+
+
+
+
+}
+/*----------------7ma media query--------------------*/
+@media(min-width:884px){
+    #figure-first-section {
+        max-width: 500px;
+        
+    }
+
+
+}
+
+/*----------------6ta media query--------------------*/
+@media(min-width:1036px){
+ 
+    main section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1115px;
     
-}
+    }
 
-.descripcion {
-    width: 40%;
-    display: block;
-
-}
-
-h2 {
-    font-size: 17px;
-}
-
-article p {
-    display: flex;
-    padding: 10px;
-    font-size: 16px;
-}
-
-
-
-
-
-
-
-}
-
-
-/************* DESKTOP *************/
-
-@media (min-width: 769px){
-
-article {
-    padding: 15px 30px;
+    #article-primer-section p {
+        width:44%;
+        margin-bottom: 35px;
+        position:absolute;
+        top:126px;
+        left:9px;   
+        font-size: 20px;
+    }
     
-}
+    #article-primer-section h2 {
+        font-size:43px;
+    }
 
-
-
-h2 {
-    font-size: 22px;
-}
-
-article p {
-    display: flex;
-    font-size: 20px;
-    
-}
-
-
-
-
-    
+    #figure-first-section {
+        margin-top: 0;
+    }
+ 
+    #box-title-un-viaje-de-ida {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 }
