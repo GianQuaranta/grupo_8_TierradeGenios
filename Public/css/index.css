@@ -232,7 +232,7 @@ main section article p {
 }
 
 .fourth-section>article:hover {
-    box-shadow: 0px 10px rgba(100,100,100,0.7);  /*No está quedando bien*/
+    box-shadow: 0px 0px 10px 0px rgba(100,100,100,0.7);  /*No está quedando bien*/
 }
 
 .fourth-section article h3 {
