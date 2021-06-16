@@ -14,6 +14,18 @@ const mainRoute = require('./routes/mainRoute')
 app.use(mainRoute);
 
 
+
+/* Productos */
+const productDetail = require('./routes/productRoute');
+app.use(productDetail);
+
+
+
+/* Carrito */
+const cart = require('./routes/cartRoute');
+app.use(cart);
+
+
 /*
 
 app.get("/productDetail", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "productDetail.html")));
