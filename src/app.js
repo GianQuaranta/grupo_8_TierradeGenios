@@ -2,32 +2,43 @@ const express = require ("express");
 const app = express();
 const path = require('path');
 
-app.set('view engine' , 'ejs');
-app.set('views', path.resolve(__dirname, './views') )
-app.set("port",process.env.PORT || 3000)
+/*Requerimiento de archivos de rutas*/
+const mainRoute = require('./routes/mainRoute')
+const productDetail = require('./routes/productRoute');
+const applyScholarship = require('./routes/applyScholarshipRoute')
+const cart = require('./routes/cartRoute');
 
+/*Configuración template engine*/
+app.set('view engine' , 'ejs');
+
+
+/*¿Qué es esto? Agregar etiqueta*/
+app.set('views', path.resolve(__dirname, './views') )
+
+
+/*Configuración puerto servidor*/
+app.set("port",process.env.PORT || 3000)
 app.listen(app.get("port"),()=>console.log("Server Start http://localhost:"+app.get("port")))
 
+
+/*Express static*/
 app.use(express.static(path.resolve(__dirname,"../Public")));
 
-const mainRoute = require('./routes/mainRoute')
+
+/*app.use de todos*/
 app.use(mainRoute);
-
-
-
-/* Productos */
-const productDetail = require('./routes/productRoute');
+app.use(applyScholarship);
 app.use(productDetail);
-
-
-
-/* Carrito */
-const cart = require('./routes/cartRoute');
 app.use(cart);
 
 
-/*
 
+
+
+
+/*FALTAN HACER*/ 
+
+/*
 app.get("/productDetail", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "productDetail.html")));
 
 app.get("/productCart", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "productCart.html")));
@@ -35,10 +46,6 @@ app.get("/productCart", (req,res) => res.sendFile(path.resolve(__dirname, "./vie
 app.get("/register", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "register.html")));
 
 app.get("/login", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "login.html")));
-
-app.get("/about-us", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "about-us.html")));
-
-app.get("/apply-scholarship", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "apply-scholarship.html")));
 
 app.get("/contrasenia", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "contrasenia.html")));
 
