@@ -3,44 +3,21 @@
 
 <!--------------------------------------------------head------------------------------------------------------------->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap">
-    <link rel="stylesheet"
-        href="https://fonts.google.com/specimen/Noto+Serif+JP?category=Serif,Sans+Serif&subset=latin">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Saira+Condensed#pairings">
+    
+    <%- include('./partials/head') %>
+    
     <link rel="stylesheet" href="/css/register.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
     <title>About-us</title>
 </head>
 <!--------------------------------------------------body------------------------------------------------------------->
  <body>
 <!-------------------------------------------------header------------------------------------------------------------> 
 <header>
-    <div class="div-logo">
-        <a href="/"><img class="logo" src="/img/tierra-de-genios-texto-logo-1.png" alt="Logotipo principal"></a>
-    </div>
     
-    
-     <div class="div-navbar">
-            <nav class="navbar">
-                <a href="/about-us">Nosotros</a>
-                <a href="/productDetail" class="boton-becas">Becas</a>
-                <a href="/apply-scholarship" class="boton">Solicitar beca</a>
-                <a href="#" class="boton">Ayudar a becar</a>
-                <a href="/register" class="boton">Registrarse</a> 
-                <a href="/login">Ingresar</a>
-                <a href="/productCart"><i class="fas fa-shopping-cart cart"></i></a>
-            </nav>
-            
-            
-        </div>  
+    <%- include('./partials/header') %>
     
          
-        </header>
+</header>
 
 <!-------------------------------------------------main------------------------------------------------------------>    
     <main>
@@ -96,24 +73,7 @@
 <!--------------------------------------------------footer------------------------------------------------------------->
     <footer>
 
-        <div class="div-footer-nav">
-            <nav>
-
-                <a href=""><i class="fab fa-facebook-square rrss-logos"></i></a>
-                <a href=""><i class="fab fa-instagram rrss-logos"></i></a>
-                <br>
-                <a href="">Terminos y condiciones</a>
-                <br>
-                <a href="">Contacto</a>
-                <p>Todos los derechos reservados</p>
-
-
-            </nav>
-
-        </div>
-        <div class="div-footer-logo">
-            <img class="footer-logo" src="/img/logotipo-tdg.png">
-        </div>
+        <%- include('./partials/footer') %>
 
     </footer>
 
