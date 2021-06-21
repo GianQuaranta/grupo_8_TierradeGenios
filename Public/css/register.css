@@ -76,7 +76,7 @@ header {
 
 main {
     width: 100vw;
-    background-color: #dcdcdc;
+    background-color: white;
 }
 
 .titular-uno {
@@ -84,6 +84,8 @@ main {
     text-align: center;
     margin-top: 30px;
     padding: 3px;
+    padding-bottom: 25px;
+    color: #808080;
 }
 
 .section-registro {
@@ -94,7 +96,11 @@ main {
 
 .registro-uno {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
+    color: #808080;
+    border: 1px solid darkgrey;
+    box-shadow: 0px 0px 7px rgb(100, 100, 100);
+    border-radius: 5px;
 }
 
 .registrarme {
@@ -107,10 +113,16 @@ main {
 .button {
     width: 100px;
     margin-top: 15px;
-    margin-left: 50px;
+    margin-left: 70px;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid darkgrey;
+    color: #808080;
     background-color: white;
+    transition: background-color 450ms infinite;
+}
+
+.button:hover{
+    background-color: #0000FF;
 }
 
 .registro-dos {
@@ -119,6 +131,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #808080;
 }
 
 
@@ -126,12 +139,12 @@ main {
 .form-registro {
     width: 400px;
     padding: 20px;
-    background-color: white;
     margin: auto;
     margin-top: 70px;
     margin-bottom: 50px;
-    border-radius: 4px;
-    color: #808080;
+    border-radius: 5px;
+    border: 1px solid darkgrey;
+    box-shadow: 0px 0px 7px rgb(100, 100, 100);
 }
 
 .titular-dos {
