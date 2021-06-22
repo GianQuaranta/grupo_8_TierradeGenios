@@ -121,18 +121,15 @@ header {
 /*** HEADER ***/
 @media(min-width: 769px) { 
 
-    .logo{
+  /*  .logo{
         width: 234px;
     }
     
     .div-navbar {
-    
         
         display: flex;
         padding: 15px;
-    
-    
-    }
+     }*/
     
     
     .boton {
