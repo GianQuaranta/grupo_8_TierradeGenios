@@ -248,7 +248,7 @@ button {
 
 /* ----------------------------------- TABLET XS -------------------------*/
 
-@media (min-width: 365px) {
+@media (min-width: 361px) {
    
    
 .articulo {
@@ -311,7 +311,7 @@ form p {
 
 /* -------------------------------- DESKTOP --------------------------*/
 
-@media (min-width: 770px){
+@media (min-width: 769px){
 
     main {
         display: flex;
