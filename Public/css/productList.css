@@ -1,0 +1,59 @@
+h1 {
+    text-align: center;
+    margin: 20px auto;
+}
+
+main {
+    width: 100%;
+}
+
+
+.tarjeta {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    
+}
+
+.tarjeta figure {
+    width: 30%;
+}
+
+.tarjeta figure img {
+    width: 70%;
+    display: flex;
+    margin: auto;
+    
+}
+
+.detalle-producto {
+    width: 60%;
+    border: 1px black solid;
+    display: flex;
+    flex-wrap: wrap;
+   
+    
+}
+
+.detalle-producto-descripcion {
+    width: 80%;
+    margin: auto;
+}
+
+.detalle-producto ul {
+    width: 80%;
+    margin: auto;
+}
+
+.detalle-producto-descripcion h3{
+    width: 100%;
+    margin: 5px auto;
+}
+
+.detalle-producto p {
+    width: 100%;
+    margin: 5px auto;
+}
+
