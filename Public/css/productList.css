@@ -1,6 +1,7 @@
 h1 {
     text-align: center;
     margin: 20px auto;
+    text-transform: uppercase;
 }
 
 main {
@@ -11,41 +12,54 @@ main {
 .tarjeta {
     width: 80%;
     margin: 10px auto;
-    display: flex;
+    border-radius: 5px;
+    display: block;
     flex-wrap: wrap;
-    border: 1px solid black;
     
 }
 
+.bronce { 
+    border: 2px solid rgb(112, 1, 1);
+}
+
+.plata {
+    border: 2px solid gray;
+}
+
+.oro {
+    border: 2px solid gold;
+}
+
+
+
 .tarjeta figure {
-    width: 30%;
+    width: 80%;
+    display: flex;
+    margin: auto;
 }
 
 .tarjeta figure img {
-    width: 70%;
-    display: flex;
-    margin: auto;
+    width: 100%;
+    border-bottom: 1px gray solid;
     
+
 }
 
 .detalle-producto {
-    width: 60%;
-    border: 1px black solid;
+    width: 90%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
+    font-size: 14px;
    
     
 }
 
 .detalle-producto-descripcion {
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
-.detalle-producto ul {
-    width: 80%;
-    margin: auto;
-}
 
 .detalle-producto-descripcion h3{
     width: 100%;
@@ -54,6 +68,120 @@ main {
 
 .detalle-producto p {
     width: 100%;
-    margin: 5px auto;
+    margin: 10px auto;
 }
 
+
+.detalle-producto ul {
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding-left: 10%;
+}
+
+.detalle-producto ul li {
+    padding-bottom: 5px;
+    
+}
+
+.contribuir {
+   display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+ul li i {
+    margin-right: 5px;
+}
+
+.contribuir button {
+    width: 70%;
+    margin-bottom: 5px;
+    background-color: rgb(230, 77, 77);
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    margin-top: 5px;
+   
+    
+    
+}
+
+/*************** TABLET *************/
+
+@media (min-width: 550px) {
+
+    .tarjeta {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    figure {
+        width: 50%;
+    }
+
+    figure img {
+        width: 80%;
+    }
+
+    .detalle-producto {
+        width: 50%;
+        font-size: 17px;
+    }
+
+    .contribuir {
+        width: 100%;
+    }
+
+    ul li {
+        font-size: 20px;
+    }
+
+    ul li i {
+        padding-right: 10px;
+    }
+
+
+    .contribuir button {
+        width: 70%;
+    }
+
+
+}
+
+
+/**************** DESKTOP ***********/
+@media (min-width: 769px ){ 
+
+.tarjeta {
+    width: 80%;
+    
+}
+
+.tarjeta figure {
+    width: 30%;
+}
+
+.tarjeta figure img {
+    width: 100%;
+    border-bottom: none;
+    border-right: 1px gray solid;
+}
+
+.detalle-producto
+{
+    width: 55%;
+    padding-left: 20px;
+}
+
+.contribuir {
+    width: 15%;
+}
+
+.contribuir button {
+    width: 90%;
+}
+}
