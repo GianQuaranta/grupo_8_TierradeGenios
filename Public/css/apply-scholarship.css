@@ -225,7 +225,7 @@ main section form label input{
     padding: 2px;
     margin-bottom: 20px;
     height: 30px;
-    border-radius: 4px;
+    border-radius: 8px;
     color: #ffffffff;
     border:none;
 }
