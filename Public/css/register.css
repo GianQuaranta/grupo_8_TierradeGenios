@@ -32,7 +32,8 @@ main {
 }
 
 .registro-uno {
-    width: 400px;
+    width: 100%;
+    height: 15vh;
     padding: 5px;
     color: #808080;
     border: 1px solid darkgrey;
@@ -48,12 +49,12 @@ main {
 }
 
 
-.button  {
-    width: 80%;
+.button {
+    width: 20%;
     font-size: 15px;
     padding:15px;
-    margin-top: 15px;
-    margin-left: 40px;
+    margin-top: 20px;
+    margin-left: 70px;
     border-radius: 5px;
     border: 1px solid black;
     color: #808080;
