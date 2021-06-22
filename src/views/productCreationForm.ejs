@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="css/productCreationForm.css">
+    <title>ProductCreationForm</title>
+</head>
+<body>
+     <header>
+        
+        <%- include('./partials/header') %>
+
+    </header> <!-- FIN HEADER -->
+        
+        <main>
+            <section>
+            <h2>Formulario creación de productos</h2>
+            <hr class="hr-debajo-h2">
+
+            <form action="" method="">
+                <h3>Crea un nuevo producto</h3>
+
+                <label for="name"> 
+                    <input type="text" name="name" id="name" value="" placeholder="Nombre suscripción nueva" required>
+            </label>
+
+                <label for="color"> 
+                    <input type="text" name="color" id="color" value="" placeholder="Color suscripción" required>
+            </label>
+
+<!--------------------------------------rank1------------------------------------------->
+            
+                <label for="rank1name"> 
+                    <input type="text" name="rank1name" id="rank1name" value="" placeholder="Nombre rango 1" required>
+            </label>    
+
+                <label for="rank1description"> 
+                    <input type="text" name="rank1description" id="rank1description" value="" placeholder="Descripción del rango 1" required>
+            </label>
+
+                <fieldset>
+                    <label for="rank1image" class="text-label-input-file">Imagen rango 1</label>
+                    <input type="file" name="rank1image" id="rank1image" value="" required class="input-file"> 
+            </fieldset>
+
+                <label for="minPriceRank1"> 
+                    <input type="number" name="minPriceRank1" id="minPriceRank1" value="" placeholder="Contribución mínima rango 1" required>
+            </label>
+            <hr>
+<!--------------------------------------rank2------------------------------------------->
+                <label for="rank2name"> 
+                    <input type="text" name="rank2name" id="rank2name" value="" placeholder="Nombre rango 2" required>
+            </label>    
+
+                <label for="rank2description"> 
+                    <input type="text" name="rank2description" id="rank2description" value="" placeholder="Descripción del rango 2" required>
+            </label>
+
+                <fieldset>
+                    <label for="rank2image" class="text-label-input-file">Imagen rango 2</label>
+                    <input type="file" name="rank2image" id="rank2image" value="" required class="input-file">
+            </fieldset>
+
+                <label for="minPriceRank2"> 
+                    <input type="number" name="minPriceRank2" id="minPriceRank2" value="" placeholder="Contribución mínima rango 2" required>
+            </label>
+            <hr>    
+<!--------------------------------------rank3------------------------------------------->
+                <label for="rank3name"> 
+                    <input type="text" name="rank3name" id="rank3name" value="" placeholder="Nombre rango 3" required>
+            </label>    
+
+                <label for="rank3description"> 
+                    <input type="text" name="rank3description" id="rank3description" value="" placeholder="Descripción del rango 3" required>
+            </label>
+
+                <fieldset>
+                    <label for="rank3image" class="text-label-input-file">Imagen rango 3</label>
+                    <input type="file" name="rank3image" id="rank3image" value="" required class="input-file">
+            </fieldset>
+
+                <label for="minPriceRank3"> 
+                    <input type="number" name="minPriceRank3" id="minPriceRank3" value="" placeholder="Contribución mínima rango 3" required>
+            </label>
+
+                <fieldset class="fieldset-button">
+                    <button type="submit" class="button-form">Enviar</button>
+                    <button type="reset" class="button-form-reset">Borrar</button>
+            </fieldset>
+
+            </form>
+        </section>        
+            
+        </main>
+
+
+    <footer>
+    
+        <%- include('./partials/footer') %>
+
+    </footer>
+
+</body>
+</html>
