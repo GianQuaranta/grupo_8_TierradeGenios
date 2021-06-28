@@ -11,3 +11,24 @@ En la reunión tratamos los siguientes puntos:
  - Dividimos las tareas de las correcciones.
  - Analisamos lo requerido para la entrega del corriente sprint, el número 3.
  - Dividimos las tareas a realizar y planteamos deadlines para la realización de las mismas. (Para el jueves 17/06/2021)
+
+
+
+**Informe comienzo semana 22/06/2021**
+En la reunión ultimamos detalles para la entrega del sprint número 2.
+- Hixcimos wireframe del listado de productos.
+- Hicimos las vistas de los formularios que nos faltaban, el de creación y edición de producto.
+- Hicimos la vista de listado de productos.
+- Corregimos la vista del carrito (el header se visualizaba con errores).
+- Corregimos la vista del registro.
+- Hicimos lista de cosas a resolver en el siguiente sprint.
+- 
+
+**Informe comienzo semana 28/06/2021**  **Comienzo 3er Sprint**
+- Realizamos la retrospectiva del segundo sprint.
+- Revisamos si los profesores nos dieron la devolución, todavía no está.
+- Enviamos consulta al profesor sobre la devolución del segundo sprint, esperando respuesta.
+- Analizamos la lista de tareas pendientes para este sprint.
+- Actualización tablero trello pendiente, lo realiza Agus.
+- Realización weekly primer semana comienzo tercer sprint (el que estoy escribiendo ahora).
+- Llegamos a la conclusión de que tenemos que ponernos al día con playground y los prácticos para poder realizar todos coordinados este sprint.

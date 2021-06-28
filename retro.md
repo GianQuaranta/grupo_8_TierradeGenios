@@ -51,7 +51,7 @@
     - Practicar mas.
     - Organizar mas.
     - Trabajar mas en equipo.
-    - Optimizar el desarrollo en trello
+    - Optimizar el desarrollo en trello.
 
 3.	***Continuar haciendo.***
     - Mantener la comunicación por los diferentes medios.
@@ -62,12 +62,55 @@
 
 4.	***Hacer menos.***
     - Atrasarnos con el playgrund.
-    - Divagar menos
+    - Divagar menos.
  
 5.	***Dejar de hacer.***
     - Pushear sin previo aviso ( generar merge ).
     - Dejar de modificar parte del codigo que no me corresponde.    
 
+
+
+
+
+# Retrospectiva 3ro Sprint
+
+1.	***Comenzar a hacer.***
+    - Ponernos al día con el estudio.
+    - Ponernos al día con los trabajos prácticos.
+    - Participar en clase todos para agarrar más ritmo.
+    - Aprender de más fuentes de conocimiento además de la información que nos dan en el curso.
+    - Apoyarnos en la comunidad de whatsapp para resolver dudas y crecer.
+    - 
+
+
+2.	***Hacer más.***
+    - Organizar más.
+    - Practicar más.
+    - Trabajar más con el código todos juntos.
+    - Utilizar la documentación existente en la nube ( w3School , develop).
+    - 
+
+
+3.	***Continuar haciendo.***
+    - Reunión semanal que habiamos fijado al principio del proyecto integrador.
+    - Informe semanal.
+    - Mantener la comunicación por los diferentes medios.
+    - Forma de administrar y dividir el trabajo.
+    - Consultar a los tutores cuando surge alguna duda
+    - Seguir avisando cuando pusheemos algo.
+    - 
+
+
+4.	***Hacer menos.***
+    - Atrasarnos en el playground.
+    - Divagar menos en las reuniones.
+    - Atrasarnos con la elaboración del sprint.
+    - 
+ 
+5.	***Dejar de hacer.***
+    - Dejar de confiarnos con las entregas.
+    - Dejar cosas a medias en la página.
+    - 
 
 
 

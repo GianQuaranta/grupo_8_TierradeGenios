@@ -31,15 +31,3 @@ app.use(products);
 app.use(cart);
 app.use(userController);
 
-
-
-
-
-
-
-/*FALTAN HACER*/ 
-
-/*
-app.get("/productDetail", (req,res) => res.sendFile(path.resolve(__dirname, "./views/", "productDetail.html")));
-
-*/
