@@ -105,6 +105,7 @@ Participación en el proceso de selección.
 
 - **Presentación wireframes:**
   ***Link:*** https://marvelapp.com/prototype/gbaf7ah ***(Realizado con marvel.app)***
+  ***Link vista "ProductList":*** https://marvelapp.com/prototype/gg7b95a ***Se agregó en el sprint nro 2***
   
     → **Estructura de alambres:** ***(Realizado con wireframe.cc)***
   1. ***Home:***
@@ -135,7 +136,7 @@ Link: https://drive.google.com/file/d/1-Bl5EIl5aplLoH7_kZqC-FKMGKsNBoDZ/view?usp
         Al ser un modelo de negocio nuevo, diferente, el encontrar referentes de mercado se volvió más una tarea de buscar cualidades y funcionalidades que nos gustan, de páginas que en algún punto, quizás sólo nos gusta su carrito o su presentación del producto, y decidimos que nos gusta como diseño para el nuestro, o algo similar.
 
     1. **[Hostinger](https://www.hostinger.com.ar/)** 
-            → Sacamos la forma de presentar las suscripciones, y las animaciones que se van activando a medida que vamos alcanzando su posición en la página).
+            → Sacamos la forma de presentar las suscripciones, y las animaciones que se van activando a medida que vamos alcanzando su posición en la página.
 
 ![Imagen presentación de producto suscripción hostinger.](Public/img/productos-hostinger.jpg)
 
