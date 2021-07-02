@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const productController = require('../controllers/productControllers');
 const descriptions = require('./description')
+const category = require('../models/category')
 
 const product = {
 
@@ -12,18 +13,52 @@ const product = {
         return products;
     },
 
-    description: ()=> {
+    addOnlyDescription: ()=> {
         const productos = product.all();
-        const productDescription = productos.map(element =>{
-            element.description =  element.description.map(oneDescription => {
+        const productDescription = productos.map(producto =>{
+            producto.description =  producto.description.map(oneDescription => {
                 oneDescription = descriptions.one(oneDescription).description
-                return oneDescription
+                return oneDescription;
+                
         })
 
-        return element
+        return producto;
+        
     } )
     return productDescription;
-}
+    
+},
+
+    addOnlyCategory: ()=> {
+        const productos = product.all();
+        const productCategory = productos.map(producto =>{
+            producto.category = category.one(producto.category) 
+            return producto
+    } )
+
+    return productCategory;
+    
+    },
+
+    addAll: ()=> {
+        const productos = product.all();
+        const productDescription = productos.map(producto =>{
+            producto.description =  producto.description.map(oneDescription => {
+                oneDescription = descriptions.one(oneDescription).description
+                return oneDescription;
+                
+        })
+
+        return producto;
+        
+    } )
+    const productCategory = productDescription.map(producto =>{
+        producto.category = category.one(producto.category) 
+        return producto
+} )
+
+return productCategory;
+    }
 }
 
 

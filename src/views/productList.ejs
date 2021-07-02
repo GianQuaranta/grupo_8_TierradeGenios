@@ -14,9 +14,12 @@
         <h1>Listado de productos</h1>
         <main>
      <!-- BRONCE    --> 
+     <% product.forEach(product => { %>
                 <%- include('./partials/product') %> 
+
+                <% }) %>      
                 
-                <section class="tarjeta bronce">
+              <!--   <section class="tarjeta bronce">
                     <figure>
                         <img src="/img/estrella-producto.jpg" alt="">
                     </figure>
@@ -89,9 +92,9 @@
                         <button type="submit">Contribuir</button>
                     </article>
                 </section>
-                <!--FIN   BRONCE    --> 
+                -FIN   BRONCE    
 
-                <!-- PLATA    --> 
+                PLATA     
                 <section class="tarjeta plata">
                     <figure>
                         <img src="/img/estrella-producto.jpg" alt="">
@@ -163,9 +166,9 @@
                     </article>
                 </section>
 
-                <!-- FIN PLATA    --> 
+                FIN PLATA    
 
-                <!-- ORO  -->
+                 ORO  
                 <section class="tarjeta oro">
                     <figure>
                         <img src="/img/estrella-producto.jpg" alt="">
@@ -214,7 +217,7 @@
                         <button type="submit">Contribuir</button>
                     </article>
                 </section>
-                <!-- FIN ORO  -->
+                 FIN ORO  -->
                
               
             

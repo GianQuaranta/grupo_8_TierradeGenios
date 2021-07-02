@@ -17,9 +17,10 @@
                 
         
             <li><b>DETALLE: </b></li>
-            <% description.forEach(element => { %>
-            <li><i class="fas fa-check"></i><% for(let i = 0; i < description.length ; i++){ description[i]} %></li>
-           
+            <% product.description.forEach(des => { %>
+            <li><i class="fas fa-check"></i><%= des %>  </li>
+               
+
            <% }) %>
         </ul>
 

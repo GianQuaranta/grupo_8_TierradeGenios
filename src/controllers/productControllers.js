@@ -1,3 +1,4 @@
+const descriptions = require('../models/description');
 const modelProducts = require('../models/modelProducts');
 
 
@@ -7,8 +8,9 @@ const productController = {
     },
 
     productList: (req,res) =>{
-        
-        res.render('productList' , {product:modelProducts.all() , description:modelProducts.description()} )
+       return res.send({productos:modelProducts.addAll()})
+       // res.render('productList' , { product:modelProducts.addAll()} )
+       
     },
     create: (req,res) => {
         res.render("productCreationForm")

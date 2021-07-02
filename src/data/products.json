@@ -1,27 +1,73 @@
-[ {
-    "id" : "1",
-    "name" : "bronce",
-    "description" : [1,2,3],
-    "image": "estrella-producto.jpg",
-    "min": 0,
-    "max": 50
-     
+[{
+        "id": "1",
+        "name": "Ciudadano emblema",
+        "description": [1, 2, 3],
+        "image": "estrella-producto.jpg",
+        "min": 0,
+        "max": 150,
+        "category": 1
+
+    },
+    {
+        "id": "1",
+        "name": "Ciudadano ilustre",
+        "description": [1, 2, 3],
+        "image": "estrella-producto.jpg",
+        "min": 151,
+        "max": 300,
+        "category": 1
+
+    }, {
+        "id": "1",
+        "name": "Patriota",
+        "description": [1, 2, 3],
+        "image": "estrella-producto.jpg",
+        "min": 301,
+        "max": 450,
+        "category": 1
+
     },
 
-{
-    "id" : "2",
-    "name" : "plata",
-    "description" : [1,2,3,4],
-    "image": "estrella-producto.jpg",
-    "min": 50,
-    "max": 100 
-},
+    {
+        "id": "2",
+        "name": "Icono",
+        "description": [1, 2, 3, 4],
+        "image": "estrella-producto.jpg",
+        "min": 451,
+        "max": 750
+    },
+    {
+        "id": "2",
+        "name": "Eminencia",
+        "description": [1, 2, 3, 4],
+        "image": "estrella-producto.jpg",
+        "min": 751,
+        "max": 1500
+    },{
+        "id": "2",
+        "name": "Procer",
+        "description": [1, 2, 3, 4],
+        "image": "estrella-producto.jpg",
+        "min": 1501,
+        "max": 3750
+    },
 
-{
-    "id" : "3",
-    "name" : "oro",
-    "description" : [1,2,3,4,5],
-    "image": "estrella-producto.jpg",
-    "min": 150,
-    "max": 200 
-}]
+    {
+        "id": "3",
+        "name": "Magno",
+        "description": [1, 2, 3, 4, 5],
+        "image": "estrella-producto.jpg",
+        "min": 3751,
+        "max": 7500
+    }
+    ,
+
+    {
+        "id": "3",
+        "name": "Egregio",
+        "description": [1, 2, 3, 4, 5],
+        "image": "estrella-producto.jpg",
+        "min": 7501,
+        "max": "En adelante."
+    }
+]
