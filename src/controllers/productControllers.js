@@ -1,10 +1,14 @@
+const modelProducts = require('../models/modelProducts');
+
+
 const productController = {
     vistaDeLosProductos: (req,res)=> {
         res.render('productDetail')
     },
 
     productList: (req,res) =>{
-        res.render('productList')
+        
+        res.render('productList' , {product:modelProducts.all() , description:modelProducts.description()} )
     },
     create: (req,res) => {
         res.render("productCreationForm")

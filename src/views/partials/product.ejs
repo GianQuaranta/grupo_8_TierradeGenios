@@ -1,0 +1,33 @@
+
+<% product.forEach(product => { %>
+    
+
+<section class="tarjeta bronce">
+    <figure>
+        <img src="/img/estrella-producto.jpg" alt="">
+    </figure>
+     <article class="detalle-producto"> 
+         <section class="detalle-producto-descripcion">
+             <h3>Categoria suscripción: <b>BRONCE</b></h3>
+            <p>Rango: <b><%= product.name %></b></p>
+            <p>Rango de donacion : <b> AR$ <%=product.min %> - <%= product.max %></b></p>
+          </section>
+        <ul>
+            
+                
+        
+            <li><b>DETALLE: </b></li>
+            <% description.forEach(element => { %>
+            <li><i class="fas fa-check"></i><% for(let i = 0; i < description.length ; i++){ description[i]} %></li>
+           
+           <% }) %>
+        </ul>
+
+        
+    </article>
+    <article class="contribuir">
+        <button type="submit"> Contribuir</button>
+    </article>
+   
+</section>
+<% }) %> 

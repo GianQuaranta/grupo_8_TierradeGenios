@@ -1,0 +1,27 @@
+[ {
+    "id" : "1",
+    "name" : "bronce",
+    "description" : [1,2,3],
+    "image": "estrella-producto.jpg",
+    "min": 0,
+    "max": 50
+     
+    },
+
+{
+    "id" : "2",
+    "name" : "plata",
+    "description" : [1,2,3,4],
+    "image": "estrella-producto.jpg",
+    "min": 50,
+    "max": 100 
+},
+
+{
+    "id" : "3",
+    "name" : "oro",
+    "description" : [1,2,3,4,5],
+    "image": "estrella-producto.jpg",
+    "min": 150,
+    "max": 200 
+}]
