@@ -41,18 +41,7 @@ const product = {
 
     addAll: ()=> {
         const productos = product.all();
-        //const productDescription = productos.map(producto =>{
-        /*    producto.description =  producto.description.map(oneDescription => {
-                oneDescription = descriptions.one(oneDescription).description
-                return oneDescription;
-                
-        })
-
-        return producto;
-        
-    })
-*/
-
+       
         return product.all().map(producto =>{
             producto.category = category.one(producto.category) 
             return producto
