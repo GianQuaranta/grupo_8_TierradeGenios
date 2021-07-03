@@ -8,7 +8,6 @@ const productController = {
     },
 
     productList: (req,res) =>{
-       //return res.send({productos:modelProducts.addAll()})
        res.render('productList' , { products:modelProducts.addAll()} )   
        
     },
@@ -25,6 +24,10 @@ const productController = {
     update: (req,res) => {
         //Falta la lógica
         res.send("Falta la lógica")
+    },
+    detailId: (req,res) => {
+        //res.send(modelProducts.one(req.params.id))
+        res.render("detailId", {product: modelProducts.one(req.params.id)})
     }
 
 }

@@ -42,6 +42,7 @@ const product = {
     addAll: ()=> {
         const productos = product.all();
        
+
         return product.all().map(producto =>{
             producto.category = category.one(producto.category) 
             return producto
@@ -58,12 +59,14 @@ const product = {
     }); 
 
     },
+
     one:(id) => {
-        let all = this.addAll();
+        let all = product.addAll();
         return all.find(p => p.id == id)
     },
+
     create: (data,file) => {
-        let all = this.all();
+        let all = product.all();
         let newProduct = {
             id: all.lenght > 0 ? all[all.lenght -1].id + 1 : 1,
             name: data.name,
@@ -77,7 +80,6 @@ const product = {
         all.push(newProduct);
         // escribir en el JSON
     }
-    
 }
 
 

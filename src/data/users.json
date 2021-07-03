@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "firstName": "",
+        "lastName": "",
+        "email": 0,
+        "birthdate": "",
+        "avatar": "estrella-producto.jpg",
+        "adress": "",
+        "phoneNumber": "",
+        "country": "",
+        "password": ""
+
+    }
+]

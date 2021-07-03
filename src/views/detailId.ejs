@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="css/productList.css">
+    <title>Document</title>
+</head>
+<body>
+     <header>
+        
+        <%- include('./partials/header') %>
+
+    </header> <!-- FIN HEADER -->
+        <h1>Detalle producto</h1>
+        <main>
+    
+            <section class="tarjeta bronce">
+                <figure>
+                    <img src="/img/<%=product.image%>" alt="">
+                </figure>
+                 <article class="detalle-producto"> 
+                     <section class="detalle-producto-descripcion">
+                         <h3>Categoria suscripción: <b><%= product.category.name %>  </b> </b></h3>
+                        <p>Rango: <b><%= product.name %></b></p>
+                        <p>Rango de donacion : <b> AR$ <%=product.min %> - <%= product.max %></b></p>
+                      </section>
+                    <ul>
+                        
+                        <li><b>DETALLE: </b></li>
+                        <% product.description.forEach(des => { %>
+                        <li><i class="fas fa-check"></i><%= des %>  </li>
+                           
+            
+                       <% }) %>
+                    
+                        
+                    </ul>
+            
+                    
+                </article>
+                <article class="contribuir">
+                    <button type="submit"> Contribuir</button>
+                </article>
+               
+            </section>
+
+        </main>
+
+
+    <footer>
+    
+        <%- include('./partials/footer') %>
+
+    </footer>
+
+</body>
+</html>
