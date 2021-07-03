@@ -60,7 +60,27 @@ const product = {
 
         return productCategory;
 
+    },
+    one:(id) => {
+        let all = this.addAll();
+        return all.find(p => p.id == id)
+    },
+    create: (data,file) => {
+        let all = this.all();
+        let newProduct = {
+            id: all.lenght > 0 ? all[all.lenght -1].id + 1 : 1,
+            name: data.name,
+            description: data.description,
+            image: file.filename,
+            min: data.min,
+            max: data.max,
+            category: data.category,
+            range: data.range
+        };
+        all.push(newProduct);
+        // escribir en el JSON
     }
+    
 }
 
 
