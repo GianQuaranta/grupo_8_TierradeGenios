@@ -1,73 +1,91 @@
 [{
-        "id": "1",
+        "id": 1,
         "name": "Ciudadano emblema",
         "description": [1, 2, 3],
         "image": "estrella-producto.jpg",
         "min": 0,
         "max": 150,
-        "category": 1
+        "category": 1,
+        "range": "1"
 
-    },
+    }
+    ,
     {
-        "id": "1",
+        "id": 2,
         "name": "Ciudadano ilustre",
         "description": [1, 2, 3],
         "image": "estrella-producto.jpg",
         "min": 151,
         "max": 300,
-        "category": 1
+        "category": 1,
+        "range": "2"
 
-    }, {
-        "id": "1",
+    }
+    ,
+    {
+        "id": 3,
         "name": "Patriota",
         "description": [1, 2, 3],
         "image": "estrella-producto.jpg",
         "min": 301,
         "max": 450,
-        "category": 1
+        "category": 1,
+        "range": "3"
 
-    },
-
+    }
+    ,
     {
-        "id": "2",
+        "id": 4,
         "name": "Icono",
         "description": [1, 2, 3, 4],
         "image": "estrella-producto.jpg",
         "min": 451,
-        "max": 750
-    },
+        "max": 750,
+        "category": 2,
+        "range": "1"
+    }
+    ,
     {
-        "id": "2",
+        "id": 5,
         "name": "Eminencia",
         "description": [1, 2, 3, 4],
         "image": "estrella-producto.jpg",
         "min": 751,
-        "max": 1500
-    },{
-        "id": "2",
+        "max": 1500,
+        "category": 2,
+        "range": "2"
+    }
+    ,
+    {
+        "id": 6,
         "name": "Procer",
         "description": [1, 2, 3, 4],
         "image": "estrella-producto.jpg",
         "min": 1501,
-        "max": 3750
-    },
-
+        "max": 3750,
+        "category": 2,
+        "range": "3"
+    }
+    ,
     {
-        "id": "3",
+        "id": 7,
         "name": "Magno",
         "description": [1, 2, 3, 4, 5],
         "image": "estrella-producto.jpg",
         "min": 3751,
-        "max": 7500
+        "max": 7500,
+        "category": 3,
+        "range": "1"
     }
     ,
-
     {
-        "id": "3",
+        "id": 8,
         "name": "Egregio",
         "description": [1, 2, 3, 4, 5],
         "image": "estrella-producto.jpg",
         "min": 7501,
-        "max": "En adelante."
+        "max": "En adelante.",
+        "category": 3,
+        "range": "2"
     }
 ]

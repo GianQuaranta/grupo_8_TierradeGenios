@@ -2,22 +2,19 @@
     {
         "id": "1",
         "name": "bronce",
-        "color": "brown",
-        "range": "3"
+        "color": "brown"
 
     },
     {
         "id": "1",
         "name": "plata",
         "color": "grey",
-        "range": "3"
 
     },
     {
         "id": "1",
         "name": "oro",
-        "color": "gold",
-        "range": "2"
+        "color": "gold"
 
     }
 ]
