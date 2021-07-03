@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const productController = require('../controllers/productControllers');
 const descriptions = require('./description')
 const category = require('../models/category')
 
@@ -51,13 +50,16 @@ const product = {
 
         return producto;
         
-    } )
-    const productCategory = productDescription.map(producto =>{
-        producto.category = category.one(producto.category) 
-        return producto
-} )
+    })
 
-return productCategory;
+        const productCategory = productDescription.map(producto =>{
+            producto.category = category.one(producto.category) 
+            return producto
+
+    })
+
+        return productCategory;
+
     }
 }
 

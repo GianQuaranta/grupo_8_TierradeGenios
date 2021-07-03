@@ -8,20 +8,15 @@
     </figure>
      <article class="detalle-producto"> 
          <section class="detalle-producto-descripcion">
-             <h3>Categoria suscripción: <b>BRONCE</b></h3>
+             <h3>Categoria suscripción: <b>FALTA </b> </b></h3>
             <p>Rango: <b><%= product.name %></b></p>
             <p>Rango de donacion : <b> AR$ <%=product.min %> - <%= product.max %></b></p>
           </section>
         <ul>
             
-                
+            <%- include('./partials/detailProduct') %>
         
-            <li><b>DETALLE: </b></li>
-            <% product.description.forEach(des => { %>
-            <li><i class="fas fa-check"></i><%= des %>  </li>
-               
-
-           <% }) %>
+            
         </ul>
 
         

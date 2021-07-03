@@ -8,8 +8,8 @@ const productController = {
     },
 
     productList: (req,res) =>{
-       return res.send({productos:modelProducts.addAll()})
-       // res.render('productList' , { product:modelProducts.addAll()} )
+       //return res.send({productos:modelProducts.addAll()})
+       res.render('productList' , { product:modelProducts.addAll()} )
        
     },
     create: (req,res) => {
