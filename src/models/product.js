@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const descriptions = require('./description')
-const category = require('../models/category')
+const category = require('./category')
 
 const product = {
 
@@ -41,8 +41,8 @@ const product = {
 
     addAll: ()=> {
         const productos = product.all();
-        const productDescription = productos.map(producto =>{
-            producto.description =  producto.description.map(oneDescription => {
+        //const productDescription = productos.map(producto =>{
+        /*    producto.description =  producto.description.map(oneDescription => {
                 oneDescription = descriptions.one(oneDescription).description
                 return oneDescription;
                 
@@ -51,14 +51,22 @@ const product = {
         return producto;
         
     })
+*/
 
-        const productCategory = productDescription.map(producto =>{
+        return product.all().map(producto =>{
             producto.category = category.one(producto.category) 
             return producto
 
-    })
+    }).map(producto =>{
+        producto.description =  producto.description.map(oneDescription => {
+        oneDescription = descriptions.one(oneDescription).description
+        return oneDescription;
+                
+        })
 
-        return productCategory;
+        return producto;
+        
+    }); 
 
     }
 }

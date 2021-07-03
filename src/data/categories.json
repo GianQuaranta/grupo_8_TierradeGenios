@@ -1,18 +1,18 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "name": "bronce",
         "color": "brown"
 
     },
     {
-        "id": "1",
+        "id": 2,
         "name": "plata",
-        "color": "grey",
+        "color": "grey"
 
     },
     {
-        "id": "1",
+        "id": 3,
         "name": "oro",
         "color": "gold"
 

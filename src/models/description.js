@@ -4,7 +4,7 @@ const path = require('path');
 const descriptions = {
     
     all: ()=>{
-        const directory = path.resolve(__dirname, '../data','description.json')
+        const directory = path.resolve(__dirname, '../data','descriptions.json')
         const readJson = fs.readFileSync(directory,'utf-8');
         const products = JSON.parse(readJson);
         return products;

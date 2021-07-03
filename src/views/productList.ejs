@@ -14,8 +14,8 @@
         <h1>Listado de productos</h1>
         <main>
      <!-- BRONCE    --> 
-     <% product.forEach(product => { %>
-                <%- include('./partials/product') %> 
+     <% products.forEach(product => { %>
+                <%- include('./partials/product',{product}) %> 
 
                 <% }) %>      
                 

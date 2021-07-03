@@ -1,5 +1,5 @@
 const descriptions = require('../models/description');
-const modelProducts = require('../models/modelProducts');
+const modelProducts = require('../models/product');
 
 
 const productController = {
@@ -9,7 +9,7 @@ const productController = {
 
     productList: (req,res) =>{
        //return res.send({productos:modelProducts.addAll()})
-       res.render('productList' , { product:modelProducts.addAll()} )
+       res.render('productList' , { products:modelProducts.addAll()} )   
        
     },
     create: (req,res) => {
