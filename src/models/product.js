@@ -47,16 +47,12 @@ const product = {
             producto.category = category.one(producto.category) 
             return producto
 
-    }).map(producto =>{
-        producto.privileges =  producto.privileges.map(oneDescription => {
-        oneDescription = descriptions.one(oneDescription).description
-        return oneDescription;
-                
+    }).map(product =>{
+        product.privileges = product.privileges.map(privilege => {
+            return descriptions.one(privilege)
         })
-
-        return producto;
-        
-    }); 
+        return product
+    })  
 
     },
 
@@ -85,7 +81,38 @@ const product = {
         all.push(newProduct);
         fs.writeFileSync(directory,JSON.stringify(all,null,2));
         return true
+    },
+
+    one: (id)=> {
+        let all= product.all();
+        let findElement = all.find(element => element.id == id)
+        return findElement;
+    },
+
+    edit: function (data,file,id){
+        const directory = path.resolve(__dirname,"../data", "products.json");
+        let productos = product.all();
+        productos.map(product => {
+            if(product.id == id) {
+                product.name = data.name,
+                product.privileges = data.privileges,
+                product.category = data.category,
+                product.image = file.filename,
+                product.min = data.min, 
+                product.max = data.max,
+                product.range = data.range
+
+                return product;
+
+            }
+            return product;
+        })
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true
     }
+
+
+
 }
 
 

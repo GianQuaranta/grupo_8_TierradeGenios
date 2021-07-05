@@ -26,11 +26,11 @@ router.get("/create", productController.create);
 
 router.get('/:id' , productController.detailId);
 
-router.get("/productEditingForm", productController.edit);
+router.get("/:id/edit", productController.edit);
 
 router.post("/create", upload.single('rank1image'),productController.saveProduct);
 
-router.put("/productEditingForm", productController.update);
+router.put("/:id", upload.single('rank1image'), productController.update);
 
 
 module.exports = router;

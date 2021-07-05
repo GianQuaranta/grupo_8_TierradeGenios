@@ -8,7 +8,9 @@ const productController = {
     },
 
     productList: (req,res) =>{
-       res.render('productList' , { products:modelProducts.addAll()} )   
+        return res.send({ products:modelProducts.addAll()})
+      // res.render('productList' , { products:modelProducts.addAll()} )  
+
        
     },
     create: (req,res) => {
@@ -21,11 +23,15 @@ const productController = {
         
     },
     edit: (req,res) => {
-        res.render("productEditingForm")
+        //res.send(modelProducts.one(req.params.id));
+        res.render("productEditingForm", {product: modelProducts.one(req.params.id)});
+        
     },
     update: (req,res) => {
         //Falta la lógica
-        res.send("Falta la lógica")
+        //res.send("Falta la lógica")
+        let result = modelProducts.edit(req.body,req.file,req.params.id)
+		return result == true ? res.redirect("/products/") : res.send("Error al cargar la información");
     },
     detailId: (req,res) => {
         //res.send(modelProducts.one(req.params.id))
