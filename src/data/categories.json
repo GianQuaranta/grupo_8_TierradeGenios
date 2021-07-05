@@ -2,19 +2,37 @@
     {
         "id": 1,
         "name": "bronce",
-        "color": "brown"
+        "color": "brown",
+        "privileges": [
+            1,
+            2,
+            3
+          ]
 
     },
     {
         "id": 2,
         "name": "plata",
-        "color": "grey"
+        "color": "grey",
+        "privileges": [
+            1,
+            2,
+            3,
+            4
+          ]
 
     },
     {
         "id": 3,
         "name": "oro",
-        "color": "gold"
+        "color": "gold",
+        "privileges": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
 
     }
 ]

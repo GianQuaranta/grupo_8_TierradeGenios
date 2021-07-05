@@ -7,7 +7,7 @@ const product = {
 
     all: ()=>{
         const directory = path.resolve(__dirname, '../data','products.json')
-        const readJsonn = fs.readFileSync(directory,'utf-8');
+        const readJsonn = fs.readFileSync(directory,{encoding:'utf-8'});
         const products = JSON.parse(readJsonn);
         return products;
     },
@@ -48,7 +48,7 @@ const product = {
             return producto
 
     }).map(producto =>{
-        producto.description =  producto.description.map(oneDescription => {
+        producto.privileges =  producto.privileges.map(oneDescription => {
         oneDescription = descriptions.one(oneDescription).description
         return oneDescription;
                 
@@ -66,19 +66,25 @@ const product = {
     },
 
     create: (data,file) => {
+        const directory = path.resolve(__dirname, '../data','products.json')
         let all = product.all();
+        let categorySelect = category.one(data.category)
+        let newPrivilege = descriptions.create(data.privilege)
+        categorySelect.privileges.push(newPrivilege);
+
         let newProduct = {
-            id: all.lenght > 0 ? all[all.lenght -1].id + 1 : 1,
+            id: all.length > 0 ? all[all.length -1].id + 1 : 2,
             name: data.name,
-            description: data.description,
+            privileges: categorySelect.privileges,
             image: file.filename,
             min: data.min,
             max: data.max,
-            category: data.category,
+            category: categorySelect.id,
             range: data.range
         };
         all.push(newProduct);
-        // escribir en el JSON
+        fs.writeFileSync(directory,JSON.stringify(all,null,2));
+        return true
     }
 }
 

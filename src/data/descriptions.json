@@ -1,21 +1,42 @@
-[{
+[
+  {
     "id": 1,
     "description": "Acceso al tablero de becados propios."
-},
-{
+  },
+  {
     "id": 2,
     "description": "Acceso al flujo de dinero."
-},
-{
+  },
+  {
     "id": 3,
     "description": "Certificado digital."
-},
-{
+  },
+  {
     "id": 4,
     "description": "Acceso al tablero de becados universal."
-},
-{
+  },
+  {
     "id": 5,
     "description": "Participacion en la seleccion de becados."
-}
+  },
+  {
+    "id": 6,
+    "description": "Ser mi amigo"
+  },
+  {
+    "id": 7,
+    "description": "Salir con edu"
+  },
+  {
+    "id": 8,
+    "description": "Cojer a gian"
+  },
+  {
+    "id": 9,
+    "description": "Ser mi amigo"
+  },
+  {
+    "id": 10,
+    "description": "Hacer cosas "
+  }
 ]

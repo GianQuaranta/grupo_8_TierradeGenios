@@ -17,71 +17,49 @@
             <h2>Formulario creación de productos</h2>
             <hr class="hr-debajo-h2">
 
-            <form action="" method="">
+      
+            <form action="/products/create" method="POST" enctype="multipart/form-data">
                 <h3>Crea un nuevo producto</h3>
 
-                <label for="name"> 
-                    <input type="text" name="name" id="name" value="" placeholder="Nombre suscripción nueva" required>
-            </label>
-
-                <label for="color"> 
-                    <input type="text" name="color" id="color" value="" placeholder="Color suscripción" required>
-            </label>
-
+                <select name="category" id="category">
+                    <option value="" disabled selected>Crear categoria</option>
+                    <option value="1">Bronce</option>
+                    <option value="2">Plata</option>
+                    <option value="3">Oro</option>
+                </select>
+    
+               
 <!--------------------------------------rank1------------------------------------------->
             
-                <label for="rank1name"> 
-                    <input type="text" name="rank1name" id="rank1name" value="" placeholder="Nombre rango 1" required>
+                <label for="name"> 
+                    <input type="text" name="name" id="name" value="" placeholder="Nombre" required>
             </label>    
 
-                <label for="rank1description"> 
-                    <input type="text" name="rank1description" id="rank1description" value="" placeholder="Descripción del rango 1" required>
-            </label>
+            <fieldset>
+                <label for="privilege" class="text-label-input-file">Nuevo privilegio</label>
+                <input type="text" name="privilege" id="privilege" value="" class="input-file"> 
+        </fieldset>
+             
 
                 <fieldset>
                     <label for="rank1image" class="text-label-input-file">Imagen rango 1</label>
-                    <input type="file" name="rank1image" id="rank1image" value="" required class="input-file"> 
+                    <input type="file" name="rank1image" id="rank1image" value="" class="input-file"> 
             </fieldset>
 
-                <label for="minPriceRank1"> 
-                    <input type="number" name="minPriceRank1" id="minPriceRank1" value="" placeholder="Contribución mínima rango 1" required>
-            </label>
+              <!--   <label for="min"> 
+                    <input type="number" name="min" id="min" value="" placeholder="Contribución mínima rango" required>
+                 </label>
+
+                 <label for="max"> 
+                    <input type="number" name="max" id="max" value="" placeholder="Contribución maxima rango" required>
+                 </label>
+
+                <label for="range"> 
+                    <input type="number" name="range" id="range" value="" min="1" max="3" placeholder="Seleccione un rango dentro de la categoria" required>
+                 </label>--> 
             <hr>
-<!--------------------------------------rank2------------------------------------------->
-                <label for="rank2name"> 
-                    <input type="text" name="rank2name" id="rank2name" value="" placeholder="Nombre rango 2">
-            </label>    
+            
 
-                <label for="rank2description"> 
-                    <input type="text" name="rank2description" id="rank2description" value="" placeholder="Descripción del rango 2">
-            </label>
-
-                <fieldset>
-                    <label for="rank2image" class="text-label-input-file">Imagen rango 2</label>
-                    <input type="file" name="rank2image" id="rank2image" value="" class="input-file">
-            </fieldset>
-
-                <label for="minPriceRank2"> 
-                    <input type="number" name="minPriceRank2" id="minPriceRank2" value="" placeholder="Contribución mínima rango 2">
-            </label>
-            <hr>    
-<!--------------------------------------rank3------------------------------------------->
-                <label for="rank3name"> 
-                    <input type="text" name="rank3name" id="rank3name" value="" placeholder="Nombre rango 3">
-            </label>    
-
-                <label for="rank3description"> 
-                    <input type="text" name="rank3description" id="rank3description" value="" placeholder="Descripción del rango 3">
-            </label>
-
-                <fieldset>
-                    <label for="rank3image" class="text-label-input-file">Imagen rango 3</label>
-                    <input type="file" name="rank3image" id="rank3image" value="" class="input-file">
-            </fieldset>
-
-                <label for="minPriceRank3"> 
-                    <input type="number" name="minPriceRank3" id="minPriceRank3" value="" placeholder="Contribución mínima rango 3">
-            </label>
 
                 <fieldset class="fieldset-button">
                     <button type="submit" class="button-form">Enviar</button>

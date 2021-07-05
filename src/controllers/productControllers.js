@@ -15,8 +15,10 @@ const productController = {
         res.render("productCreationForm")
     },
     saveProduct: (req,res) => {
-        //Falta la lógica
-        res.send("Falta la lógica")
+        let result = modelProducts.create(req.body,req.file)
+        res.redirect('/products')
+       // return result == true ? res.redirect('/products'):*/res.send('Error al cargar la informacion')
+        
     },
     edit: (req,res) => {
         res.render("productEditingForm")
