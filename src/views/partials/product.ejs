@@ -13,7 +13,7 @@
             
             <li><b>DETALLE: </b></li>
             <% product.privileges.forEach(des => { %>
-            <li><i class="fas fa-check"></i><%= des %>  </li>
+            <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
                
 
            <% }) %>
@@ -23,6 +23,7 @@
 
         
     </article>
+    <a href="/products/<%= product.id %>">Ver producto</a>
     <article class="contribuir">
         <button type="submit"> Contribuir</button>
     </article>

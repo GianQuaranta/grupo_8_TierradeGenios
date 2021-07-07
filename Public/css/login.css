@@ -93,8 +93,17 @@ color: white;
 .olvide{
     font-size: 12px;
     text-align: center;
+    width:50%;
+    margin: 5px;
+    margin-left: 25%;
+
+}
+
+.crear{
+    font-size: 12px;
+    text-align: center;
     width: 50%;
-    margin: 30px;
+    margin: 5px;
     margin-left: 25%;
 
 }

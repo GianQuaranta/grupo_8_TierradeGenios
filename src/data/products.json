@@ -1,29 +1,18 @@
 [
   {
-    "id": 2,
-    "name": "Silver",
-    "privileges": [
-      1,
-      2,
-      3,
-      10
-    ],
-    "image": "rank1image-1625511601439.jpg",
-    "category": 1
-  },
-  {
     "id": 3,
-    "name": "AG",
+    "name": "Gian",
     "privileges": [
       1,
       2,
       3,
-      4,
-      5,
-      12
+      15
     ],
-    "image": "rank1image-1625513236952.jpg",
-    "category": 3
+    "image": "rank1image-1625679075053.jpg",
+    "category": 1,
+    "min": "3",
+    "max": "34",
+    "range": "2"
   },
   {
     "id": 4,
@@ -41,12 +30,19 @@
     "category": 2
   },
   {
-    "id": 5,
-    "image": "rank1image-1625521858761.jpg",
-    "name": "Gian",
-    "category": "3",
-    "min": "2",
-    "max": "40",
-    "range": "3"
+    "id": 6,
+    "name": "La nueva",
+    "privileges": [
+      1,
+      2,
+      3,
+      4,
+      18
+    ],
+    "image": "rank1image-1625681678864.jpg",
+    "min": "4",
+    "max": "34",
+    "category": 2,
+    "range": "2"
   }
 ]

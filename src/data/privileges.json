@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "privilege": "Acceso al tablero de becados propios."
+  },
+  {
+    "id": 2,
+    "privilege": "Acceso al flujo de dinero."
+  },
+  {
+    "id": 3,
+    "privilege": "Certificado digital."
+  },
+  {
+    "id": 4,
+    "privilege": "Acceso al tablero de becados universal."
+  },
+  {
+    "id": 5,
+    "privilege": "Participacion en la seleccion de becados."
+  },
+  {
+    "id": 6,
+    "privilege": "Ser mi amigo"
+  },
+  {
+    "id": 7,
+    "privilege": "Salir con edu"
+  },
+  {
+    "id": 8,
+    "privilege": "Cojer a gian"
+  },
+  {
+    "id": 9,
+    "privilege": "Ser mi amigo"
+  },
+  {
+    "id": 10,
+    "privilege": "Hacer cosas "
+  },
+  {
+    "id": 11,
+    "privilege": "Suma"
+  },
+  {
+    "id": 12,
+    "privilege": "Suma"
+  },
+  {
+    "id": 13,
+    "privilege": "Suma"
+  },
+  {
+    "id": 14,
+    "privilege": "Suma"
+  },
+  {
+    "id": 15,
+    "privilege": "3, 4"
+  },
+  {
+    "id": 16,
+    "privilege": "Aguante Uruguay"
+  },
+  {
+    "id": 17,
+    "privilege": "2,3 "
+  },
+  {
+    "id": 18,
+    "privilege": "1"
+  }
+]

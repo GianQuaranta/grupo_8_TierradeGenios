@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const descriptions = require('./description')
+const privileges = require('./privileges')
 const category = require('./category')
 
 const product = {
@@ -12,19 +12,19 @@ const product = {
         return products;
     },
 
-    addOnlyDescription: ()=> {
+    addOnlyPrivilege: ()=> {
         const productos = product.all();
-        const productDescription = productos.map(producto =>{
-            producto.description =  producto.description.map(oneDescription => {
-                oneDescription = descriptions.one(oneDescription).description
-                return oneDescription;
+        const productPrivilege = productos.map(producto =>{
+            producto.privilege =  producto.privilege.map(onePrivilege => {
+                onePrivilege = privilege.one(onePrivilege).privilege
+                return onePrivilege;
                 
         })
 
         return producto;
         
     } )
-    return productDescription;
+    return productPrivilege;
     
 },
 
@@ -49,7 +49,7 @@ const product = {
 
     }).map(product =>{
         product.privileges = product.privileges.map(privilege => {
-            return descriptions.one(privilege)
+            return privileges.one(privilege)
         })
         return product
     })  
@@ -65,11 +65,11 @@ const product = {
         const directory = path.resolve(__dirname, '../data','products.json')
         let all = product.all();
         let categorySelect = category.one(data.category)
-        let newPrivilege = descriptions.create(data.privilege)
+        let newPrivilege = privileges.create(data.privilege)
         categorySelect.privileges.push(newPrivilege);
 
         let newProduct = {
-            id: all.length > 0 ? all[all.length -1].id + 1 : 2,
+            id: all.length > 0 ? all[all.length -1].id + 1 : 1,
             name: data.name,
             privileges: categorySelect.privileges,
             image: file.filename,
@@ -90,13 +90,16 @@ const product = {
     },
 
     edit: function (data,file,id){
-        const directory = path.resolve(__dirname,"../data", "products.json");
+        const directory = path.resolve(__dirname,"../data", "products.json"); //ruta donde va a guardar la información
+        let categorySelect = category.one(data.category) //busca una categoría de acuerdo al id que recibe de la data
+        let newPrivilege = data.privilege.length > 0 ? privileges.create(data.privilege): null; //si hay algún nuevo privilegio lo agrega, sino nada 
+        let addPrivilegeCategory = newPrivilege ? categorySelect.privileges.push(newPrivilege): categorySelect.privileges; //
         let productos = product.all();
         productos.map(product => {
             if(product.id == id) {
                 product.name = data.name,
-                product.privileges = data.privileges,
-                product.category = data.category,
+                product.privileges = addPrivilegeCategory,
+                product.category = categorySelect.id,
                 product.image = file.filename,
                 product.min = data.min, 
                 product.max = data.max,
@@ -109,9 +112,19 @@ const product = {
         })
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true
+    },
+
+    delete: function (id) {
+        const directory = path.resolve(__dirname,"../data","products.json")
+        let productos = this.all();
+        let deleted = this.one(id);
+        // eliminamos la imagen de la carpeta upload
+        fs.unlinkSync(path.resolve(__dirname,"../../public/img/products",deleted.image))
+        // filtarmos el producto que deaseamos eliminar
+        productos = productos.filter(producto => producto.id != deleted.id )
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true;
     }
-
-
 
 }
 

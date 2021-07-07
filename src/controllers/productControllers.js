@@ -1,4 +1,4 @@
-const descriptions = require('../models/description');
+const privileges = require('../models/privileges');
 const modelProducts = require('../models/product');
 
 
@@ -8,8 +8,8 @@ const productController = {
     },
 
     productList: (req,res) =>{
-        return res.send({ products:modelProducts.addAll()})
-      // res.render('productList' , { products:modelProducts.addAll()} )  
+       //return res.send({ products:modelProducts.addAll()}) 
+        res.render('productList' , { products:modelProducts.addAll()} )  
 
        
     },
@@ -28,15 +28,18 @@ const productController = {
         
     },
     update: (req,res) => {
-        //Falta la lógica
-        //res.send("Falta la lógica")
         let result = modelProducts.edit(req.body,req.file,req.params.id)
 		return result == true ? res.redirect("/products/") : res.send("Error al cargar la información");
     },
     detailId: (req,res) => {
         //res.send(modelProducts.one(req.params.id))
         res.render("detailId", {product: modelProducts.one(req.params.id)})
-    }
+    },
+
+    delete: (req, res) => {
+        let result = modelProducts.delete(req.params.id);
+        return result == true ? res.redirect("/products/") : res.send("Error al cargar la información")
+    },
 
 }
 

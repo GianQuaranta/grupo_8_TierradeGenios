@@ -32,5 +32,7 @@ router.post("/create", upload.single('rank1image'),productController.saveProduct
 
 router.put("/:id", upload.single('rank1image'), productController.update);
 
+router.delete("/:id", productController.delete);
+
 
 module.exports = router;
