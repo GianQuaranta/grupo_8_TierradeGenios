@@ -83,12 +83,6 @@ const product = {
         return true
     },
 
-    one: (id)=> {
-        let all= product.all();
-        let findElement = all.find(element => element.id == id)
-        return findElement;
-    },
-
     edit: function (data,file,id){
         const directory = path.resolve(__dirname,"../data", "products.json"); //ruta donde va a guardar la información
         let categorySelect = category.one(data.category) //busca una categoría de acuerdo al id que recibe de la data

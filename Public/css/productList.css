@@ -36,6 +36,7 @@ main {
     width: 80%;
     display: flex;
     margin: auto;
+    margin-top: 25px;
 }
 
 .tarjeta figure img {
@@ -51,8 +52,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     font-size: 14px;
-   
-    
+    padding: 15px 0;
+       
+}
+
+#detalle-ul-privileges {
+    font-size: 16px;
 }
 
 .detalle-producto-descripcion {
@@ -76,7 +81,7 @@ main {
     width: 90%;
     margin: auto;
     list-style: none;
-    padding-left: 10%;
+    
 }
 
 .detalle-producto ul li {
@@ -84,13 +89,42 @@ main {
     
 }
 
-.contribuir {
-   display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: flex-end;
+.detalle-producto ul li i{
+    font-size: 13px;
     
 }
+
+.contribuir {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.ver-producto-button{
+    width: 100% !important; 
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    margin-top: 5px;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+}
+
+.button-contribuir {
+    color: white;
+    text-decoration: none;
+}
+
+.etiqueta-button-ver-producto{
+    background-color: rgb(4, 57, 120) !important;
+}
+
 
 ul li i {
     margin-right: 5px;
@@ -128,8 +162,9 @@ ul li i {
     }
 
     .detalle-producto {
-        width: 50%;
+        width: 88%;
         font-size: 17px;
+        padding: 30px 0;
     }
 
     .contribuir {
@@ -137,7 +172,8 @@ ul li i {
     }
 
     ul li {
-        font-size: 20px;
+        font-size: 16px;
+        margin: 3px 0 0 0;
     }
 
     ul li i {
@@ -157,12 +193,13 @@ ul li i {
 @media (min-width: 769px ){ 
 
 .tarjeta {
-    width: 80%;
+    width: 85%;
     
 }
 
 .tarjeta figure {
     width: 30%;
+    padding: 10px;
 }
 
 .tarjeta figure img {
@@ -171,14 +208,16 @@ ul li i {
     border-right: 1px gray solid;
 }
 
-.detalle-producto
-{
+.detalle-producto{
     width: 55%;
-    padding-left: 20px;
+    padding-left: 9px;
+    padding: 14px 0;
 }
 
 .contribuir {
     width: 15%;
+    display: block;
+    align-self: flex-end;
 }
 
 .contribuir button {

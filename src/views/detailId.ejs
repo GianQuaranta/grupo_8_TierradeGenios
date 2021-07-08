@@ -25,12 +25,11 @@
                         <p>Rango: <b><%= product.name %></b></p>
                         <p>Rango de donacion : <b> AR$ <%=product.min %> - <%= product.max %></b></p>
                       </section>
-                    <ul>
-                        
-                        <li><b>DETALLE: </b></li>
+                    
+                      <ul>                        
+                        <li><b id="detalle-ul-privileges">Privilegios de la categoría: </b></li>
                         <% product.privileges.forEach(des => { %>
-                        <li><i class="fas fa-check"></i><%= des %>  </li>
-                           
+                        <li><i class="fas fa-check"></i><%= des.privilege %>  </li>                           
             
                        <% }) %>
                     
@@ -40,13 +39,18 @@
                     
                 </article>
                 <article class="contribuir">
-                    <button type="submit"> Contribuir</button>
+                    <button type="button" class="etiqueta-button-edit"><a href="/products/<%= product.id %>/edit" class="editar-button">Editar</a></button>
+                    <form action="/products/<%= product.id %>?_method=DELETE" method="post" class="form-button">
+                        <button type="submit" class="delete-button">Borrar</button>
+                    </form>
+                    <button type="submit"><a href="/cart" class="button-contribuir">Contribuir</a></button>
                 </article>
-
-                <a href="/products/<%= product.id %>/edit">edit</a>
-                <form action="/products/<%= product.id %>?_method=DELETE" method="post">
-                    <button type="submit">delete</button>
-                </form>
+                
+                
+                
+                
+                
+                
                
             </section>
 

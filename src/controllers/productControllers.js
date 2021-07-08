@@ -32,6 +32,7 @@ const productController = {
 		return result == true ? res.redirect("/products/") : res.send("Error al cargar la información");
     },
     detailId: (req,res) => {
+        //res.send(modelProducts.addAll())
         //res.send(modelProducts.one(req.params.id))
         res.render("detailId", {product: modelProducts.one(req.params.id)})
     },

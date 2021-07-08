@@ -11,7 +11,7 @@
           </section>
         <ul>
             
-            <li><b>DETALLE: </b></li>
+            <li><b id="detalle-ul-privileges">Privilegios de la categoría: </b></li>
             <% product.privileges.forEach(des => { %>
             <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
                
@@ -23,9 +23,11 @@
 
         
     </article>
-    <a href="/products/<%= product.id %>">Ver producto</a>
+    
+    
     <article class="contribuir">
-        <button type="submit"> Contribuir</button>
+        <button type="button" class="etiqueta-button-ver-producto"><a href="/products/<%= product.id %>" class="ver-producto-button">Detalle</a></button>
+        <button type="submit"><a href="/cart" class="button-contribuir">Contribuir</a></button>
     </article>
    
 </section>
