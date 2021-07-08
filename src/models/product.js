@@ -72,7 +72,7 @@ const product = {
             id: all.length > 0 ? all[all.length -1].id + 1 : 1,
             name: data.name,
             privileges: categorySelect.privileges,
-            image: file.filename,
+            image: file != undefined ? file.name : "default.png",
             min: data.min,
             max: data.max,
             category: categorySelect.id,

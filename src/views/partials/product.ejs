@@ -1,7 +1,7 @@
 
  <section class="tarjeta bronce">
     <figure>
-        <img src="/img/products/<%=product.image%>" alt="">
+        <img src="/img/products/<%= product.image ? product.image : "default.png" %>" alt="">
     </figure>
      <article class="detalle-producto"> 
          <section class="detalle-producto-descripcion">
