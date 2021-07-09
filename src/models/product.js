@@ -94,7 +94,7 @@ const product = {
                 product.name = data.name,
                 product.privileges = addPrivilegeCategory,
                 product.category = categorySelect.id,
-                product.image = file.filename,
+                product.image = file != undefined ? file.name : "default.png",
                 product.min = data.min, 
                 product.max = data.max,
                 product.range = data.range
