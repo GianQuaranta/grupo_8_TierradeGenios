@@ -32,3 +32,16 @@ En la reunión ultimamos detalles para la entrega del sprint número 2.
 - Actualización tablero trello pendiente, lo realiza Agus.
 - Realización weekly primer semana comienzo tercer sprint (el que estoy escribiendo ahora).
 - Llegamos a la conclusión de que tenemos que ponernos al día con playground y los prácticos para poder realizar todos coordinados este sprint.
+
+
+**Informe semana 08/07/2021**  **3er Sprint Actualización**
+- Analizamos la devolución de los profesores.
+- Solucionamos funcionalidades del login.
+- Pulimos estilos de los formularios.
+- Realizamos CRUD de toda la aplicación.
+- Creamos JSON de productos, categorías, privilegios y users.
+- Creamos modelos de cada uno de los JSON excepto de los users.
+- Hicimos partial del product.
+- Realizamos la vista de todos los productos, productList.
+- Actualizamos el tablero de trabajo.
+- Actualizamos el informe semanal.
