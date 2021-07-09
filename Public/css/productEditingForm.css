@@ -148,6 +148,27 @@ main section hr {
     width: 100%;
     border:none;
 }
+
+main section form fieldset figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagen-form {
+    max-width: 90%;
+    align-self: center;
+    margin: auto;
+}
+
+#article-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*-------------------------------------------------------Media Queries----------------------------------------------------------*/
 
 @media(min-width:897px){
@@ -161,3 +182,4 @@ main section hr {
     }
 
 }
+

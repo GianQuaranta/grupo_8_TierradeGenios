@@ -65,14 +65,16 @@ const product = {
         const directory = path.resolve(__dirname, '../data','products.json')
         let all = product.all();
         let categorySelect = category.one(data.category)
-        let newPrivilege = privileges.create(data.privilege)
-        categorySelect.privileges.push(newPrivilege);
-
+        let newPrivilege = data.privilege.length > 0 && data.privilege != "" ? privileges.create(data.privilege): null;
+        if(newPrivilege != null){
+            categorySelect.privileges.push(newPrivilege);
+        }
+        
         let newProduct = {
             id: all.length > 0 ? all[all.length -1].id + 1 : 1,
             name: data.name,
             privileges: categorySelect.privileges,
-            image: file != undefined ? file.name : "default.png",
+            image: file != undefined ? file.filename : "default.png",
             min: data.min,
             max: data.max,
             category: categorySelect.id,
@@ -86,15 +88,15 @@ const product = {
     edit: function (data,file,id){
         const directory = path.resolve(__dirname,"../data", "products.json"); //ruta donde va a guardar la información
         let categorySelect = category.one(data.category) //busca una categoría de acuerdo al id que recibe de la data
-        let newPrivilege = data.privilege.length > 0 ? privileges.create(data.privilege): null; //si hay algún nuevo privilegio lo agrega, sino nada 
-        let addPrivilegeCategory = newPrivilege ? categorySelect.privileges.push(newPrivilege): categorySelect.privileges; //
+        let newPrivilege = data.privilege.length > 0 && data.privilege != "" ? privileges.create(data.privilege): null; //si hay algún nuevo privilegio lo agrega, sino nada 
+        let addPrivilegeCategory =  newPrivilege ? categorySelect.privileges.push(newPrivilege): categorySelect.privileges; //
         let productos = product.all();
         productos.map(product => {
             if(product.id == id) {
                 product.name = data.name,
                 product.privileges = addPrivilegeCategory,
                 product.category = categorySelect.id,
-                product.image = file != undefined ? file.name : "default.png",
+                product.image = file != undefined ? file.filename : "default.png",
                 product.min = data.min, 
                 product.max = data.max,
                 product.range = data.range
@@ -113,7 +115,7 @@ const product = {
         let productos = this.all();
         let deleted = this.one(id);
         // eliminamos la imagen de la carpeta upload
-        fs.unlinkSync(path.resolve(__dirname,"../../public/img/products",deleted.image))
+        if(deleted.image != "default.png"){fs.unlinkSync(path.resolve(__dirname,"../../public/img/products",deleted.image))}
         // filtarmos el producto que deaseamos eliminar
         productos = productos.filter(producto => producto.id != deleted.id )
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));

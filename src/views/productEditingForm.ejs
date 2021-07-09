@@ -22,7 +22,7 @@
             <h3>Editar producto</h3>
 
             <select name="category" id="category">
-                <option value="" disabled selected>Crear categoria</option>
+                <option value="" disabled>Seleccionar categoria</option>
                 <option value="1" <%=product.category == "1" ? "selected" : null%>>Bronce</option>
                 <option value="2" <%=product.category == "2" ? "selected" : null%>>Plata</option>
                 <option value="3" <%=product.category == "3" ? "selected" : null%>>Oro</option>
@@ -40,7 +40,7 @@
             <input type="text" name="privilege" id="privilege" value="" class="input-file"> 
     </fieldset>
 
-    <fieldset><figure><img src="/img/products/<%=product.image%>" alt=""></figure></fieldset>
+    <fieldset><figure><img src="/img/products/<%=product.image%>" alt="" id="imagen-form"></figure></fieldset>
 
             <fieldset>
                 <label for="rank1image" class="text-label-input-file">Imagen rango 1</label>
@@ -61,11 +61,16 @@
         <hr>
             <fieldset class="fieldset-button">
                 <button type="submit" class="button-form">Enviar</button>
-                <button type="reset" class="button-form-reset">Borrar</button>
+            
         </fieldset>
 
         </form>
 
+        <article id="article-form">
+        <form action="/products/<%= product.id %>?_method=DELETE" method="post" class="form-button">
+            <button type="submit" class="button-form-reset">Borrar</button>
+        </form>
+    </article>
                 
     </section>      
     
