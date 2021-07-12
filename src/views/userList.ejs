@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--------------------------------------------------head------------------------------------------------------------->
+
+<head>
+    
+    <%- include('./partials/head') %>
+
+    <link rel="stylesheet" href="/css/userList.css">
+    <title>userList</title>
+</head>
+<!--------------------------------------------------body------------------------------------------------------------->
+
+<body>
+    <header>
+        
+        <%- include('./partials/header') %>
+
+    </header>
+    
+    <main>
+        <article class="user">
+            <figure><img src="/img/imagenPerfil.png" alt=""></figure>
+
+            <section class="userStatic">
+                <ul>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                </ul>
+                <h3>Bronce</h3>
+
+            </section>
+
+            <section class="userInfo">
+                <ul class="userInfoUl">
+
+                <li><%= userList[0].firstName %></li>
+                <li><%= userList[0].birthDate %></li>
+                <li><%= userList[i].email %></li>
+                <li>Teléfono</li>
+                <li>Dirección</li>
+                <li>País</li>
+                <li>Contraseña</li>
+                <li>Método de pago</li>
+
+                </ul>
+                
+            </section>
+        </article>
+
+    </main>
+
+
+
+
+
+
+
+
+
+ <!--------------------------------------------------footer------------------------------------------------------------->
+ <footer>
+
+    <%- include('./partials/footer') %>
+
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+main{
+    width: 100%;
+    display: flex;
+    
+}
+
+.user{
+    width: 80%;
+    margin: auto;
+    border: 1px solid black;
+
+}
+
+main article figure{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main article figure img{
+    padding-top: 10px;
+    width: 50%;
+    border-radius: 50%;
+
+}
+
+.userInfoUl{
+    align-items: center;
+    width: 50%; 
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+
+
+.userStatic{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.userStatic ul{
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+ul li{
+    list-style: none;
+}
+

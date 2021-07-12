@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const descriptions = require('./users')
+//const descriptions = require('./user')
 
 const user = {
     
@@ -18,11 +18,5 @@ const user = {
     }
 
 }
-
-
-
-
-
-
 
 module.exports = user;

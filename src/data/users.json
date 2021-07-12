@@ -1,15 +1,15 @@
 [
     {
         "id": 1,
-        "firstName": "",
-        "lastName": "",
-        "email": 0,
-        "birthdate": "",
-        "avatar": "estrella-producto.jpg",
-        "adress": "",
-        "phoneNumber": "",
-        "country": "",
-        "password": ""
+        "firstName": "Joaquín",
+        "lastName": "Quaranta",
+        "email": "somogrosos83@yahoo.com.ar",
+        "birthDate": "1987-05-07",
+        "avatar": "imagenPerfil.png",
+        "adress": "Avenida del Libertador 17000",
+        "phoneNumber": "1167349876",
+        "country": "Cuba",
+        "password": "aguantemessi"
 
     }
 ]
