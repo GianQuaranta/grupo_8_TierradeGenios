@@ -1,12 +1,13 @@
 main{
     width: 100%;
     display: flex;
+    flex-wrap:wrap
     
 }
 
 .user{
     width: 80%;
-    margin: auto;
+    margin: 20px auto; 
     border: 1px solid black;
 
 }
@@ -36,7 +37,7 @@ main article figure img{
 
 
 .userStatic{
-    width: 50%;
+    width: 40%;
     margin: auto;
     text-align: center;
 }
@@ -52,3 +53,14 @@ ul li{
     list-style: none;
 }
 
+
+@media(min-width: 769px){
+
+    .user{
+        width: 40%;
+        margin: 20px auto; 
+        border: 1px solid black;
+    
+    }
+
+}

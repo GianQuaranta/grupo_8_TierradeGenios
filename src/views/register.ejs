@@ -29,46 +29,49 @@
             <a href="https://myaccount.google.com/"><i class="fab fa-google button"></i></a>
             </article>
             <section class="registro-dos">
-                <form class="form-registro" action="/register" method="POST">
+                <form class="form-registro" action="/user/register" method="POST" enctype="multipart/form-data">
                     <h3 class="titular-dos"><strong>Formulario de registro</strong></h3>
                     <!--<p class="dummy-text">El éxito no se mide en el dinero, sino en la diferencia que marcas en las personas. – Michelle Obama</p>-->
-                    <p class="usuario-pass">
-                        <a>Nombre</a><input type="text" name="usuario" id="usuario" required>
-                    </p>
-                    <p class="usuario-pass">
-                        <a>Apellido</a><input type="text" name="usuario" id="usuario" required>
-                    </p>
-                    <p class="usuario-pass">
-                        <a>Email</a><input type="email" name="email" id="email" required>
-                    </p>
-                    <p class="usuario-pass">
+                    <fieldset class="usuario-pass">
+                        <label>Nombre</label><input type="text" name="usuario" id="usuario" required>
+                    </fieldset>
+                    <input type="text" name="usuario" id="usuario" placeholder="Nombre" class= "usuarioNombre" required>
+
+                    <label for="avatar">Seleccionar imagen de perfil</label>
+                    <input type="file" name="avatar" id="avatar" class= "usuarioNombre" required>
+                    <fieldset class="usuario-pass">
+                        <label>Apellido</label><input type="text" name="usuario" id="usuario" required>
+                    </fieldset>
+                    <fieldset class="usuario-pass">
+                        <label>Email</label><input type="email" name="email" id="email" required>
+                    </fieldset>
+                    <fieldset class="usuario-pass">
                         <label>Fecha de Nacimiento:</label>
                         <input class="fecha-nac" type="date" name="fecha" value="2021-07-05" min="1930-01-01"
                             max="2019-12-30" required>
-                    </p>
-                    <p class="usuario-pass">
-                        <a>Dirección</a><input type="text" name="direccion" id="direccion" required>
-                    </p>
-                    <p class="usuario-pass">
-                        <a>Teléfono</a><input type="tel" name="telefono" id="telefono" required>
-                    </p>
-                    <p class="usuario-pass">
-                        <a>País</a><input type="text" name="pais" id="pais" required>
-                    </p>
-                    <p class="usuario-pass">
-                        <a>Crear constraseña</a><input type="password" name="password" id="password" required>
-                    </p>
-                    <p class="usuario-pass">
-                        <a>Confirmar contraseña</a><input type="password" name="password" id="password" required>
-                    </p>
-                    <article class="opciones-pago" required>
-                        <h2 class="opciones">Opciones de pago</h2>
-                        <p><input class= "forma-pago" type="radio" name="pago" value="pago">Transferencia Bancaria<i class="fas fa-money-check-alt imagen"></i></p>
-                        <p><input class= "forma-pago" type="radio" name="pago" value="pago">Tarjeta de credito/debito<i class="fas fa-credit-card imagen"></i></p>
-                        <p><input class= "forma-pago" type="radio" name="pago" value="pago">Pay Pal<i class="fab fa-cc-paypal imagen"></i></p>
-                        <p><input class= "forma-pago" type="radio" name="pago" value="pago">Bitcoin<i class="fab fa-bitcoin imagen"></i></p>
-
-                    </article>
+                    </fieldset>
+                    <fieldset class="usuario-pass">
+                        <label>Dirección</label><input type="text" name="direccion" id="direccion" required>
+                    </fieldset>
+                    <fieldset class="usuario-pass">
+                        <label>Teléfono</label><input type="tel" name="telefono" id="telefono" required>
+                    </fieldset>
+                    <fieldset class="usuario-pass">
+                        <label>País</label><input type="text" name="pais" id="pais" required>
+                    </fieldset>
+                    <fieldset class="usuario-pass">
+                        <label>Crear constraseña</label><input type="password" name="password" id="password" required>
+                    </fieldset>
+                    <fieldset class="usuario-pass">
+                        <label>Confirmar contraseña</label><input type="password" name="password" id="password" required>
+                    </fieldset>
+                    <fieldset class="opciones-pago" required>
+                        <h3 class="opciones">Opciones de pago</h3>
+                        <input class= "forma-pago" type="radio" name="pago" value="pago">Transferencia Bancaria<i class="fas fa-money-check-alt imagen"></i>
+                        <input class= "forma-pago" type="radio" name="pago" value="pago">Tarjeta de credito/debito<i class="fas fa-credit-card imagen"></i>
+                        <input class= "forma-pago" type="radio" name="pago" value="pago">Pay Pal<i class="fab fa-cc-paypal imagen"></i>
+                        <input class= "forma-pago" type="radio" name="pago" value="pago">Bitcoin<i class="fab fa-bitcoin imagen"></i>
+                    </fieldset>
                 <a href="/"><input class="button-dos" type="submit" value="Registrarme"></a>    
                 </form>
                 

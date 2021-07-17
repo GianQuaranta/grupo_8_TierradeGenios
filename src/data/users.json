@@ -11,5 +11,19 @@
         "country": "Cuba",
         "password": "aguantemessi"
 
+    },
+
+    {
+        "id": 2,
+        "firstName": "Diego",
+        "lastName": "Forlan",
+        "email": "forlan10@yahoo.com.ar",
+        "birthDate": "1978-05-07",
+        "avatar": "imagenPerfil.png",
+        "adress": "Avenida 18 de Julio 17000",
+        "phoneNumber": "116728346527",
+        "country": "Paraguay",
+        "password": "aguantegodin"
+
     }
 ]

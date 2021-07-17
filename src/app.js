@@ -8,7 +8,7 @@ const mainRoute = require('./routes/mainRoute')
 const products = require('./routes/productRoute');
 const applyScholarship = require('./routes/applyScholarshipRoute')
 const cart = require('./routes/cartRoute');
-const userController = require('./routes/users')
+const userRoutes = require('./routes/users')
 
 /*Configuración template engine*/
 app.set('view engine' , 'ejs');
@@ -33,7 +33,7 @@ app.use(mainRoute);
 app.use(applyScholarship);
 app.use("/products",products);
 app.use(cart);
-app.use("/user", userController);
+app.use("/user", userRoutes);
 
 
 

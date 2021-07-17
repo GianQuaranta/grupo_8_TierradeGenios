@@ -11,6 +11,10 @@ const userController = {
         return res.render('contrasenia')
     },
 
+    create: function(req, res){
+        return res.send('Ok, viniste por POST')
+    },
+
     userList: function(req,res){
         return res.render('userList', {userList: user.all()}
         //res.send(user.all());

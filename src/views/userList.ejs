@@ -19,8 +19,12 @@
     </header>
     
     <main>
+
+        <% for(let i = 0; i < userList.length; i++){%>
+        
+
         <article class="user">
-            <figure><img src="/img/imagenPerfil.png" alt=""></figure>
+            <figure><img src="/img/users/<%=userList[i].avatar%>" alt=""></figure>
 
             <section class="userStatic">
                 <ul>
@@ -34,20 +38,29 @@
 
             <section class="userInfo">
                 <ul class="userInfoUl">
-
-                <li><%= userList[0].firstName %></li>
-                <li><%= userList[0].birthDate %></li>
+                    
+                <li>Nombre de usuario</li>    
+                <li><%= userList[i].firstName %></li>
+                <li>Fecha de nacimiento</li>
+                <li><%= userList[i].birthDate %></li>
+                <li>Correo electrónico</li>
                 <li><%= userList[i].email %></li>
                 <li>Teléfono</li>
+                <li><%= userList[i].phoneNumber %></li>
                 <li>Dirección</li>
+                <li><%= userList[i].adress %></li>
                 <li>País</li>
+                <li><%= userList[i].country %></li>
                 <li>Contraseña</li>
+                <li><%= userList[i].password %></li>
                 <li>Método de pago</li>
+                <li><%= userList[i].password %></li>
 
                 </ul>
                 
             </section>
         </article>
+        <%}%>
 
     </main>
 
