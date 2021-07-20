@@ -34,7 +34,7 @@ En la reunión ultimamos detalles para la entrega del sprint número 2.
 - Llegamos a la conclusión de que tenemos que ponernos al día con playground y los prácticos para poder realizar todos coordinados este sprint.
 
 
-**Informe semana 08/07/2021**  **3er Sprint Actualización**
+**Informe semana 08/07/2021**  **4to Sprint Actualización**
 - Analizamos la devolución de los profesores.
 - Solucionamos funcionalidades del login.
 - Pulimos estilos de los formularios.
@@ -45,3 +45,8 @@ En la reunión ultimamos detalles para la entrega del sprint número 2.
 - Realizamos la vista de todos los productos, productList.
 - Actualizamos el tablero de trabajo.
 - Actualizamos el informe semanal.
+
+
+**Informe semana 17/07/2021**  **5to Sprint Actualización**
+ - Realizamos el retro del 4to sprint.
+ - 

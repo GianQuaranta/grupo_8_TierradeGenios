@@ -1,6 +1,8 @@
 const user = require('../models/user')
+const bcrypt = require("bcryptjs")
 const userController = {
     register: function(req,res){
+        //return res.send(user.findAll())
         return res.render('register')
 
     },
@@ -12,7 +14,16 @@ const userController = {
     },
 
     create: function(req, res){
-        return res.send('Ok, viniste por POST')
+        const userToCreate = {
+            ...req.body,
+            avatar: req.file.filename,
+            password: bcrypt.hashSync(req.body.password, 10)
+        }
+
+        user.create(userToCreate)
+
+        return res.send("Ok, se guardó el usuario")
+        
     },
 
     userList: function(req,res){

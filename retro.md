@@ -115,6 +115,46 @@
 
 
 
+# Retrospectiva 4to Sprint
+
+1. ***Comenzar a hacer.*** 
+    - Luego de ponernos al día, empezar a adelantar contenido.
+    - 
+
+
+2.	***Hacer más.***
+    - Aprender de más fuentes de conocimiento además de la información que nos dan en el curso.
+    - Apoyarnos en la comunidad de whatsapp para resolver dudas y crecer.
+    - Ponernos al día con el estudio. (mejoramos pero aún no logramos el ritmo que queremos)
+    - Ponernos al día con los trabajos prácticos. (mejoramos pero aún no logramos el ritmo que queremos)
+    - Hacer más reuniones semanales como antes.
+    - Forma de administrar y dividir el trabajo.
+    - Consultar a los tutores cuando surge alguna duda.
+
+
+3.	***Continuar haciendo.***
+    - Participar en clase todos para agarrar más ritmo.
+    - Trabajar más con el código todos juntos.
+    - Organizar más.
+    - Practicar más.
+    - Utilizar la documentación existente en la nube ( w3School , develop).
+    - Informe semanal.
+    - Mantener la comunicación por los diferentes medios.
+    - Seguir avisando cuando pusheemos algo.
+    - Seguir repasando estudio y práctica de los temas del siguiente sprint para agarrar práctica antes de hacer el sprint.
+
+
+4.	***Hacer menos.***
+    - Atrasarnos en el playground.
+    - Divagar menos en las reuniones.
+    - Atrasarnos con la elaboración del sprint.
+    - 
+ 
+5.	***Dejar de hacer.***
+    - Dejar de confiarnos con las entregas.
+    - Dejar cosas a medias en la página.
+    - 
+
 
 
 

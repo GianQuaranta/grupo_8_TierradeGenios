@@ -201,6 +201,11 @@ Link: https://drive.google.com/file/d/1-Bl5EIl5aplLoH7_kZqC-FKMGKsNBoDZ/view?usp
   
   ![Logotipo](Public/img/logotipo-tierra-de-genios.jpg)
 
+  - Colores categorías:
+    - Bronce: #cd7f32
+    - Plateado: #C0C0C0
+    - Dorado: #EABE3F 
+
 
 
 

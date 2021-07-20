@@ -32,16 +32,18 @@
                 <form class="form-registro" action="/user/register" method="POST" enctype="multipart/form-data">
                     <h3 class="titular-dos"><strong>Formulario de registro</strong></h3>
                     <!--<p class="dummy-text">El éxito no se mide en el dinero, sino en la diferencia que marcas en las personas. – Michelle Obama</p>-->
-                    <fieldset class="usuario-pass">
+                    <!--<fieldset class="usuario-pass">
                         <label>Nombre</label><input type="text" name="usuario" id="usuario" required>
+                    </fieldset>-->
+                    <input type="text" name="firstName" id="firstName" placeholder="Nombre" class= "usuarioNombre" required>
+
+                    <fieldset class="usuario-pass">
+                        <label>Apellido</label><input type="text" name="lastName" id="lastName" required>
                     </fieldset>
-                    <input type="text" name="usuario" id="usuario" placeholder="Nombre" class= "usuarioNombre" required>
 
                     <label for="avatar">Seleccionar imagen de perfil</label>
                     <input type="file" name="avatar" id="avatar" class= "usuarioNombre" required>
-                    <fieldset class="usuario-pass">
-                        <label>Apellido</label><input type="text" name="usuario" id="usuario" required>
-                    </fieldset>
+                    
                     <fieldset class="usuario-pass">
                         <label>Email</label><input type="email" name="email" id="email" required>
                     </fieldset>
@@ -63,14 +65,14 @@
                         <label>Crear constraseña</label><input type="password" name="password" id="password" required>
                     </fieldset>
                     <fieldset class="usuario-pass">
-                        <label>Confirmar contraseña</label><input type="password" name="password" id="password" required>
+                        <label>Confirmar contraseña</label><input type="password" name="passwordConfirm" id="passwordConfirm" required>
                     </fieldset>
                     <fieldset class="opciones-pago" required>
                         <h3 class="opciones">Opciones de pago</h3>
-                        <input class= "forma-pago" type="radio" name="pago" value="pago">Transferencia Bancaria<i class="fas fa-money-check-alt imagen"></i>
-                        <input class= "forma-pago" type="radio" name="pago" value="pago">Tarjeta de credito/debito<i class="fas fa-credit-card imagen"></i>
-                        <input class= "forma-pago" type="radio" name="pago" value="pago">Pay Pal<i class="fab fa-cc-paypal imagen"></i>
-                        <input class= "forma-pago" type="radio" name="pago" value="pago">Bitcoin<i class="fab fa-bitcoin imagen"></i>
+                        <input class= "forma-pago" type="radio" name="transferenciaBancaria" value="transferenciaBancaria">Transferencia Bancaria<i class="fas fa-money-check-alt imagen"></i>
+                        <input class= "forma-pago" type="radio" name="tarjetaDebito-Credito" value="TarjetaDebito-Credito">Tarjeta de credito/debito<i class="fas fa-credit-card imagen"></i>
+                        <input class= "forma-pago" type="radio" name="PayPal" value="PayPal">Pay Pal<i class="fab fa-cc-paypal imagen"></i>
+                        <input class= "forma-pago" type="radio" name="cripto" value="cripto">Bitcoin<i class="fab fa-bitcoin imagen"></i>
                     </fieldset>
                 <a href="/"><input class="button-dos" type="submit" value="Registrarme"></a>    
                 </form>

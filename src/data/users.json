@@ -1,29 +1,80 @@
 [
-    {
-        "id": 1,
-        "firstName": "Joaquín",
-        "lastName": "Quaranta",
-        "email": "somogrosos83@yahoo.com.ar",
-        "birthDate": "1987-05-07",
-        "avatar": "imagenPerfil.png",
-        "adress": "Avenida del Libertador 17000",
-        "phoneNumber": "1167349876",
-        "country": "Cuba",
-        "password": "aguantemessi"
-
-    },
-
-    {
-        "id": 2,
-        "firstName": "Diego",
-        "lastName": "Forlan",
-        "email": "forlan10@yahoo.com.ar",
-        "birthDate": "1978-05-07",
-        "avatar": "imagenPerfil.png",
-        "adress": "Avenida 18 de Julio 17000",
-        "phoneNumber": "116728346527",
-        "country": "Paraguay",
-        "password": "aguantegodin"
-
-    }
+ {
+  "id": 1,
+  "firstName": "Joaquín",
+  "lastName": "Quaranta",
+  "email": "somogrosos83@yahoo.com.ar",
+  "birthDate": "1987-05-07",
+  "avatar": "imagenPerfil.png",
+  "adress": "Avenida del Libertador 17000",
+  "phoneNumber": "1167349876",
+  "country": "Cuba",
+  "password": "aguantemessi"
+ },
+ {
+  "id": 2,
+  "firstName": "Diego",
+  "lastName": "Forlan",
+  "email": "forlan10@yahoo.com.ar",
+  "birthDate": "1978-05-07",
+  "avatar": "imagenPerfil.png",
+  "adress": "Avenida 18 de Julio 17000",
+  "phoneNumber": "116728346527",
+  "country": "Paraguay",
+  "password": "aguantegodin"
+ },
+ {
+  "id": 3,
+  "firstName": "Diego",
+  "lastName": "Forlan",
+  "email": "eiia10@yahoo.com.ar",
+  "birthDate": "1978-05-07",
+  "avatar": "imagenPerfil.png",
+  "adress": "Avenida 18 de Julio 17000",
+  "phoneNumber": "116728346527",
+  "country": "Argentina",
+  "password": "aguantegodin"
+ },
+ {
+  "id": 5,
+  "firstName": "Gianfranco",
+  "lastName": "Quaranta",
+  "email": "gianquarantaa@gmail.com",
+  "fecha": "2019-12-12",
+  "direccion": "Tandil 1544",
+  "telefono": "+543513270775",
+  "pais": "Argentina",
+  "password": "1234",
+  "passwordConfirm": "1234",
+  "pago": "pago",
+  "avatar": "avatar-1626738727047.jpg"
+ },
+ {
+  "id": 6,
+  "firstName": "Agustin",
+  "lastName": "Gardey",
+  "email": "gianquarantaa@gmail.com",
+  "fecha": "2019-12-19",
+  "direccion": "Tandil 1544",
+  "telefono": "+543513270775",
+  "pais": "Argentina",
+  "password": "1234",
+  "passwordConfirm": "1234",
+  "cripto": "cripto",
+  "avatar": "avatar-1626738918849.jpg"
+ },
+ {
+  "id": 7,
+  "firstName": "Joaco ",
+  "lastName": "Gil",
+  "email": "gianquarantaa@gmail.com",
+  "fecha": "2019-12-19",
+  "direccion": "Tandil 1544",
+  "telefono": "3513270775",
+  "pais": "Argentina",
+  "password": "$2a$10$nF5KP/PsErKETTkP8h8rEurKPbV4JEqYnzNB1P4OtX0Cki0W3mAZW",
+  "passwordConfirm": "1234",
+  "PayPal": "PayPal",
+  "avatar": "avatar-1626739764631.jpg"
+ }
 ]
