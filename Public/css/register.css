@@ -108,11 +108,15 @@ main {
 
 }*/
 
+fieldset{
+    border: none
+}
+
 .usuarioNombre{
     width: 100%;
     padding: 3px;
     margin: 4px 0;
-    border: 1px solid grey
+    border: 1px solid rgb(204, 204, 204)
 }
 
 input {
