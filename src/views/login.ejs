@@ -20,11 +20,11 @@
     <main>
             <section class= "section-login">
                 
-                <form class="form-login" action="/login" method="POST"> 
+                <form class="form-login" action="/user/login?method" method="POST"> 
                     <p class="titular"><strong>Sign in</strong></p>
                     <p class="dummy-text">El éxito no se mide en el dinero, sino en la diferencia que marcas en las personas. – Michelle Obama</p>
-                    <input type="text" name="usuario" id="usuario" required placeholder="Email" class="input-campo">
-                    <input type="password" name="clave" id="clave" required placeholder="Contraseña" class="input-campo">
+                    <input type="email" name="email" id="email" required placeholder="Email" class="input-campo">
+                    <input type="password" name="password" id="password" required placeholder="Contraseña" class="input-campo">
                     <a href="/"><input class="button" type="submit" value="Ingresar"></a>
                     <a href="/user/contrasenia"><p class="olvide">Olvidé mi contraseña</p></a>
                     <a href="/user/register"><p class="crear">Crear mi cuenta</p></a>

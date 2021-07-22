@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--------------------------------------------------head------------------------------------------------------------->
+<head>
+    
+    <%- include('./partials/head') %>
+    
+    <link rel="stylesheet" href="/css/profileUser.css">
+    <title>About-us</title>
+</head>
+<!--------------------------------------------------body------------------------------------------------------------->
+ <body>
+<!-------------------------------------------------header------------------------------------------------------------> 
+<header>
+    
+    <%- include('./partials/header') %>
+    
+         
+</header>
+
+<main>
+    <article>
+        <h2> Hola <%= user.firstName %></h2>
+        <figure>
+            <img src="/img/users/<%= user.avatar%>" alt="">
+        </figure>
+        
+
+    </article>
+
+
+</main>
+
+<footer>
+
+    <%- include('./partials/footer') %>
+
+</footer>
+
+</body>
+
+</html>
