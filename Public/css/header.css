@@ -7,7 +7,7 @@
 
 
 
-/********* HEADER ***********/
+/*** HEADER *****/
 
 header {
     display: flex;
@@ -58,8 +58,8 @@ header {
 .navbar {
 
     display: flex;
-    width: 99%;
-    justify-content: space-between;
+    width: 78%;
+    justify-content: space-around;
     align-items: flex-end;
     margin: 10px 10px 0px 10px;
 
@@ -74,32 +74,40 @@ header {
 }
 
 
-/********* MEDIA QUERYS TABLET ********/
+/*** MEDIA QUERYS TABLET ****/
 
 @media (min-width: 361px) {
 
-    /** HEADER **/
+    /* HEADER */
 
-    .div-logo {
+    #div-logo {
         display: flex;
-        justify-content: space-evenly;
-        width: 40%;
-        margin-top: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        width: 45%;
+        margin-top: 4px;
+        padding-left: 19px;
 
+    }
+
+    #div-logo a {
+        width: 30%;
     }
 
 
     .div-navbar {
 
-        width: 60%;
+        width: 53%;
         display: flex;
         padding: 8px;
-
+        justify-content: flex-end;
 
     }
 
     .navbar {
-        margin: 0px;
+        margin: 8px 0 0 0 ;
+        padding: 4px;
+        padding-right: 13px;
     }
 
     .boton { 
@@ -107,18 +115,127 @@ header {
     }
 
     .logo {
-        width: 80%;
+        width: 100%;
         padding: 10px;
         margin: auto;
     }
 
+    header section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header section nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+    }
+
+    header section nav ul li a {
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header section nav ul li a img {
+        width: 30%;
+        border-radius: 50%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header section nav ul {
+        list-style: none;
+    }
+
+    #primer-nav-img-arriba {
+        width: 66%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #ul-de-la-imagen {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 34%;
+    }
+
+    #ul-de-la-imagen li {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #ul-de-la-imagen li a {
+        text-decoration: none;
+        color: #04398c;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    #ul-de-la-imagen li a img {
+        width: 15%;
+        margin: 0 8px 0 5px;
+    }
+
+    #segundo-ul-desplegable {
+        width: 33%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #segundo-ul-desplegable a {
+        margin: 0 5px;
+        text-decoration: none;  
+        color: #04398c;
+    }
+
+    #tercer-ul-register-login {
+        list-style: none;
+        width: 33%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+
+
+    #tercer-ul-register-login li a {
+        width: 50%;
+        margin: 0 5px;
+        text-decoration: none;
+        color: #04398c;
+    }
 
 }
 
 
- /****** MEDIA QUERY DESKTOP *****/
 
-/*** HEADER ***/
+
+ /** MEDIA QUERY DESKTOP ***/
+
+/* HEADER */
 @media(min-width: 769px) { 
 
     /* .logo{
