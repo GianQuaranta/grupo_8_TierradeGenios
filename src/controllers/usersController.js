@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs")
 const userController = {
     register: function(req,res){
         //return res.send(user.findAll())
+        //res.cookies('TESTEANDO GUAACHO ', "QUE TE IMPORTA" , {maxAge: 1000* 30})
         return res.render('register')
 
     },

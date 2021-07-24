@@ -76,5 +76,19 @@
   "passwordConfirm": "1234",
   "PayPal": "PayPal",
   "avatar": "avatar-1626739764631.jpg"
- }
+ },
+ {
+    "id": 8,
+    "firstName": "Joaco ",
+    "lastName": "Gil",
+    "email": "j@gmail.com",
+    "fecha": "2019-12-19",
+    "direccion": "Tandil 1544",
+    "telefono": "3513270775",
+    "pais": "Argentina",
+    "password": "$2a$10$nF5KP/PsErKETTkP8h8rEurKPbV4JEqYnzNB1P4OtX0Cki0W3mAZW",
+    "passwordConfirm": "1234",
+    "PayPal": "PayPal",
+    "avatar": "avatar-1626739764631.jpg"
+   }
 ]
