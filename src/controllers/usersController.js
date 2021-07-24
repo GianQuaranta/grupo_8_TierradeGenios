@@ -27,9 +27,28 @@ const userController = {
     },
 
     userList: function(req,res){
-        return res.render('userList', {userList: user.all()}
-        //res.send(user.all());
-        )}
+        return res.render('userList', {userList: user.findAll()}
+        
+        )},
+
+        loginProcess: function(req,res) {
+        let userLogin = user.findByField('email', req.body.email);
+            console.log(userLogin)
+        if(userLogin) {
+            let correctPassword = bcrypt.compareSync(req.body.password , userLogin.password);
+            if(correctPassword){
+                req.session.userLogged = userLogin
+                return res.redirect('/user/profile')
+            }
+            
+        }
+        return res.render('login')
+    },
+
+    profile: function(req,res) {
+        return res.render('profileUser', {user: req.session.userLogged})
+    }
+
 
 }
 

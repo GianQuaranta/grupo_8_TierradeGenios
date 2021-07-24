@@ -2,6 +2,8 @@ const express = require ("express");
 const app = express();
 const path = require('path');
 const method = require("method-override")
+const session = require('express-session');
+const cookie = require('cookie-parser');
 
 /*Requerimiento de archivos de rutas*/
 const mainRoute = require('./routes/mainRoute')
@@ -27,6 +29,12 @@ app.use(express.static(path.resolve(__dirname,"../Public")));
 //method-override
 app.use(express.urlencoded({extended:false}));
 app.use(method("_method"));
+
+//Cookie y Session //
+app.use(cookie());
+app.use(session({secret:'Tierra de genios', 
+resave: false, 
+saveUninitialized:true}));
 
 /*app.use de todos*/
 app.use(mainRoute);
