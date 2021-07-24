@@ -29,11 +29,11 @@ router.get('/:id' , productController.detailId);
 
 router.get("/:id/edit",[adminMiddleware ],productController.edit);
 
-router.post("/create", upload.single('rank1image'),productController.saveProduct);
+router.post("/create",[adminMiddleware ], upload.single('rank1image'),productController.saveProduct);
 
-router.put("/:id", upload.single('rank1image'), productController.update);
+router.put("/:id", [adminMiddleware ],upload.single('rank1image'), productController.update);
 
-router.delete("/:id", productController.delete);
+router.delete("/:id",[adminMiddleware ], productController.delete);
 
 
 module.exports = router;

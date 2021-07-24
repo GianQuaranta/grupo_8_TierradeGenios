@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs")
 const userController = {
     register: function(req,res){
         //return res.send(user.findAll())
-        //res.cookies('TESTEANDO GUAACHO ', "QUE TE IMPORTA" , {maxAge: 1000* 30})
+        
         return res.render('register')
 
     },
@@ -33,12 +33,18 @@ const userController = {
         )},
 
         loginProcess: function(req,res) {
+     
         let userLogin = user.findByField('email', req.body.email);
             console.log(userLogin)
         if(userLogin) {
             let correctPassword = bcrypt.compareSync(req.body.password , userLogin.password);
             if(correctPassword){
+                delete userLogin.password;
                 req.session.userLogged = userLogin
+
+                if(req.body.remember){
+                    res.cookie('userEmail', req.body.email, {maxAge: 1000 * 10})
+                }
                 return res.redirect('/user/profile')
             }
             
@@ -48,6 +54,12 @@ const userController = {
 
     profile: function(req,res) {
         return res.render('profileUser', {user: req.session.userLogged})
+    },
+
+    logout: function(req,res) {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/')
     }
 
 
