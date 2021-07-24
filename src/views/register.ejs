@@ -34,13 +34,10 @@
                     <!--<p class="dummy-text">El éxito no se mide en el dinero, sino en la diferencia que marcas en las personas. – Michelle Obama</p>-->
                     <fieldset>
                     <input type="text" name="firstName" id="firstName" placeholder="Nombre" class= "usuarioNombre" required>
-
                     <input type="text" name="lastName" id="lastName" placeholder="Apellido" class= "usuarioNombre" required>
-
                     <label for="avatar">Seleccionar imagen de perfil</label>
                     <input type="file" name="avatar" id="avatar" class= "usuarioNombre" required>
-
-                    <input type="email" name="email" id="email" placeholder= "email" class="usuarioNombre" required>
+                    <input type="email" name="email" id="email" placeholder= "Email" class="usuarioNombre" required>
                     <label>Fecha de Nacimiento:</label>
                     <input class="fecha-nac" type="date" name="fecha" value="2021-07-05" min="1930-01-01" max="2019-12-30" class="usuarioNombre" required>
                     <input type="text" name="direccion" id="direccion" placeholder="Dirección" class="usuarioNombre" required>
@@ -51,10 +48,10 @@
                     </fieldset>
                     <fieldset class="opciones-pago" required>
                         <h3 class="opciones">Opciones de pago</h3>
-                        <input class= "forma-pago" type="radio" name="transferenciaBancaria" value="transferenciaBancaria">Transferencia Bancaria<i class="fas fa-money-check-alt imagen"></i>
-                        <input class= "forma-pago" type="radio" name="tarjetaDebito-Credito" value="TarjetaDebito-Credito">Tarjeta de credito/debito<i class="fas fa-credit-card imagen"></i>
-                        <input class= "forma-pago" type="radio" name="PayPal" value="PayPal">Pay Pal<i class="fab fa-cc-paypal imagen"></i>
-                        <input class= "forma-pago" type="radio" name="cripto" value="cripto">Bitcoin<i class="fab fa-bitcoin imagen"></i>
+                        <label for="Transferencia"><input class="forma-pago" type="radio" name="medio-de-pago" value="transferencia">Transferencia Bancaria<i class="fas fa-money-check-alt imagen"></i></label>
+                        <label for="Tarjeta"><input class="forma-pago" type="radio" name="medio-de-pago" value="Tarjeta">Tarjeta de credito/debito<i class="fas fa-credit-card imagen"></i></label>
+                        <label for="PayPal"><input class="forma-pago" type="radio" name="medio-de-pago" value="PayPal">PayPal<i class="fab fa-cc-paypal imagen"></i></label>
+                        <label for="Bitcoin"><input class="forma-pago" type="radio" name="medio-de-pago" value="cripto">Bitcoin<i class="fab fa-bitcoin imagen"></i></label>
                     </fieldset>
                 <a href="/"><input class="button-dos" type="submit" value="Registrarme"></a>    
                 </form>

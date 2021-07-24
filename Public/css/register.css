@@ -109,7 +109,7 @@ main {
 }*/
 
 fieldset{
-    border: none
+    border: none;
 }
 
 .usuarioNombre{
@@ -137,7 +137,10 @@ input {
     border-radius: 4px;
     color: #808080;
     border: 1px solid black;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .opciones {
@@ -146,9 +149,8 @@ input {
 
 
 .forma-pago {
-    display: flex;
-    justify-content: space-around;
     margin: 10px;
+    width: 1vw;
 }
 
 .button-dos {
