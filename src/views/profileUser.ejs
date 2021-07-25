@@ -20,11 +20,23 @@
 </header>
 
 <main>
+    <h2> Bienvenido <%= user.firstName %></h2>
     <article>
-        <h2> Hola <%= user.firstName %></h2>
-        <figure>
+        
+        <figure class="figure">
             <img src="/img/users/<%= user.avatar%>" alt="">
         </figure>
+        <section class="info">
+                <h3>Gracias por unirte a nuestra comunidad.</h3>
+                <hr class="blue">
+                <ul>
+                    <li><p>Tu email de registro es:</p><%= user.email %></li>
+                    <li><p>Fecha de nacimiento:</p><%= user.fecha %></li>
+                    <li><p>Tu pais de residencia es:</p><%= user.pais %></li>
+                </ul>
+                <hr class="red">
+                <h4>Esperemos que puedas disfrutar la experiencia en nuestro sitio.</h4>
+        </section>
         
 
     </article>
