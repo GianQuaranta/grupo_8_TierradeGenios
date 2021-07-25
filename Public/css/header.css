@@ -49,6 +49,11 @@ header {
 
 }
 
+.lognavbar{
+    width: 40%;
+    display: flex;
+}
+
 .boton {
     display: none;
 }
@@ -214,7 +219,7 @@ header {
         list-style: none;
         width: 33%;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: flex-end;
         align-items: center;
     }
@@ -222,10 +227,12 @@ header {
 
 
     #tercer-ul-register-login li a {
+        font-family: "Noto", sans-serif;
+        font-size: 15px;
         width: 50%;
         margin: 0 5px;
         text-decoration: none;
-        color: #04398c;
+        color: black;
     }
 
 }

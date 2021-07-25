@@ -78,17 +78,59 @@
   "avatar": "avatar-1626739764631.jpg"
  },
  {
-    "id": 8,
-    "firstName": "Joaco ",
-    "lastName": "Gil",
-    "email": "j@gmail.com",
-    "fecha": "2019-12-19",
-    "direccion": "Tandil 1544",
-    "telefono": "3513270775",
-    "pais": "Argentina",
-    "password": "$2a$10$nF5KP/PsErKETTkP8h8rEurKPbV4JEqYnzNB1P4OtX0Cki0W3mAZW",
-    "passwordConfirm": "1234",
-    "PayPal": "PayPal",
-    "avatar": "avatar-1626739764631.jpg"
-   }
+  "id": 8,
+  "firstName": "Joaco ",
+  "lastName": "Gil",
+  "email": "j@gmail.com",
+  "fecha": "2019-12-19",
+  "direccion": "Tandil 1544",
+  "telefono": "3513270775",
+  "pais": "Argentina",
+  "password": "$2a$10$nF5KP/PsErKETTkP8h8rEurKPbV4JEqYnzNB1P4OtX0Cki0W3mAZW",
+  "passwordConfirm": "1234",
+  "PayPal": "PayPal",
+  "avatar": "avatar-1626739764631.jpg"
+ },
+ {
+  "id": 9,
+  "firstName": "Rodrigo",
+  "lastName": "Cordoba",
+  "email": "rcordoba@gmail.com",
+  "fecha": "2008-05-19",
+  "direccion": "Lujan 123",
+  "telefono": "11533371133",
+  "pais": "Argentina",
+  "password": "$2a$10$wfDwqDIg/8uRorwCsaOVRe9415Y4JzExvVoIH6q2fqbHbbAj94hTS",
+  "passwordConfirm": "Hola123",
+  "medio-de-pago": "PayPal",
+  "avatar": "avatar-1627252858632.jpg"
+ },
+ {
+  "id": 10,
+  "firstName": "Lionel",
+  "lastName": "Messi",
+  "email": "leomessi@gmail.com",
+  "fecha": "1998-10-06",
+  "direccion": "Messi 4567",
+  "telefono": "1152243374",
+  "pais": "Argentina",
+  "password": "$2a$10$R/sRRDrVzGcMkag/srn4puAK/A23pAzdExHw.oo.QKrhs7gFBHfG.",
+  "passwordConfirm": "Hola12345",
+  "medio-de-pago": "transferencia",
+  "avatar": "avatar-1627253162762.JPG"
+ },
+ {
+  "id": 11,
+  "firstName": "Lionel",
+  "lastName": "Messi",
+  "email": "leomessi@gmail.com",
+  "fecha": "1998-10-06",
+  "direccion": "Messi 4567",
+  "telefono": "1152243374",
+  "pais": "Argentina",
+  "password": "$2a$10$x0vbBa2E13.HwhXgQSzxNOP1N/Mpz7ayLKklhBd/cpKHKAZBbTcl.",
+  "passwordConfirm": "Hola12345",
+  "medio-de-pago": "transferencia",
+  "avatar": "avatar-1627253308399.JPG"
+ }
 ]

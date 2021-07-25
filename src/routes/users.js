@@ -2,6 +2,7 @@ const express = require('express');
 const userController = require('../controllers/usersController');
 const adminMiddleware = require('../middlewares/authAdminMiddleware')
 const authMiddleware = require('../middlewares/authMiddleware')
+const guestMiddleware = require('../middlewares/guestMiddleware')
 const router = express.Router();
 const multer = require('multer')
 const path = require ('path')
@@ -20,8 +21,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage})
 
-router.get('/register' , userController.register);
-router.get('/login' , userController.login);
+router.get('/register' , [guestMiddleware], userController.register);
+router.get('/login' , [guestMiddleware],userController.login);
 router.get('/contrasenia' , userController.contrasenia);
 router.get('/list',[adminMiddleware] ,userController.userList);
 router.get('/profile', [authMiddleware], userController.profile)

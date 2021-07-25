@@ -23,7 +23,7 @@ const userController = {
 
         user.create(userToCreate)
 
-        return res.send("Ok, se guardó el usuario")
+        return res.send("/")
         
     },
 
@@ -46,10 +46,21 @@ const userController = {
                     res.cookie('userEmail', req.body.email, {maxAge: 1000 * 10})
                 }
                 return res.redirect('/user/profile')
+            } else {
+                return res.render('login', {
+                    errors: {
+                        email: {msg: 'Credenciales invalidas'}
+                    },
+                    old: req.body
+                })
             }
             
         }
-        return res.render('login')
+        return res.render('login', {
+            errors: {
+                email: {msg: 'No se encuentra este email en nuestra base de datos'}
+            }
+        })
     },
 
     profile: function(req,res) {
