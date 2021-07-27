@@ -199,7 +199,10 @@ input {
     }
 }
 
-
+#text-danger {
+    color: red;
+    font-size: 13px;
+}
 
 
 /********* MEDIA QUERYS TABLET ********/

@@ -132,5 +132,47 @@
   "passwordConfirm": "Hola12345",
   "medio-de-pago": "transferencia",
   "avatar": "avatar-1627253308399.JPG"
+ },
+ {
+  "id": 13,
+  "firstName": "Gasti",
+  "lastName": "Garcia",
+  "email": "gast@gmail.com",
+  "fecha": "1996-07-05",
+  "direccion": "Tandil 1544",
+  "telefono": "+543513270775",
+  "pais": "Argentina",
+  "password": "$2a$10$hCImShFb6FihKHZZw7L4o.57uHybCZ.yIjHI9qM4RiK8mFwbClMr6",
+  "passwordConfirm": "1234",
+  "medio-de-pago": "transferencia",
+  "avatar": "avatar-1627338467891.jpg"
+ },
+ {
+  "id": 14,
+  "firstName": "Gianfranco",
+  "lastName": "Quaranta",
+  "email": "gianquarantaa@gmail.com",
+  "fecha": "1996-07-05",
+  "direccion": "Tandil 1544",
+  "telefono": "+543513270775",
+  "pais": "Argentina",
+  "password": "$2a$10$v4H6JbOqUbNC4C9d5/Zzr.ImCisl9eP8do1ahU6.Tps8a/s7v20/y",
+  "passwordConfirm": "1234",
+  "medio-de-pago": "transferencia",
+  "avatar": "avatar-1627339096682.jpg"
+ },
+ {
+  "id": 15,
+  "firstName": " Gianfranco",
+  "lastName": " Quaranta",
+  "email": "gianquaranta@gmail.com",
+  "fecha": "1996-06-18",
+  "direccion": " Tandil 1544",
+  "telefono": " +543513270775",
+  "pais": " Argentina",
+  "password": "$2a$10$EDpNSrIDEusUkoChxfiPxORSq5wJo9qHlNwdLYwM0I9rPImd55OV6",
+  "passwordConfirm": "1234",
+  "medio-de-pago": "transferencia",
+  "avatar": "avatar-1627340393479.png"
  }
 ]
