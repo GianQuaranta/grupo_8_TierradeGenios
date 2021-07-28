@@ -15,46 +15,35 @@
             <a href="/cart"><i class="fas fa-shopping-cart cart"></i></a>
         </nav>
  </section>  -->
- <figure id="div-logo">
+<figure id="div-logo">
     <a href="/">
         <img class="logo" src="/img/tierra-de-genios-texto-logo-1.png" alt="Logotipo principal">
     </a>
 </figure>
 
 
- <section class="div-navbar">
+<section class="div-navbar">
 
-        <nav class="lognavbar" id="primer-nav-img-arriba">
-
-            <ul id="ul-de-la-imagen">
-                <% if (locals.isLogged) { %>
-                 
-                
-                <li>
-
-                    <a href="#">
-
-                        <img src="\img\users\<%=locals.userLogged.avatar%>" alt="Imagen-perfil-usuario">
-                    
-                        Hi <%= locals.userLogged.firstName %> 
-                        
-                    </a>
-
-            </ul>
-
-
-            <ul id="segundo-ul-desplegable">
-
-                <a href="/user/profile">My profile</a>
-
-                <li><hr></li>  <!--- en esta línea hay que poner el desplegable con las opciones-->
-
+    <nav class="lognavbar" > <!-- id="primer-nav-img-arriba" -->
+        <% if (locals.isLogged) { %>
+        <ul id="tercer-ul-register-login">
+            
+             <li>
+                <a href="/user/profile">
+                    <img src="\img\users\<%=locals.userLogged.avatar%>" alt="Imagen-perfil-usuario">
+                    <li>Hi <%= locals.userLogged.firstName %></li>
+                </a>
+               
+            </li>
+            <li>
                 <a href="/user/logout">Logout</a>
+            </li>
+        </ul>
 
-            </ul>
 
-    </li>
-    <% } else { %>
+        
+
+        <% } else { %>
         <ul id="tercer-ul-register-login">
             <li>
                 <a href="/user/register">
@@ -68,18 +57,18 @@
             </li>
         </ul>
 
-    <% } %>
+        <% } %>
 
-        </nav>
+    </nav>
 
-        <nav class="navbar">
-            <a href="/about-us">Nosotros</a>
-            <a href="#" class="boton-becas">Becas</a>
-            <a href="/apply-scholarship" class="boton">Solicitar beca</a>
-            <a href="/products/detail" class="boton">Ayudar a becar</a>
-            <!-- <a href="/register" class="boton">Registrarse</a> -->
-            <!--<a href="/user/login">Ingresar</a>-->
-            <a class= "boton" href="/products">Rangos</a>
-            <a href="/cart"><i class="fas fa-shopping-cart cart"></i></a>
-        </nav>
- </section>
+    <nav class="navbar">
+        <a href="/about-us">Nosotros</a>
+        <a href="#" class="boton-becas">Becas</a>
+        <a href="/apply-scholarship" class="boton">Solicitar beca</a>
+        <a href="/products/detail" class="boton">Ayudar a becar</a>
+        <!-- <a href="/register" class="boton">Registrarse</a> -->
+        <!--<a href="/user/login">Ingresar</a>-->
+        <a class="boton" href="/products">Rangos</a>
+        <a href="/cart"><i class="fas fa-shopping-cart cart"></i></a>
+    </nav>
+</section>
