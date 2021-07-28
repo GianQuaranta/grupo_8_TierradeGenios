@@ -49,4 +49,24 @@ En la reunión ultimamos detalles para la entrega del sprint número 2.
 
 **Informe semana 17/07/2021**  **5to Sprint Actualización**
  - Realizamos el retro del 4to sprint.
- - 
+ - Analizamos todo lo que debíamos hacer.
+ - Hicimos la retrospectiva.
+ - Completamos el README.md.
+ - Planificamos el trabajo.
+ - Coordinamos las siguientes reuniones.
+ - Nos fijamos quiénes estamos al día con el contenido estudiado y practicado, de ahí planificamos cómo trabajamos.
+
+
+**Informe semana 17/07/2021**  **5to Sprint Actualización**
+ - Completamos el sprint.
+ - Nos reunimos multiples veces para trabajarlo.
+ - Decidimos no dividirlo porque todo lo que debíamos hacer era importante aprenderlo y practicarlo entre los 3.
+ - Corregimos cuestiones de sprints anteriores.
+ - Corregimos la vista del register, el formulario.
+ - Corregimos el formulario de login.
+ - Agregamos multer.
+ - Agregamos session.
+ - Agregamos las cookies.
+ - Completamos el tablero de trabajo.
+ - Creamos los middlewares.
+ - Analizamos los requerimientos del sprint y está todo ok.s

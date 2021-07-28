@@ -15,6 +15,28 @@ const userController = {
     },
 
     create: function(req, res){
+        const userInDB = user.findByField('email', req.body.email);
+
+        if (userInDB) {
+            return res.render('register', 
+            {
+                errors: {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    },
+                    avatar: {
+                        msg: 'Seleccione nuevamente la imagen de perfil'
+                    },
+                    fecha: {
+                        msg: 'Seleccione nuevamente la fecha de nacimiento'
+                    }
+                },
+                old: req.body
+            
+        })
+        }
+
+
         const userToCreate = {
             ...req.body,
             avatar: req.file.filename,
@@ -23,7 +45,7 @@ const userController = {
 
         user.create(userToCreate)
 
-        return res.send("/")
+        return res.redirect("/user/login")
         
     },
 
@@ -32,36 +54,37 @@ const userController = {
         
         )},
 
-        loginProcess: function(req,res) {
-     
-        let userLogin = user.findByField('email', req.body.email);
-            console.log(userLogin)
-        if(userLogin) {
-            let correctPassword = bcrypt.compareSync(req.body.password , userLogin.password);
-            if(correctPassword){
-                delete userLogin.password;
-                req.session.userLogged = userLogin
+    loginProcess: function(req,res) {
+    
+    let userLogin = user.findByField('email', req.body.email);
+        console.log(userLogin)
+    if(userLogin) {
+        let correctPassword = bcrypt.compareSync(req.body.password , userLogin.password);
+        if(correctPassword){
+            delete userLogin.password;
+            req.session.userLogged = userLogin
 
-                if(req.body.remember){
-                    res.cookie('userEmail', req.body.email, {maxAge: 1000 * 10})
-                }
-                return res.redirect('/user/profile')
-            } else {
-                return res.render('login', {
-                    errors: {
-                        email: {msg: 'Credenciales invalidas'}
-                    },
-                    old: req.body
-                })
-            }
-            
+            if(req.body.remember){
+                res.cookie('userEmail', req.body.email, {maxAge: 1000 * 10})
+            }   
+
+            return res.redirect('/user/profile')
+        } else {
+            return res.render('login', {
+                errors: {
+                    email: {msg: 'Credenciales invalidas'}
+                },
+                old: req.body
+            })
         }
-        return res.render('login', {
-            errors: {
-                email: {msg: 'No se encuentra este email en nuestra base de datos'}
-            }
-        })
-    },
+        
+    }
+    return res.render('login', {
+        errors: {
+            email: {msg: 'No se encuentra este email en nuestra base de datos'}
+        }
+    })
+},
 
     profile: function(req,res) {
         return res.render('profileUser', {user: req.session.userLogged})

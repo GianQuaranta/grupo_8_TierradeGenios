@@ -33,16 +33,39 @@
                     <h3 class="titular-dos"><strong>Formulario de registro</strong></h3>
                     <!--<p class="dummy-text">El éxito no se mide en el dinero, sino en la diferencia que marcas en las personas. – Michelle Obama</p>-->
                     <fieldset>
-                    <input type="text" name="firstName" id="firstName" placeholder="Nombre" class= "usuarioNombre" required>
-                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" class= "usuarioNombre" required>
+                    <input type="text" name="firstName" id="firstName" placeholder="Nombre" class= "usuarioNombre" required value=" <%= (locals.errors && locals.old) ? old.firstName : "" %>">
+                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" class= "usuarioNombre" required value=" <%= (locals.errors && locals.old) ? old.lastName : "" %>">
                     <label for="avatar">Seleccionar imagen de perfil</label>
                     <input type="file" name="avatar" id="avatar" class= "usuarioNombre" required>
-                    <input type="email" name="email" id="email" placeholder= "Email" class="usuarioNombre" required>
+                    <% if (locals.errors && errors.avatar) { %>
+                        <p id="text-danger">
+                            <%= errors.avatar.msg %> 
+                        </p>
+                       <% } %>
+
+
+                    <input type="email" name="email" id="email" placeholder= "Email" class="usuarioNombre" required value=" <%= (locals.errors && locals.old) ? old.email : "" %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <p id="text-danger">
+                            <%= errors.email.msg %> 
+                        </p>
+                       <% } %>
+           
+
+
+
                     <label>Fecha de Nacimiento:</label>
-                    <input class="fecha-nac" type="date" name="fecha" value="2021-07-05" min="1930-01-01" max="2019-12-30" class="usuarioNombre" required>
-                    <input type="text" name="direccion" id="direccion" placeholder="Dirección" class="usuarioNombre" required>
-                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono" class= "usuarioNombre" required>
-                    <input type="text" name="pais" id="pais" placeholder="Pais" class="usuarioNombre" required>
+                    <input class="fecha-nac" type="date" name="fecha" value="" min="1930-01-01" max="2019-12-30" class="usuarioNombre" required>
+                    <% if (locals.errors && errors.fecha) { %>
+                        <p id="text-danger">
+                            <%= errors.fecha.msg %> 
+                        </p>
+                       <% } %>
+
+                    <input type="text" name="direccion" id="direccion" placeholder="Dirección" class="usuarioNombre" required value=" <%= (locals.errors && locals.old) ? old.direccion : "" %>">
+                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono" class= "usuarioNombre" required value=" <%= (locals.errors && locals.old) ? old.telefono : "" %>">
+                    <input type="text" name="pais" id="pais" placeholder="Pais" class="usuarioNombre" required
+                    value=" <%= (locals.errors && locals.old) ? old.pais : "" %>">
                     <input type="password" name="password" id="password" placeholder="Contraseña" class="usuarioNombre" required>
                     <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirmar contraseña" class="usuarioNombre" required>
                     </fieldset>
