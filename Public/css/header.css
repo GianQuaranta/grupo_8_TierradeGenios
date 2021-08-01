@@ -49,10 +49,7 @@ header {
 
 }
 
-.lognavbar{
-    width: 40%;
-    display: flex;
-}
+
 
 .boton {
     display: none;
@@ -243,7 +240,42 @@ header {
  /** MEDIA QUERY DESKTOP ***/
 
 /* HEADER */
-@media(min-width: 769px) { 
+@media(min-width: 450px) { 
+
+    
+
+    .lognavbar{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin: auto;
+    }
+    
+    #tercer-ul-register-login {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+    }
+
+    #tercer-ul-register-login li {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        
+        
+    }
+
+    #tercer-ul-register-login li a{
+        width: 100%
+        
+    }
+    #tercer-ul-register-login li a img {
+        width: 100%
+        
+    }
+
 
     /* .logo{
         width: 40%;

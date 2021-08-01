@@ -4,11 +4,39 @@ main {
 
 article {
     width: 80%;
-    margin: 20px auto;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.figure {
+    width: 40%;
+}
+
+.figure img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.info {
+    width: 60%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.info ul li {
+    list-style: none;
+    margin-top: 10px;
 }
 
 h2{
     text-align: center;
-    margin: 15px 0px;
+    margin: 30px 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+hr {
+    width: 40%;
+    margin: 20px auto;
 }
 
