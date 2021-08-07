@@ -7,7 +7,14 @@ function authAdminMiddleware(req,res,next) {
     let allAdmins = admin.findAll();
 
     let isAdmin = userLogged != null ? allAdmins.find(admin => admin.email == userLogged.email) : null;
-    return isAdmin ? next() : userLogged != null ? res.redirect('/') : res.redirect('/user/login')
+
+    console.log(isAdmin);
+
+    if(isAdmin){
+        res.locals.isAdmin = true;
+    }
+
+    return isAdmin ? next() : userLogged != null ? res.redirect('/') : res.redirect('/user/login');
 
 
 }

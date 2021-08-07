@@ -1,4 +1,5 @@
 const user = require('../models/user')
+const userAdmin = require('../models/admin')
 const bcrypt = require("bcryptjs")
 const userController = {
     register: function(req,res){
@@ -57,7 +58,6 @@ const userController = {
     loginProcess: function(req,res) {
     
     let userLogin = user.findByField('email', req.body.email);
-        console.log(userLogin)
     if(userLogin) {
         let correctPassword = bcrypt.compareSync(req.body.password , userLogin.password);
         if(correctPassword){
@@ -67,6 +67,18 @@ const userController = {
             if(req.body.remember){
                 res.cookie('userEmail', req.body.email, {maxAge: 1000 * 10})
             }   
+
+            
+            let allAdmins = userAdmin.findAll();
+            let isAdmin = allAdmins.find(admin => admin.email == req.body.email);
+
+            console.log(isAdmin, "prueba admin");
+        
+            if(isAdmin){
+                res.locals.isAdmin = true;
+            }
+
+            console.log(res.locals.isAdmin);
 
             return res.redirect('/user/profile')
         } else {
@@ -93,7 +105,7 @@ const userController = {
     logout: function(req,res) {
         res.clearCookie('userEmail');
         req.session.destroy();
-        return res.redirect('/')
+        return res.redirect('/');
     }
 
 

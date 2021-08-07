@@ -38,11 +38,17 @@
             
                     
                 </article>
+
+
                 <article class="contribuir">
+                    <% if (locals.isAdmin) { %>
+                         
                     <button type="button" class="etiqueta-button-edit"><a href="/products/<%= product.id %>/edit" class="editar-button">Editar</a></button>
                     <form action="/products/<%= product.id %>?_method=DELETE" method="post" class="form-button">
                         <button type="submit" class="delete-button">Borrar</button>
                     </form>
+                    <% } %> 
+                    <%= locals.isAdmin %>
                     <button type="submit"><a href="/cart" class="button-contribuir">Contribuir</a></button>
                 </article>
                 

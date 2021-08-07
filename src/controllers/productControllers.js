@@ -4,10 +4,10 @@ const modelProducts = require('../models/product');
 
 const productController = {
     vistaDeLosProductos: (req,res)=> {
-        res.render('productDetail')
+        res.render('productDetail') 
     },
 
-    productList: (req,res) =>{
+    productList: (req,res) =>{  
        //return res.send({ products:modelProducts.addAll()}) 
         res.render('productList' , { products:modelProducts.addAll()} )  
 
