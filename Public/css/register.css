@@ -32,7 +32,7 @@ main {
 }
 
 .registro-uno {
-    width: 100%;
+    width: 99%;
     height: 15vh;
     padding: 5px;
     color: #808080;
@@ -46,6 +46,7 @@ main {
     padding-top: 25px;
     align-items: center;
     text-align: center;
+    margin: auto;
 }
 
 
@@ -74,6 +75,7 @@ main {
     justify-content: center;
     align-items: center;
     color: #808080;
+    margin: auto;
 }
 
 
