@@ -3,27 +3,36 @@ module.exports = function (sequelize, dataTypes){
         id: {
             autoIncrement: true,
             primaryKey: true,
-            type: dataTypes.INTEGER
+            allowNull: false,
+            type: dataTypes.TINYINT
         }, 
         name: {
             allowNull: false, 
-            type: dataTypes.VARCHAR
-        }, 
+            type: dataTypes.VARCHAR(100)
+        },
+        privileges: {
+            allowNull: false,
+            primaryKey: true
+        },
         image: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(250),
+            allowNull: false
         }, 
         min: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.INTEGER,
+            allowNull: false
         }, 
         max: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.INTEGER,
+            allowNull: false
         }, 
         category: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            allowNull: false
         }, 
         range: {
-            type: dataTypes.VARCHAR
-
+            type: dataTypes.INTEGER,
+            allowNull: false
     },
 }
 

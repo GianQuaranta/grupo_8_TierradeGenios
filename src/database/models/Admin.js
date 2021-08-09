@@ -3,10 +3,12 @@ module.exports = function (sequelize, dataTypes){
         id: {
             autoIncrement: true,
             primaryKey: true,
+            allowNull: false,
             type: dataTypes.INTEGER
         }, 
         email: { 
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(100),
+            allowNull: false
         }
 }
 

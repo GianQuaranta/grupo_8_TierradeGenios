@@ -3,41 +3,52 @@ module.exports = function (sequelize, dataTypes) {
         id: {
             autoIncrement: true,
             primaryKey: true,
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            allowNull: false
         },
         firstName: {
             allowNull: false,
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(100)
         },
         lastName: {
             allowNull: false,
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(100)
         },
         email: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(100),
+            allowNull: false
         },
         birthDate: {
-            type: dataTypes.DATE
+            type: dataTypes.DATE,
+            allowNull: false
+        },
+        adress: {
+            type: dataTypes.VARCHAR(150),
+            allowNull: false
         },
         phoneNumber: {
-            type: dataTypes.BIGINT
+            type: dataTypes.BIGINT,
+            allowNull: false
         },
         country: {
-            type: dataTypes.VARCHAR
-
+            type: dataTypes.VARCHAR(100),
+            allowNull: false
         },
         password: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(100),
+            allowNull: false
         },
         passwordConfirm: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(100),
+            allowNull: false
         },
         medioDePago: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(100),
+            allowNull: true
         },
         avatar: {
-            type: dataTypes.VARCHAR
-
+            type: dataTypes.VARCHAR(250),
+            allowNull: false
         },
     }
 

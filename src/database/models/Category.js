@@ -3,18 +3,21 @@ module.exports = function (sequelize, dataTypes){
         id: {
             autoIncrement: true,
             primaryKey: true,
-            type: dataTypes.INTEGER
+            type: dataTypes.TINYINT,
+            allowNull: false
         }, 
         name: {
             allowNull: false, 
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(100)
         }, 
         color: {
-            type: dataTypes.VARCHAR
+            allowNull: false,
+            type: dataTypes.VARCHAR(100)
         }, 
         privileges: {
             foreignKey: true,
-            type: dataTypes.VARCHAR
+            allowNull: false,
+            type: dataTypes.TINYINT
         }
 }
 
