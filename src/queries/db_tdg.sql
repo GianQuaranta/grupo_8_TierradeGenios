@@ -4,29 +4,25 @@ DROP DATABASE IF EXISTS db_tdg;
 CREATE DATABASE db_tdg;
 USE db_tdg;
 
-CREATE TABLE admin(
-    id INT AUTO_INCREMENT NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    PRIMARY KEY (id)
-);
+
 CREATE TABLE categories (
-    id TINYINT AUTO_INCREMENT NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL,
     name VARCHAR(100) NOT NULL,
     color VARCHAR(100) NOT NULL,
     PRIMARY KEY (id)
 );
 CREATE TABLE privileges (
-    id TINYINT AUTO_INCREMENT NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL,
     privilege VARCHAR(150) NOT NULL,
     PRIMARY KEY (id)
 );
 CREATE TABLE products (
-    id TINYINT AUTO_INCREMENT NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL,
     name VARCHAR(100) NOT NULL,
     image VARCHAR(250) NOT NULL,
     min INT NOT NULL,
     max INT NOT NULL,
-    category_id TINYINT NOT NULL,
+    category_id INT NOT NULL,
     rango INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (category_id) REFERENCES categories (id)
@@ -50,8 +46,8 @@ CREATE TABLE users (
 
 CREATE TABLE categories_privileges (
     id  INT AUTO_INCREMENT NOT NULL,
-    category_id  TINYINT NOT NULL,
-    privilege_id  TINYINT NOT NULL,
+    category_id  INT NOT NULL,
+    privilege_id  INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (category_id) REFERENCES categories (id),
     FOREIGN KEY (privilege_id) REFERENCES privileges (id)

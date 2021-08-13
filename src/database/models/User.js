@@ -16,7 +16,9 @@ module.exports = function (sequelize, dataTypes) {
         },
         email: {
             type: dataTypes.VARCHAR(100),
-            allowNull: false
+            allowNull: false,
+            unique: true
+            // Como agregar el UNIQUE tipo de dato
         },
         birthDate: {
             type: dataTypes.DATE,
@@ -38,11 +40,7 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.VARCHAR(100),
             allowNull: false
         },
-        passwordConfirm: {
-            type: dataTypes.VARCHAR(100),
-            allowNull: false
-        },
-        medioDePago: {
+            medioDePago: {
             type: dataTypes.VARCHAR(100),
             allowNull: true
         },
@@ -50,6 +48,11 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.VARCHAR(250),
             allowNull: false
         },
+
+        idAdmin: {
+            type: dataTypes.TINYINT,
+            allowNull: false
+        }
     }
 
     const config = {

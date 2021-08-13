@@ -3,7 +3,7 @@ module.exports = function (sequelize, dataTypes){
         id: {
             autoIncrement: true,
             primaryKey: true,
-            type: dataTypes.TINYINT,
+            type: dataTypes.INTEGER,
             allowNull: false
         }, 
         name: {
@@ -13,11 +13,6 @@ module.exports = function (sequelize, dataTypes){
         color: {
             allowNull: false,
             type: dataTypes.VARCHAR(100)
-        }, 
-        privileges: {
-            foreignKey: true,
-            allowNull: false,
-            type: dataTypes.TINYINT
         }
 }
 

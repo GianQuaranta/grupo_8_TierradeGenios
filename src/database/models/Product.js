@@ -4,15 +4,11 @@ module.exports = function (sequelize, dataTypes){
             autoIncrement: true,
             primaryKey: true,
             allowNull: false,
-            type: dataTypes.TINYINT
+            type: dataTypes.INTEGER
         }, 
         name: {
             allowNull: false, 
             type: dataTypes.VARCHAR(100)
-        },
-        privileges: {
-            allowNull: false,
-            primaryKey: true
         },
         image: {
             type: dataTypes.VARCHAR(250),
@@ -26,11 +22,11 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER,
             allowNull: false
         }, 
-        category: {
+        category_id: {
             type: dataTypes.INTEGER,
             allowNull: false
         }, 
-        range: {
+        rango: {
             type: dataTypes.INTEGER,
             allowNull: false
     },

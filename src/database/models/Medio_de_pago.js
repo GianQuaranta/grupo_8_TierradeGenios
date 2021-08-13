@@ -3,13 +3,14 @@ module.exports = function (sequelize, dataTypes){
         id: {
             autoIncrement: true,
             primaryKey: true,
-            allowNull: false,
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            allowNull: false
         }, 
-        privilege: {
+        medio_de_pago: {
             allowNull: false, 
-            type: dataTypes.VARCHAR(150)
-        }
+            type: dataTypes.VARCHAR(100)
+        }, 
+        
 }
 
     const config = {
@@ -18,7 +19,7 @@ module.exports = function (sequelize, dataTypes){
     }
 
     
-    const privilege = sequelize.define("Privilege", cols, config)
+    const medio_de_pago = sequelize.define("Medio_de_pago", cols, config)
 
-    return privilege; 
+    return medio_de_pago; 
 }
