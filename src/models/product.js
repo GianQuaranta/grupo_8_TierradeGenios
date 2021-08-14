@@ -1,14 +1,19 @@
 const fs = require('fs');
 const path = require('path');
-const privileges = require('./privileges')
-const category = require('./category')
+const privileges = require('./Privilege')
+const category = require('./Category')
+const db = require('../database/models');
 
 const product = {
 
     all: ()=>{
-        const directory = path.resolve(__dirname, '../data','products.json')
-        const readJsonn = fs.readFileSync(directory,{encoding:'utf-8'});
-        const products = JSON.parse(readJsonn);
+
+        const products = db.Product.findAll();
+
+
+        //const directory = path.resolve(__dirname, '../data','products.json')
+        //const readJsonn = fs.readFileSync(directory,{encoding:'utf-8'});
+        //const products = JSON.parse(readJsonn);
         return products;
     },
 
@@ -39,7 +44,7 @@ const product = {
     
     },
 
-    addAll: ()=> {
+    /***addAll: ()=> {
         const productos = product.all();
        
 
@@ -54,7 +59,7 @@ const product = {
         return product
     })  
 
-    },
+    },***/
 
     one:(id) => {
         let all = product.addAll();

@@ -17,12 +17,27 @@ module.exports = function (sequelize, dataTypes){
 }
 
     const config = {
-        timestamps: false, 
-
+        timestamps: false
     }
 
     
     const category = sequelize.define("Category", cols, config)
+
+    Category.associate = function (models) {
+        Category.belongToMany(models.Privilege, {
+            as: 'privileges',
+            through: 'CategoriesPrivileges',
+            foreignKey: 'privilege_id',
+            otherKey: 'category_id',
+            timestamps: false
+        });
+
+        Category.hasMany(models.Product, {
+            as: 'products',
+            foreignKey: 'category_id',
+        });
+    
+    };
 
     return category; 
 }

@@ -61,7 +61,30 @@ module.exports = function (sequelize, dataTypes) {
     }
 
 
-    const user = sequelize.define("User", cols, config)
+    const user = sequelize.define("User", cols, config);
 
-    return User;
+    User.associate = function (models) {
+    
+        User.belongsToMany(models.Donation, {
+            as: 'donation',
+            through: 'donation',
+            foreignKey: 'product_id',
+            otherKey: 'user_id',
+            timestamps: false
+        });
+
+        User.belongsToMany(models.MedioDePago, {
+            as: 'MedioDePago',
+            through: 'UserMediosDePago',
+            foreignKey: 'user_id',
+            otherKey: 'medio_de_pago_id',
+            timestamps: false
+        });
+
+
+    };
+
+
+
+    return user;
 }

@@ -1,17 +1,16 @@
-const privileges = require('../models/privileges');
-const modelProducts = require('../models/product');
+const privileges = require('../models/Privilege');
+const modelProducts = require('../models/Product');
+
 
 
 const productController = {
     vistaDeLosProductos: (req,res)=> {
-        res.render('productDetail') 
+        res.render('productDetail');
     },
 
     productList: (req,res) =>{  
-       //return res.send({ products:modelProducts.addAll()}) 
-        res.render('productList' , { products:modelProducts.addAll()} )  
-
-       
+        //return res.send(db.Product.findAll()) 
+        res.render('productList', { products:modelProducts.all()})  
     },
     create: (req,res) => {
         res.render("productCreationForm")

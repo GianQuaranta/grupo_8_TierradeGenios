@@ -53,16 +53,16 @@ CREATE TABLE categoriesPrivileges (
 
 CREATE TABLE mediosDePago (
   id INT AUTO_INCREMENT NOT NULL,
-  medioDePago VARCHAR(100) NOT NULL,
+  medio_de_pago VARCHAR(100) NOT NULL,
   PRIMARY KEY(id) );
   
 CREATE TABLE userMediosDePago (
   id INT AUTO_INCREMENT NOT NULL,
   user_id INT NOT NULL,
-  medioDePagoId INT NOT NULL,
+  medio_de_pago_id INT NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES users(id),
-  FOREIGN KEY (medioDePagoId) REFERENCES mediosDePago(id));
+  FOREIGN KEY (medio_de_pago_id) REFERENCES mediosDePago(id));
 
 CREATE TABLE donations (
   id INT AUTO_INCREMENT NOT NULL,

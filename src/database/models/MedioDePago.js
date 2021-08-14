@@ -19,7 +19,21 @@ module.exports = function (sequelize, dataTypes){
     }
 
     
-    const medioDePago = sequelize.define("MedioDePago", cols, config)
+    const medioDePago = sequelize.define("MedioDePago", cols, config);
+
+    MedioDePago.associate = function (models) {
+    
+        MedioDePago.belongsToMany(models.User, {
+            as: 'user',
+            through: 'UserMediosDePago',
+            foreignKey: 'medio_de_pago_id',
+            otherKey: 'user_id',
+            timestamps: false
+        });
+
+        
+
+    };
 
     return medioDePago; 
 }
