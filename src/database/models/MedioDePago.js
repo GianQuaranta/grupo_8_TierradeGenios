@@ -19,7 +19,7 @@ module.exports = function (sequelize, dataTypes){
     }
 
     
-    const medio_de_pago = sequelize.define("Medio_de_pago", cols, config)
+    const medioDePago = sequelize.define("MedioDePago", cols, config)
 
-    return medio_de_pago; 
+    return medioDePago; 
 }
