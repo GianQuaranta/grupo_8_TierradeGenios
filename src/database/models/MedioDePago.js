@@ -8,7 +8,7 @@ module.exports = function (sequelize, dataTypes){
         }, 
         medio_de_pago: {
             allowNull: false, 
-            type: dataTypes.VARCHAR(100)
+            type: dataTypes.STRING(100)
         }, 
         
 }
@@ -19,7 +19,7 @@ module.exports = function (sequelize, dataTypes){
     }
 
     
-    const medioDePago = sequelize.define("MedioDePago", cols, config);
+    const MedioDePago = sequelize.define("MedioDePago", cols, config);
 
     MedioDePago.associate = function (models) {
     
@@ -35,5 +35,5 @@ module.exports = function (sequelize, dataTypes){
 
     };
 
-    return medioDePago; 
+    return MedioDePago; 
 }

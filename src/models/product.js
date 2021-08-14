@@ -8,7 +8,8 @@ const product = {
 
     all: ()=>{
 
-        const products = db.Product.findAll();
+        const products = db.Product.findAll()
+            .then(product => {product})
 
 
         //const directory = path.resolve(__dirname, '../data','products.json')

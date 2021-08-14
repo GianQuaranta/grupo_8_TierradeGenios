@@ -8,7 +8,7 @@ module.exports = function (sequelize, dataTypes){
         }, 
         privilege: {
             allowNull: false, 
-            type: dataTypes.VARCHAR(150)
+            type: dataTypes.STRING(150)
         }
 }
 
@@ -18,10 +18,10 @@ module.exports = function (sequelize, dataTypes){
     }
 
     
-    const privilege = sequelize.define("Privilege", cols, config)
+    const Privilege = sequelize.define("Privilege", cols, config)
 
     Privilege.associate = function (models) {
-        Privilege.belongToMany(models.Category, {
+        Privilege.belongsToMany(models.Category, {
             as: 'categories',
             through: 'CategoriesPrivileges',
             foreignKey: 'category_id',
@@ -32,5 +32,5 @@ module.exports = function (sequelize, dataTypes){
         
     };
 
-    return privilege; 
+    return Privilege; 
 }

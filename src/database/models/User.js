@@ -8,14 +8,14 @@ module.exports = function (sequelize, dataTypes) {
         },
         firstName: {
             allowNull: false,
-            type: dataTypes.VARCHAR(100)
+            type: dataTypes.STRING(100)
         },
         lastName: {
             allowNull: false,
-            type: dataTypes.VARCHAR(100)
+            type: dataTypes.STRING(100)
         },
         email: {
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING(100),
             allowNull: false,
             unique: true
             // Como agregar el UNIQUE tipo de dato
@@ -25,7 +25,7 @@ module.exports = function (sequelize, dataTypes) {
             allowNull: false
         },
         adress: {
-            type: dataTypes.VARCHAR(150),
+            type: dataTypes.STRING(150),
             allowNull: false
         },
         phoneNumber: {
@@ -33,19 +33,19 @@ module.exports = function (sequelize, dataTypes) {
             allowNull: false
         },
         country: {
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING(100),
             allowNull: false
         },
         password: {
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING(100),
             allowNull: false
         },
             medioDePago: {
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING(100),
             allowNull: true
         },
         avatar: {
-            type: dataTypes.VARCHAR(250),
+            type: dataTypes.STRING(250),
             allowNull: false
         },
 
@@ -61,11 +61,11 @@ module.exports = function (sequelize, dataTypes) {
     }
 
 
-    const user = sequelize.define("User", cols, config);
+    const User = sequelize.define("User", cols, config);
 
     User.associate = function (models) {
     
-        User.belongsToMany(models.Donation, {
+        /**  User.belongsToMany(models.Donation, {
             as: 'donation',
             through: 'donation',
             foreignKey: 'product_id',
@@ -73,18 +73,18 @@ module.exports = function (sequelize, dataTypes) {
             timestamps: false
         });
 
-        User.belongsToMany(models.MedioDePago, {
+      User.belongsToMany(models.MedioDePago, {
             as: 'MedioDePago',
             through: 'UserMediosDePago',
             foreignKey: 'user_id',
             otherKey: 'medio_de_pago_id',
             timestamps: false
-        });
+        });**/
 
 
     };
 
 
 
-    return user;
+    return User;
 }

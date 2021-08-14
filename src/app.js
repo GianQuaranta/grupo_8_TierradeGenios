@@ -6,6 +6,7 @@ const session = require('express-session');
 const cookie = require('cookie-parser');
 
 
+
 /*Requerimiento de archivos de rutas*/
 const mainRoute = require('./routes/mainRoute')
 const products = require('./routes/productRoute');

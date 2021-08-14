@@ -8,10 +8,10 @@ module.exports = function (sequelize, dataTypes){
         }, 
         name: {
             allowNull: false, 
-            type: dataTypes.VARCHAR(100)
+            type: dataTypes.STRING(100)
         },
         image: {
-            type: dataTypes.VARCHAR(250),
+            type: dataTypes.STRING(250),
             allowNull: false
         }, 
         min: {
@@ -38,7 +38,7 @@ module.exports = function (sequelize, dataTypes){
     }
 
     
-    const product = sequelize.define("Product", cols, config)
+    const Product = sequelize.define("Product", cols, config)
 
     Product.associate = function (models) {
 
@@ -47,15 +47,15 @@ module.exports = function (sequelize, dataTypes){
             foreignKey: 'category_id'
         });
     
-        Product.belongsToMany(models.Donation, {
+      /**   Product.belongsToMany(models.Donation, {
             as: 'donation',
             through: 'donation',
             foreignKey: 'product_id',
             otherKey: 'user_id',
             timestamps: false
-        }) 
+        })*/ 
 
     };
 
-    return product; 
+    return Product; 
 }

@@ -8,11 +8,11 @@ module.exports = function (sequelize, dataTypes){
         }, 
         name: {
             allowNull: false, 
-            type: dataTypes.VARCHAR(100)
+            type: dataTypes.STRING(100)
         }, 
         color: {
             allowNull: false,
-            type: dataTypes.VARCHAR(100)
+            type: dataTypes.STRING(100)
         }
 }
 
@@ -21,10 +21,10 @@ module.exports = function (sequelize, dataTypes){
     }
 
     
-    const category = sequelize.define("Category", cols, config)
+    const Category = sequelize.define("Category", cols, config)
 
     Category.associate = function (models) {
-        Category.belongToMany(models.Privilege, {
+        Category.belongsToMany(models.Privilege, {
             as: 'privileges',
             through: 'CategoriesPrivileges',
             foreignKey: 'privilege_id',
@@ -39,5 +39,5 @@ module.exports = function (sequelize, dataTypes){
     
     };
 
-    return category; 
+    return Category; 
 }

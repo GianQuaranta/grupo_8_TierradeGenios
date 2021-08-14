@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="dfMMm38E5qG-qeg2q2bQ" name="Page-1">
-        <mxGraphModel dx="1337" dy="1543" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="1908" dy="1436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -22,20 +22,11 @@
                 <mxCell id="12" value="max VARCHAR (100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;" parent="6" vertex="1">
                     <mxGeometry y="130" width="140" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="category(FK) INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;" parent="6" vertex="1">
+                <mxCell id="13" value="category_id(FK) INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;" parent="6" vertex="1">
                     <mxGeometry y="156" width="140" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="14" value="range VARCHAR (100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;" parent="6" vertex="1">
                     <mxGeometry y="182" width="140" height="26" as="geometry"/>
-                </mxCell>
-                <mxCell id="736" value="" style="endArrow=none;html=1;fontColor=#FFFFFF;entryX=0;entryY=0.049;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;exitX=-0.003;exitY=0.156;exitDx=0;exitDy=0;exitPerimeter=0;" parent="6" source="7" target="6" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="-1" y="33" as="sourcePoint"/>
-                        <mxPoint x="-1.17999999999995" y="10" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="-9.590000000000032" y="20"/>
-                        </Array>
-                    </mxGeometry>
                 </mxCell>
                 <mxCell id="15" value="Privileges" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" vertex="1">
                     <mxGeometry x="-660" y="-728" width="147" height="78" as="geometry"/>
@@ -670,7 +661,7 @@
                 <mxCell id="775" value="id(PK) INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;" parent="774" vertex="1">
                     <mxGeometry y="26" width="190" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="776" value="medioDePago VARCHAR (100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;" parent="774" vertex="1">
+                <mxCell id="776" value="medio_de_pago VARCHAR (100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;" parent="774" vertex="1">
                     <mxGeometry y="52" width="190" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="780" value="UserMediosDePago" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" vertex="1">
@@ -682,7 +673,7 @@
                 <mxCell id="782" value="user_id(FK) INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;" parent="780" vertex="1">
                     <mxGeometry y="52" width="190" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="783" value="medioDePagoId(FK) INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;" parent="780" vertex="1">
+                <mxCell id="783" value="medio_de_pago_id(FK) INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;" parent="780" vertex="1">
                     <mxGeometry y="78" width="190" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="786" value="" style="endArrow=classic;startArrow=classic;html=1;fillColor=#000000;strokeColor=#000000;exitX=0.997;exitY=0.192;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
@@ -726,6 +717,15 @@
                         <mxPoint x="340.509" y="-900" as="targetPoint"/>
                         <Array as="points">
                             <mxPoint x="330.19000000000005" y="-910.2"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="794" value="" style="endArrow=none;html=1;fontColor=#FFFFFF;entryX=0;entryY=0.049;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;exitX=-0.003;exitY=0.156;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-430.4200000000001" y="-1010.134" as="sourcePoint"/>
+                        <mxPoint x="-430" y="-1029.998" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-439.59000000000003" y="-1020.19"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>

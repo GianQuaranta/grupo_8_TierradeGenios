@@ -1,6 +1,6 @@
 const privileges = require('../models/Privilege');
 const modelProducts = require('../models/Product');
-
+const db = require('../database/models');
 
 
 const productController = {
@@ -9,8 +9,14 @@ const productController = {
     },
 
     productList: (req,res) =>{  
-        //return res.send(db.Product.findAll()) 
-        res.render('productList', { products:modelProducts.all()})  
+        db.Product.findAll({
+            include: [{association: "category"}]
+        })
+            .then(function(product){
+                //return res.send(product[0].category.name)
+                return res.render ("productList", {products: product})
+         
+    })
     },
     create: (req,res) => {
         res.render("productCreationForm")
