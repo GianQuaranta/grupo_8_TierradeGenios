@@ -23,6 +23,20 @@
 
             <select name="category" id="category">
                 <option value="" disabled>Seleccionar categoria</option>
+
+                <% for( let i = 0; i < categories.length; i++ ) { %>
+                    <% if (categories[i].id == product.category_id) { %>
+                        
+                        <option value="<%= categories[i].id %>" selected ><%= categories[i].name %> </option>
+                        
+                    <% } else { %>        
+
+                        <option value="<%= categories[i].id %>" ><%= categories[i].name %> </option>
+
+                    <% } %> 
+
+                <% } %>
+
                 <option value="1" <%=product.category == "1" ? "selected" : null%>>Bronce</option>
                 <option value="2" <%=product.category == "2" ? "selected" : null%>>Plata</option>
                 <option value="3" <%=product.category == "3" ? "selected" : null%>>Oro</option>
@@ -43,8 +57,8 @@
     <fieldset><figure><img src="/img/products/<%=product.image%>" alt="" id="imagen-form"></figure></fieldset>
 
             <fieldset>
-                <label for="rank1image" class="text-label-input-file">Imagen rango 1</label>
-                <input type="file" name="rank1image" id="rank1image" value="" class="input-file"> 
+                <label for="image" class="text-label-input-file">Imagen rango 1</label>
+                <input type="file" name="image" id="image" value="" class="input-file"> 
         </fieldset>
 
              <label for="min"> 
@@ -56,7 +70,7 @@
              </label>
 
              <label for="range"> 
-                <input type="number" name="range" id="range" value="<%=product.range%>" min="1" max="3" placeholder="Seleccione un rango dentro de la categoria" required>
+                <input type="number" name="rango" id="range" value="<%=product.rango%>" min="1" max="3" placeholder="Seleccione un rango dentro de la categoria" required>
              </label>
         <hr>
             <fieldset class="fieldset-button">

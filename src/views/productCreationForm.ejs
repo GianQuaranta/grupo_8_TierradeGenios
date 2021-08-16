@@ -23,16 +23,19 @@
 
                 <select name="category" id="category">
                     <option value="" disabled selected>Seleccionar categoria</option>
-                    <option value="1">Bronce</option>
-                    <option value="2">Plata</option>
-                    <option value="3">Oro</option>
+                    <% for( let i = 0; i < categories.length; i++ ) { %>
+                        
+                        <option value="<%= categories[i].id %>"><%= categories[i].name %> </option>
+
+                    <% } %>
+                        
                 </select>
     
                
 <!--------------------------------------rank1------------------------------------------->
             
                 <label for="name"> 
-                    <input type="text" name="name" id="name" value="" placeholder="Nombre" required>
+                    <input type="text" name="name" id="name" value="" placeholder="Nombre">
             </label>    
 
             <fieldset>
@@ -42,8 +45,8 @@
              
 
                 <fieldset>
-                    <label for="rank1image" class="text-label-input-file">Imagen rango 1</label>
-                    <input type="file" name="rank1image" id="rank1image" value="" class="input-file"> 
+                    <label for="image" class="text-label-input-file">Imagen rango 1</label>
+                    <input type="file" name="image" id="image" value="" class="input-file"> 
             </fieldset>
 
                  <label for="min"> 
@@ -54,8 +57,8 @@
                     <input type="number" name="max" id="max" value="" placeholder="Contribución maxima rango" required>
                  </label>
 
-                 <label for="range"> 
-                    <input type="number" name="range" id="range" value="" min="1" max="3" placeholder="Seleccione un rango dentro de la categoria" required>
+                 <label for="rango"> 
+                    <input type="number" name="rango" id="rango" value="" min="1" max="3" placeholder="Seleccione un rango dentro de la categoria" required>
                  </label>
             <hr>
             

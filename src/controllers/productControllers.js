@@ -1,5 +1,4 @@
 const privileges = require('../models/Privilege');
-const modelProducts = require('../models/Product');
 const db = require('../database/models');
 
 
@@ -9,42 +8,85 @@ const productController = {
     },
 
     productList: (req,res) =>{  
-        db.Product.findAll({
+        const pedidoProducts = db.Product.findAll({
             include: [{association: "category"}]
-        })
-            .then(function(product){
-                //return res.send(product[0].category.name)
-                return res.render ("productList", {products: product})
-         
-    })
+        });
+        const pedidoCategories = db.Category.findAll({
+            include: [{association: "privileges"}]
+        });
+
+        Promise.all([pedidoProducts, pedidoCategories])
+            .then(function([pedidoProducts, pedidoCategories]){
+                return res.render ("productList", {products: pedidoProducts, category: pedidoCategories})
+          })
     },
     create: (req,res) => {
-        res.render("productCreationForm")
+        db.Category.findAll()
+            .then(function(categories){
+                return res.render("productCreationForm", {categories: categories})   
+            })
     },
     saveProduct: (req,res) => {
-        let result = modelProducts.create(req.body,req.file)
-        res.redirect('/products')
-       // return result == true ? res.redirect('/products'):*/res.send('Error al cargar la informacion')
+        db.Product.create({
+            name: req.body.name,
+            image: req.file != undefined ? req.file.filename : "default.png",
+            min: req.body.min,
+            max: req.body.max,
+            category_id: req.body.category,
+            rango: req.body.rango
+        });
+        res.redirect('/products')           
         
     },
     edit: (req,res) => {
-        //res.send(modelProducts.one(req.params.id));
-        res.render("productEditingForm", {product: modelProducts.one(req.params.id)});
-        
+        const pedidoProducts = db.Product.findByPk(req.params.id, {
+            include: [{association: "category"}]
+        });
+        const pedidoCategories = db.Category.findAll({
+            include: [{association: "privileges"}]
+        });
+
+        Promise.all([pedidoProducts, pedidoCategories])
+            .then(function([pedidoProducts, pedidoCategories]){
+                return res.render ("productEditingForm", {product: pedidoProducts, categories: pedidoCategories})
+          })        
     },
     update: (req,res) => {
-        let result = modelProducts.edit(req.body,req.file,req.params.id)
-		return result == true ? res.redirect("/products/") : res.send("Error al cargar la información");
+        db.Product.update({
+            name: req.body.name,
+            image: req.file != undefined ? req.file.filename : "default.png",
+            min: req.body.min,
+            max: req.body.max,
+            category_id: req.body.category,
+            rango: req.body.rango
+        }, {
+            where: {
+                id: req.params.id
+            }
+        });
+        res.redirect('/products/' + req.params.id) 
     },
     detailId: (req,res) => {
-        //res.send(modelProducts.addAll())
-        //res.send(modelProducts.one(req.params.id))
-        res.render("detailId", {product: modelProducts.one(req.params.id)})
+        const pedidoProduct = db.Product.findByPk(req.params.id,{
+            include: [{association: "category"}]
+        });
+        const pedidoCategories = db.Category.findAll({
+            include: [{association: "privileges"}]
+        });
+
+        Promise.all([pedidoProduct, pedidoCategories])
+            .then(function([pedidoProduct, pedidoCategories]){
+                return res.render ("detailId", {product: pedidoProduct, category: pedidoCategories})
+          })
     },
 
     delete: (req, res) => {
-        let result = modelProducts.delete(req.params.id);
-        return result == true ? res.redirect("/products/") : res.send("Error al cargar la información")
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
+        res.redirect("/products/");
     },
 
 }

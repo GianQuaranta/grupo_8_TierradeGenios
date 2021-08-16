@@ -27,8 +27,8 @@ module.exports = function (sequelize, dataTypes){
         Category.belongsToMany(models.Privilege, {
             as: 'privileges',
             through: 'CategoriesPrivileges',
-            foreignKey: 'privilege_id',
-            otherKey: 'category_id',
+            foreignKey: 'category_id',
+            otherKey: 'privilege_id',
             timestamps: false
         });
 

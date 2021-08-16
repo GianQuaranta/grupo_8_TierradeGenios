@@ -12,12 +12,33 @@
         <ul>
             
             <li><b id="detalle-ul-privileges">Privilegios de la categoría: </b></li>
-            <% product.privileges.forEach(des => { %>
-            <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
-               
+            
+            <% if (product.category_id == 1) { %>
 
-           <% }) %>
-        
+                <% category[0].privileges.forEach(des => { %>
+                
+                    <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
+                           
+                <% }) %>
+
+            <% } else if (product.category_id == 2) { %>
+
+                <% category[1].privileges.forEach(des => { %>
+                
+                    <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
+                           
+                <% }) %>
+
+
+            <% } else { %>
+
+                <% category[2].privileges.forEach(des => { %>
+                
+                    <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
+                           
+                <% }) %>
+
+            <% } %>
             
         </ul>
 

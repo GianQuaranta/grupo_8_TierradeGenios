@@ -71,7 +71,7 @@ module.exports = function (sequelize, dataTypes) {
             foreignKey: 'product_id',
             otherKey: 'user_id',
             timestamps: false
-        });
+        }); **/
 
       User.belongsToMany(models.MedioDePago, {
             as: 'MedioDePago',
@@ -79,7 +79,7 @@ module.exports = function (sequelize, dataTypes) {
             foreignKey: 'user_id',
             otherKey: 'medio_de_pago_id',
             timestamps: false
-        });**/
+        });
 
 
     };

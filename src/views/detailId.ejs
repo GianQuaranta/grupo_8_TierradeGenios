@@ -28,10 +28,32 @@
                     
                       <ul>                        
                         <li><b id="detalle-ul-privileges">Privilegios de la categoría: </b></li>
-                        <% product.privileges.forEach(des => { %>
-                        <li><i class="fas fa-check"></i><%= des.privilege %>  </li>                           
+                        <% if (product.category_id == 1) { %>
+
+                            <% category[0].privileges.forEach(des => { %>
+                            
+                                <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
+                                       
+                            <% }) %>
             
-                       <% }) %>
+                        <% } else if (product.category_id == 2) { %>
+            
+                            <% category[1].privileges.forEach(des => { %>
+                            
+                                <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
+                                       
+                            <% }) %>
+            
+            
+                        <% } else { %>
+            
+                            <% category[2].privileges.forEach(des => { %>
+                            
+                                <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
+                                       
+                            <% }) %>
+            
+                        <% } %> 
                     
                         
                     </ul>
@@ -41,20 +63,20 @@
 
 
                 <article class="contribuir">
-                    <% if (locals.isAdmin) { %>
                          
                     <button type="button" class="etiqueta-button-edit"><a href="/products/<%= product.id %>/edit" class="editar-button">Editar</a></button>
                     <form action="/products/<%= product.id %>?_method=DELETE" method="post" class="form-button">
                         <button type="submit" class="delete-button">Borrar</button>
                     </form>
-                    <% } %> 
+                  
                     <%= locals.isAdmin %>
                     <button type="submit"><a href="/cart" class="button-contribuir">Contribuir</a></button>
                 </article>
                 
                 
-                
-                
+                <% if (locals.isAdmin) { %> <!--Linea 66-->
+                    
+                  <% } %> <!--Linea 71-->
                 
                 
                

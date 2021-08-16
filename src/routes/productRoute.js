@@ -19,21 +19,21 @@ const storage = multer.diskStorage({
 const upload = multer({storage})
 
 
-router.get('/detail', productController.vistaDeLosProductos);
+router.get('/detail', productController.vistaDeLosProductos);  // Falta 
 
-router.get('/' , productController.productList);
+router.get('/' , productController.productList); // CRUD Sequelize Realizado
 
-router.get("/create",[adminMiddleware] ,productController.create);
+router.get("/create",[adminMiddleware], productController.create); // CRUD Sequelize Realizado
 
-router.get('/:id' , productController.detailId);
+router.get('/:id', productController.detailId); // CRUD Sequelize Realizado
 
-router.get("/:id/edit",[adminMiddleware ],productController.edit);
+router.get("/:id/edit", [adminMiddleware], productController.edit); // CRUD Sequelize Realizado
 
-router.post("/create",[adminMiddleware ], upload.single('rank1image'),productController.saveProduct);
+router.post("/create", [adminMiddleware], upload.single('image'),productController.saveProduct); // CRUD Sequelize Realizado
 
-router.put("/:id", [adminMiddleware ],upload.single('rank1image'), productController.update);
+router.put("/:id", [adminMiddleware], upload.single('image'), productController.update); // CRUD Sequelize Realizado
 
-router.delete("/:id",[adminMiddleware ], productController.delete);
+router.delete("/:id", [adminMiddleware], productController.delete); // Falta
 
 
 module.exports = router;
