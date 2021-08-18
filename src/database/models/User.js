@@ -65,13 +65,13 @@ module.exports = function (sequelize, dataTypes) {
 
     User.associate = function (models) {
     
-        /**  User.belongsToMany(models.Donation, {
-            as: 'donation',
-            through: 'donation',
-            foreignKey: 'product_id',
-            otherKey: 'user_id',
+        User.belongsToMany(models.Product, {
+            as: 'donation_user',
+            through: 'donations',
+            foreignKey: 'user_id',
+            otherKey: 'product_id',
             timestamps: false
-        }); **/
+        });
 
       User.belongsToMany(models.MedioDePago, {
             as: 'MedioDePago',

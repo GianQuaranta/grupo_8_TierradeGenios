@@ -47,13 +47,13 @@ module.exports = function (sequelize, dataTypes){
             foreignKey: 'category_id'
         });
     
-      /**   Product.belongsToMany(models.Donation, {
-            as: 'donation',
-            through: 'donation',
-            foreignKey: 'product_id',
-            otherKey: 'user_id',
+        Product.belongsToMany(models.Donation, {
+            as: 'donation_product',
+            through: 'donations',
+            foreignKey: 'user_id',
+            otherKey: 'product_id',
             timestamps: false
-        })*/ 
+        })
 
     };
 

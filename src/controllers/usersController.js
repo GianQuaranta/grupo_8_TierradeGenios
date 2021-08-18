@@ -1,6 +1,7 @@
 const user = require('../models/user')
 const userAdmin = require('../models/admin')
 const bcrypt = require("bcryptjs")
+const db = require('../database/models')
 const userController = {
     register: function(req,res){
         //return res.send(user.findAll())
@@ -51,9 +52,14 @@ const userController = {
     },
 
     userList: function(req,res){
-        return res.render('userList', {userList: user.findAll()}
-        
-        )},
+        db.User.findAll()
+        .then(function(users){
+            return res.render('userList', { userList: users })
+        })
+        .catch(function(err){
+            console.log("Error!")
+        })
+    },
 
     loginProcess: function(req,res) {
     

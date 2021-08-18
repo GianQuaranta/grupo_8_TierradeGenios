@@ -33,22 +33,6 @@ module.exports = function (sequelize, dataTypes){
     const Donation = sequelize.define("Donation", cols, config);
 
     Donation.associate = function (models) {
-
-        /**   Donation.belongsToMany(models.Product, {
-            as: 'product',
-            through: 'donation',
-            foreignKey: 'product_id',
-            otherKey: 'user_id',
-            timestamps: false
-        });
-
-      Donation.belongsToMany(models.User, {
-            as: 'user',
-            through: 'donation',
-            foreignKey: 'user_id',
-            otherKey: 'product_id',
-            timestamps: false
-        })**/
     
     };
 
