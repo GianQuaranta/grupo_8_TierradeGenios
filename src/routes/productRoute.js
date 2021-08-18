@@ -33,7 +33,7 @@ router.post("/create", [adminMiddleware], upload.single('image'),productControll
 
 router.put("/:id", [adminMiddleware], upload.single('image'), productController.update); // CRUD Sequelize Realizado
 
-router.delete("/:id", [adminMiddleware], productController.delete); // Falta
+router.delete("/:id", [adminMiddleware], productController.delete); // CRUD Sequelize Realizado
 
 
 module.exports = router;

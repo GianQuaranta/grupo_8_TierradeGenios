@@ -21,16 +21,16 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage})
 
-router.get('/register' , [guestMiddleware], userController.register);
-router.get('/login' , [guestMiddleware],userController.login);
-router.get('/contrasenia' , userController.contrasenia);
-router.get('/list',[adminMiddleware] ,userController.userList);
-router.get('/profile', [authMiddleware], userController.profile)
-router.get('/logout', userController.logout)
-    
+router.get('/register' , [guestMiddleware], userController.register); // Falta
+router.get('/login' , [guestMiddleware],userController.login); // Falta
+router.get('/contrasenia' , userController.contrasenia); // Falta
+router.get('/list',[adminMiddleware] ,userController.userList); // Falta
+router.get('/profile', [authMiddleware], userController.profile); // Falta
+router.get('/logout', userController.logout); // Falta
+     
 
-router.post('/register', upload.single("avatar"), userController.create);
-router.post('/login', userController.loginProcess)
+router.post('/register', upload.single("avatar"), userController.create); // Falta
+router.post('/login', userController.loginProcess); // Falta
 
 
 

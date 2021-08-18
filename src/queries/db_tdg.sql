@@ -2,7 +2,6 @@ DROP DATABASE IF EXISTS db_tdg;
 CREATE DATABASE db_tdg;
 USE db_tdg;
 
-
 CREATE TABLE categories (
     id INT AUTO_INCREMENT NOT NULL,
     name VARCHAR(100) NOT NULL,
@@ -99,8 +98,8 @@ VALUES(1,'Ciudadano emblema','default.png',1,50,1,1),(2,'Ciudadano ilustre','def
  'default.png',101,150,1,1),(4,'Icono','default.png',151,200,2,2),(5,'Eminencia','default.png',201,150,2,2),(6,'Prócer','default.png',
    251,300,2,2),(7,'Magno','default.png',301,350,3,3),(8,'Egregio','default.png',351,400,3,3) ; 
    
-INSERT INTO mediosDePago ( id, medioDePago )
+INSERT INTO mediosDePago ( id, medio_de_pago )
 VALUES (1 , 'paypal'),(2,'transferencia'),(3,'tarjeta'),(4,'bitcoint');
 
-INSERT INTO userMediosDePago (id, user_id, medioDePagoId)
+INSERT INTO userMediosDePago (id, user_id, medio_de_pago_id)
 VALUES (1, 1,1 ),(2,2,1);
