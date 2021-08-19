@@ -53,12 +53,16 @@
                 <li><%= userList[i].country %></li>
                 <li>Contraseña</li>
                 <li><%= userList[i].password %></li>
-                <li>Método de pago</li>
-                <li><%= userList[i].password %></li>
+                <li>Métodos de pago</li>
 
                 </ul>
                 
             </section>
+
+            <form action="/user/<%= userList[i].id %>?_method=DELETE" method="post" class="">
+                <button type="submit" class="delete-button">Borrar usuario</button>
+            </form>
+
         </article>
         <%}%>
 

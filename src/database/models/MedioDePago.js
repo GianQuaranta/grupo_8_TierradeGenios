@@ -15,7 +15,7 @@ module.exports = function (sequelize, dataTypes){
 
     const config = {
         timestamps: false, 
-
+        tableName: "MediosDePago"
     }
 
     
@@ -24,7 +24,7 @@ module.exports = function (sequelize, dataTypes){
     MedioDePago.associate = function (models) {
     
         MedioDePago.belongsToMany(models.User, {
-            as: 'user',
+            as: 'user_MediodePagos',
             through: 'UserMediosDePago',
             foreignKey: 'medio_de_pago_id',
             otherKey: 'user_id',

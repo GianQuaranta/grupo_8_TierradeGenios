@@ -20,12 +20,14 @@ const productController = {
                 return res.render ("productList", {products: pedidoProducts, category: pedidoCategories})
           })
     },
+    
     create: (req,res) => {
         db.Category.findAll()
             .then(function(categories){
                 return res.render("productCreationForm", {categories: categories})   
             })
     },
+
     saveProduct: (req,res) => {
         db.Product.create({
             name: req.body.name,
@@ -38,6 +40,7 @@ const productController = {
         res.redirect('/products')           
         
     },
+
     edit: (req,res) => {
         const pedidoProducts = db.Product.findByPk(req.params.id, {
             include: [{association: "category"}]
@@ -51,6 +54,7 @@ const productController = {
                 return res.render ("productEditingForm", {product: pedidoProducts, categories: pedidoCategories})
           })        
     },
+
     update: (req,res) => {
         db.Product.update({
             name: req.body.name,
@@ -66,6 +70,7 @@ const productController = {
         });
         res.redirect('/products/' + req.params.id) 
     },
+
     detailId: (req,res) => {
         const pedidoProduct = db.Product.findByPk(req.params.id,{
             include: [{association: "category"}]

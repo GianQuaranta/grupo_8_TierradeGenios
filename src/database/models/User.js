@@ -18,7 +18,6 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING(100),
             allowNull: false,
             unique: true
-            // Como agregar el UNIQUE tipo de dato
         },
         birthDate: {
             type: dataTypes.DATE,
@@ -40,16 +39,12 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-            medioDePago: {
-            type: dataTypes.STRING(100),
-            allowNull: true
-        },
         avatar: {
             type: dataTypes.STRING(250),
             allowNull: false
         },
 
-        idAdmin: {
+        isAdmin: {
             type: dataTypes.TINYINT,
             allowNull: false
         }
@@ -78,8 +73,9 @@ module.exports = function (sequelize, dataTypes) {
             through: 'UserMediosDePago',
             foreignKey: 'user_id',
             otherKey: 'medio_de_pago_id',
-            timestamps: false
-        });
+            timestamps: false,
+            onDelete: 'cascade'
+        })
 
 
     };

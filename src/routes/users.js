@@ -24,14 +24,15 @@ const upload = multer({storage})
 router.get('/register' , [guestMiddleware], userController.register); // Queda igual
 router.get('/login' , [guestMiddleware],userController.login); // Queda igual
 router.get('/contrasenia' , userController.contrasenia); // Queda igual
-router.get('/list',[adminMiddleware] ,userController.userList); // Falta
+router.get('/list',[adminMiddleware] ,userController.userList); // CRUD Sequelize Realizado
 router.get('/profile', [authMiddleware], userController.profile); // Falta
-router.get('/logout', userController.logout); // Falta
-     
+router.get('/logout', userController.logout); // Queda igual
+router.get('/:id/edit', userController.edit);
 
-router.post('/register', upload.single("avatar"), userController.create); // Falta
+router.post('/register', upload.single("avatar"), userController.create); // Falta ver de hacer que los datos del array se guarden en formato number(dice agus que me asegure que le estoy haciendo el parseInt a los elementos del array y no al array)
 router.post('/login', userController.loginProcess); // Falta
-
+router.put('/:id/edit', userController.update);
+router.delete("/:id", [adminMiddleware], userController.deleteUser);
 
 
 module.exports = router;
