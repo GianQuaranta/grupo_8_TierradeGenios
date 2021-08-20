@@ -22,11 +22,9 @@
 
         <% for(let i=0; i < user.length; i++){%>
 
+            <article id="article-tjta-user">
 
-            <article class="user">
-
-
-                <section class="userStatic">
+                <section id="section-1">
                     <figure><img src="/img/users/<%=user[i].avatar%>" alt=""></figure>
 
                     <ul>
@@ -34,18 +32,20 @@
                         <li><i class="fas fa-star"></i></li>
                         <li><i class="fas fa-star"></i></li>
                     </ul>
+
                     <h3>Bronce</h3>
 
                 </section>
 
-                <section class="userInfo">
-                    <ul class="userInfoUl">
+                <section id="section-2">
 
+                    <ul>
                         <li><b>Id usuario: </b>
                             <%= user[i].id %>
                         </li>
                         <li><b>Nombre de usuario: </b>
                             <%= user[i].firstName %>
+                                <%= user[i].lastName %>
                         </li>
                         <li><b>Fecha de nacimiento: </b>
                             <%= user[i].birthDate %>
@@ -74,19 +74,22 @@
                         </li>
                     </ul>
 
+                    <div id="div-buttons">
+
+                        <button type="button" class="button-user-detail"><a href="/user/<%= user[i].id %>">Detail</a></button>
+
+                        <button type="button" class="button-user-edit"><a href="/user/<%= user[i].id %>/edit">Editar</a></button>
+
+                        <form action="/user/<%= user[i].id %>?_method=DELETE" method="post">
+                            <button type="submit">Borrar</button>
+                        </form>
+
+                    </div>
+
                 </section>
 
-                <button type="button" class="etiqueta-button-edit"><a href="/user/<%= user[i].id %>"
-                        class="editar-button">User detail</a></button>
-
-                <button type="button" class="etiqueta-button-edit"><a href="/user/<%= user[i].id %>/edit"
-                        class="editar-button">Editar</a></button>
-
-                <form action="/user/<%= user[i].id %>?_method=DELETE" method="post" class="">
-                    <button type="submit" class="delete-button">Borrar usuario</button>
-                </form>
-
             </article>
+
             <%}%>
 
     </main>

@@ -24,7 +24,7 @@ const upload = multer({storage})
 router.get('/register' , [guestMiddleware], userController.register); // CRUD Sequelize Realizado
 router.get('/login' , [guestMiddleware],userController.login); // CRUD Sequelize Realizado
 router.get('/contrasenia' , userController.contrasenia); // CRUD Sequelize Realizado
-router.get('/list',[adminMiddleware] ,userController.userList); // CRUD Sequelize Realizado
+router.get('/list', [adminMiddleware],userController.userList); // CRUD Sequelize Realizado
 router.get('/profile', [authMiddleware], userController.profile); // CRUD Sequelize Realizado
 router.get('/logout', userController.logout); // CRUD Sequelize Realizado
 router.get('/:id/edit', [authMiddleware], userController.edit); // CRUD Sequelize Realizado
