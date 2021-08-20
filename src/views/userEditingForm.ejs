@@ -26,7 +26,7 @@
         <h1 class="titular-uno"><strong>¡Modifiquemos esa info!</strong></h1>
         <section class="section-registro">
             <section class="registro-dos">
-                <form class="form-registro" action="/user/:id/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form class="form-registro" action="/user/<%=user.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
                     
                     <h3 class="titular-dos"><strong>Formulario de edición</strong></h3>
                     <fieldset>
@@ -103,8 +103,9 @@
                         
 
                     </fieldset>
-
-                <a href="/"><input class="button-dos" type="submit" value="Registrarme"></a>    
+                    
+                    <button class="button-dos">Enviar</button>
+                
                 </form>
                 
             </section>

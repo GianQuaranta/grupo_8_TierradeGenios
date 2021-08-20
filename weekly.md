@@ -57,7 +57,7 @@ En la reunión ultimamos detalles para la entrega del sprint número 2.
  - Nos fijamos quiénes estamos al día con el contenido estudiado y practicado, de ahí planificamos cómo trabajamos.
 
 
-**Informe semana 17/07/2021**  **5to Sprint Actualización**
+**Informe semana 19/07/2021**  **5to Sprint Actualización**
  - Completamos el sprint.
  - Nos reunimos multiples veces para trabajarlo.
  - Decidimos no dividirlo porque todo lo que debíamos hacer era importante aprenderlo y practicarlo entre los 3.
@@ -69,4 +69,34 @@ En la reunión ultimamos detalles para la entrega del sprint número 2.
  - Agregamos las cookies.
  - Completamos el tablero de trabajo.
  - Creamos los middlewares.
- - Analizamos los requerimientos del sprint y está todo ok.s
+ - Analizamos los requerimientos del sprint y está todo ok.
+
+
+**Informe semana 26/07/2021**  **5to Sprint Actualización**
+ - Hacemos un análisis de situación para saber cómo nos encontramos para la realización del siguiente sprint.
+ - Empezamos a planificar el trabajo a realizar.
+ - Determinamos dedicar poco más de una semana para ponernos al día con el estudio y los prácticos.
+
+
+**Informe semana 02/08/2021**  **5to Sprint Actualización**
+ - Realizamos otro análisis de situación para ver, luego de dedicar días a ponernos al día, cómo nos encontramos para comenzar con el sprint.
+ - Comenzamos con el sprint.
+ - Comenzamos con el diseñado del diagrama de base de datos.
+ - Comenzamos con la elaboración de los diseños de los modelos en Sequelize.
+ 
+
+**Informe semana 09/08/2021**  **5to Sprint Actualización**
+ - Comenzamos con el desarrollo de los scripts de SQL.
+ - Corregimos y finalizamos el diagrama de nuestra base de datos.
+ - Pulimos el desarrollo de los scripts de SQL.
+ - Comenzamos a configurar las relaciones entre modelos en Sequelize.
+ - Comenzamos con el CRUD.
+
+
+**Informe semana 16/08/2021**  **5to Sprint Actualización**
+ - Desarrollamos el CRUD.
+ - Creamos las vistas faltantes de User y de Product.
+ - Creamos las rutas faltantes de User y de Product.
+ - Completamos el controller de user y de product para conectarlo con la base de datos.
+ - Finalizamos la actualización del tablero de Trello.
+ - Finalizamos la actualización del weekly.

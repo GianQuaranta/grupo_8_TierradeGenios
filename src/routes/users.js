@@ -29,9 +29,9 @@ router.get('/profile', [authMiddleware], userController.profile); // Falta
 router.get('/logout', userController.logout); // Queda igual
 router.get('/:id/edit', userController.edit);
 
-router.post('/register', upload.single("avatar"), userController.create); // Falta ver de hacer que los datos del array se guarden en formato number(dice agus que me asegure que le estoy haciendo el parseInt a los elementos del array y no al array)
+router.post('/register', upload.single("avatar"), userController.create); // CRUD Sequelize Realizado
 router.post('/login', userController.loginProcess); // Falta
-router.put('/:id/edit', userController.update);
+router.put('/:id/edit', upload.single('avatar'), userController.update);
 router.delete("/:id", [adminMiddleware], userController.deleteUser);
 
 
