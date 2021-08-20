@@ -199,18 +199,8 @@ const userController = {
             let numberArray = req.body.medio_de_pago.map(m => parseInt(m))
             console.log(numberArray);
 
-            let actualizarMdp = numberArray.map(async (mdp) => {
-                return await db.UserMediosDePago.update({
-                    user_id: usuarioEditar.id,
-                    medio_de_pago_id: mdp   
-                }, {
-                    where: {
-                        user_id: usuarioEditar.id
-                    }
-                })
-            });
-
-            console.log(actualizarMdp);
+            let user = await db.User.findByPk(req.params.id);
+            let actualizarMdp = await user.setMedioDePago(numberArray);
 
             res.redirect('/user/list');
 

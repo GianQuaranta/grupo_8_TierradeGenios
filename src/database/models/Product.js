@@ -48,7 +48,7 @@ module.exports = function (sequelize, dataTypes){
         });
     
         Product.belongsToMany(models.Donation, {
-            as: 'donation_product',
+            as: 'donationProduct',
             through: 'donations',
             foreignKey: 'user_id',
             otherKey: 'product_id',

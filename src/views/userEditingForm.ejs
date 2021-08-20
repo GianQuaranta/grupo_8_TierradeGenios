@@ -51,7 +51,7 @@
                        <% } %>
 
 
-                    <input type="email" name="email" id="email" placeholder= "Email" class="usuarioNombre" required value= <%= (user.email) ? user.email : (locals.errors && locals.old) ? old.email : "" %>>
+                    <input type="email" name="email" id="email" placeholder= "Email" class="usuarioNombre" required disabled value= <%= (user.email) ? user.email : (locals.errors && locals.old) ? old.email : "" %>>
 
                     <% if (locals.errors && errors.email) { %>
                         <p id="text-danger">

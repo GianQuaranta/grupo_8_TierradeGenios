@@ -61,7 +61,7 @@ module.exports = function (sequelize, dataTypes) {
     User.associate = function (models) {
     
         User.belongsToMany(models.Product, {
-            as: 'donation_user',
+            as: 'donationUser',
             through: 'donations',
             foreignKey: 'user_id',
             otherKey: 'product_id',
