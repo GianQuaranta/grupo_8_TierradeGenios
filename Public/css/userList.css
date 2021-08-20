@@ -7,8 +7,13 @@ main{
 
 .user{
     width: 80%;
-    margin: 20px auto; 
+    margin: 0px 5px auto; 
     border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -58,7 +63,6 @@ ul li{
 
     .user{
         width: 40%;
-        margin: 20px auto; 
         border: 1px solid black;
     
     }

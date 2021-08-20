@@ -6,12 +6,13 @@ function authAdminMiddleware(req,res,next) {
     //console.log(userLogged);
     
 
-    if(userLogged.isAdmin == 1){
+    /**if(userLogged.isAdmin == 1){
         res.locals.isAdmin = true;
-    }
+    }**/
 
-    return (userLogged.isAdmin == 1) ? next() : userLogged != null ? res.redirect('/') : res.redirect('/user/login');
+    //return (userLogged.isAdmin == 1) ? next() : userLogged != null ? res.redirect('/') : res.redirect('/user/login');
 
+    return (!userLogged) ? res.redirect('/user/login') : (userLogged.isAdmin == 1) ? next() : res.redirect('/');
 
 }
 
