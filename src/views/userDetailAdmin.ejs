@@ -20,6 +20,7 @@
 </header>
 
 <main>
+    <i><b>Vista Admin</b></i>
     <h2> Bienvenid@ <%= user.firstName %> <%= user.lastName %> </h2>
     <article>
         
@@ -43,15 +44,20 @@
                             <% } %>
                         </ul>
                     </li>
-
-
                 </ul>
                 <hr class="red">
                 <h4>Disfrutemos de cambiar el mundo junt@s.</h4>
 
-                <button type="button" class="etiqueta-button-edit"><a href="/user/<%= user.id %>/edit" class="editar-button">Editar información</a></button>
+            <button type="button" class="etiqueta-button-edit"><a href="/user/<%= user.id %>/edit" class="editar-button">Editar</a></button>
+
+            <form action="/user/<%= user.id %>?_method=DELETE" method="post" class="">
+                <button type="submit" class="delete-button">Borrar usuario</button>
+            </form>
+
+
         </section>
         
+
 
     </article>
 

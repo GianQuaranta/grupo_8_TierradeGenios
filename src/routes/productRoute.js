@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
 const upload = multer({storage})
 
 
-router.get('/detail', productController.vistaDeLosProductos);  // Falta 
+router.get('/detail', productController.vistaDeLosProductos);  // Falta agregar los privilegios desde la DB (no indispensable en este momento)
 
 router.get('/' , productController.productList); // CRUD Sequelize Realizado
 

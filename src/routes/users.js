@@ -21,18 +21,19 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage})
 
-router.get('/register' , [guestMiddleware], userController.register); // Queda igual
-router.get('/login' , [guestMiddleware],userController.login); // Queda igual
-router.get('/contrasenia' , userController.contrasenia); // Queda igual
+router.get('/register' , [guestMiddleware], userController.register); // CRUD Sequelize Realizado
+router.get('/login' , [guestMiddleware],userController.login); // CRUD Sequelize Realizado
+router.get('/contrasenia' , userController.contrasenia); // CRUD Sequelize Realizado
 router.get('/list',[adminMiddleware] ,userController.userList); // CRUD Sequelize Realizado
-router.get('/profile', [authMiddleware], userController.profile); // Falta
-router.get('/logout', userController.logout); // Queda igual
-router.get('/:id/edit', userController.edit);
+router.get('/profile', [authMiddleware], userController.profile); // CRUD Sequelize Realizado
+router.get('/logout', userController.logout); // CRUD Sequelize Realizado
+router.get('/:id/edit', [authMiddleware], userController.edit); // CRUD Sequelize Realizado
+router.get('/:id', [adminMiddleware], userController.userDetailAdmin); // CRUD Sequelize Realizado
 
 router.post('/register', upload.single("avatar"), userController.create); // CRUD Sequelize Realizado
-router.post('/login', userController.loginProcess); // Falta
-router.put('/:id/edit', upload.single('avatar'), userController.update);
-router.delete("/:id", [adminMiddleware], userController.deleteUser);
+router.post('/login', userController.loginProcess); // CRUD Sequelize Realizado
+router.put('/:id/edit', upload.single('avatar'), userController.update); // Falta revisar con Edu y/o Agus
+router.delete("/:id", [adminMiddleware], userController.deleteUser); // CRUD Sequelize Realizado
 
 
 module.exports = router;
