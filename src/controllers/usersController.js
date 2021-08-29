@@ -1,6 +1,8 @@
 const user = require('../models/user')
 const bcrypt = require("bcryptjs")
 const db = require('../database/models')
+const { validationResult } = require('express-validator');
+
 const userController = {
     register: async function (req, res) {
 
