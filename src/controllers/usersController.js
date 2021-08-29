@@ -98,6 +98,13 @@ const userController = {
     loginProcess: async function (req, res) {
 
         try {
+            let errors = validationResult(req);
+            console.log(errors)
+            //res.send(errores)
+            if(errors.isEmpty()){
+
+            
+
             let userLogin = await db.User.findOne({
                 where: {
                     email: req.body.email,
@@ -136,7 +143,13 @@ const userController = {
                 errors: {
                     email: { msg: 'No se encuentra este email en nuestra base de datos' }
                 }
-            });
+            })
+        } else{
+            res.render('login',{
+                errors: errors.array(),
+                old: req.body
+            } )
+        }
 
         } catch (e) { res.send(e) };
 
