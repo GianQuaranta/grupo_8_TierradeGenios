@@ -116,9 +116,8 @@ const userController = {
                         res.locals.isAdmin = true;
                     };
 
-                    //console.log(res.locals.isAdmin);
-
                     return res.redirect('/user/profile')
+                    
                 } else {
                     return res.render('login', {
                         errors: {
