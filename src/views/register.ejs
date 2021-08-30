@@ -35,13 +35,19 @@
                     
                     <fieldset>
                     <label>Nombre:</label>
-                    <input type="text" name="firstName" id="firstName" placeholder="Nombre" class= "usuarioNombre" required value=" <%= (locals.errors && locals.old) ? old.firstName : "" %>">
+                    <input type="text" name="firstName" id="firstName" placeholder="Nombre" class= "usuarioNombre" value=" <%= (locals.errors && locals.old) ? old.firstName : "" %>">
+
+                    <% if (locals.errors && errors.firstName) { %>
+                        <p class = "msg-error">
+                            <%= errors.firstName.msg %> 
+                        </p>
+                       <% } %>
                     
                     <label>Apellido:</label>
-                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" class= "usuarioNombre" required value=" <%= (locals.errors && locals.old) ? old.lastName : "" %>">
+                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" class= "usuarioNombre"  value=" <%= (locals.errors && locals.old) ? old.lastName : "" %>">
 
                     <label for="avatar">Seleccionar imagen de perfil</label>
-                    <input type="file" name="avatar" id="avatar" class= "usuarioNombre" required>
+                    <input type="file" name="avatar" id="avatar" class= "usuarioNombre" >
                     <% if (locals.errors && errors.avatar) { %>
                         <p id="text-danger">
                             <%= errors.avatar.msg %> 
@@ -49,7 +55,7 @@
                        <% } %>
 
                     <label>Email:</label>
-                    <input type="email" name="email" id="email" placeholder= "Email" class="usuarioNombre" required value=" <%= (locals.errors && locals.old) ? old.email : "" %>">
+                    <input type="email" name="email" id="email" placeholder= "Email" class="usuarioNombre"  value=" <%= (locals.errors && locals.old) ? old.email : "" %>">
                     <% if (locals.errors && errors.email) { %>
                         <p id="text-danger">
                             <%= errors.email.msg %> 
@@ -68,13 +74,13 @@
                        <% } %>
                     
                     <label>Domicilio:</label>
-                    <input type="text" name="adress" id="adress" placeholder="Dirección" class="usuarioNombre" required value=" <%= (locals.errors && locals.old) ? old.adress : "" %>">
+                    <input type="text" name="adress" id="adress" placeholder="Dirección" class="usuarioNombre"  value=" <%= (locals.errors && locals.old) ? old.adress : "" %>">
 
                     <label>Número de contacto:</label>
-                    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Telefono" class= "usuarioNombre" required value=" <%= (locals.errors && locals.old) ? old.phoneNumber : "" %>">
+                    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Telefono" class= "usuarioNombre"  value=" <%= (locals.errors && locals.old) ? old.phoneNumber : "" %>">
                     
                     <label>País:</label>
-                    <input type="text" name="country" id="country" placeholder="Pais" class="usuarioNombre" required
+                    <input type="text" name="country" id="country" placeholder="Pais" class="usuarioNombre" 
                     value=" <%= (locals.errors && locals.old) ? old.country : "" %>">
                     
                     <label>Contraseña:</label>

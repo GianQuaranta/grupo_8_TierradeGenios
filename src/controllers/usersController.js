@@ -8,6 +8,7 @@ const userController = {
 
         try {
             let mediosDePago = await db.MedioDePago.findAll();
+            console.log(mediosDePago)
             return res.render('register', { mediosDePago: mediosDePago });
 
         } catch (e) { res.send(e) };
@@ -24,7 +25,12 @@ const userController = {
 
     create: async function (req, res) {
 
-        try {
+        try{
+
+            const resultValidation = validationResult(req);
+
+            if(!resultValidation.errors.length > 0){    
+
             const userInDB = await db.User.findOne({
                 where: {
                     email: req.body.email,
@@ -75,6 +81,13 @@ const userController = {
                 })
             });
             return res.redirect("/user/login");
+
+        } else{
+            return res.render("register", {
+                errors: resultValidation.mapped(),
+                old: req.body
+            })
+        }
 
         } catch (e) { res.send(e) };
 

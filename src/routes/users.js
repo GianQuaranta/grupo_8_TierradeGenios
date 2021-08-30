@@ -6,14 +6,63 @@ const guestMiddleware = require('../middlewares/guestMiddleware')
 const router = express.Router();
 const multer = require('multer')
 const path = require ('path')
-const { body } = require('express-validator')
+const { body } = require('express-validator');
+const { isDate } = require('util');
 
 const validationLogin = [
     body('email').notEmpty().withMessage("Debes ingresar el email con el que estas registrado").bail()
     .isEmail().withMessage("Debe ingresar un formato de email válido"),
 
     body('password').notEmpty().withMessage("Debes ingresar tu contraseña")
-    
+]
+
+const validationRegister = [
+    body('firstName').notEmpty().withMessage('Debes ingresar tu nombre').bail()
+    .isLength({min: 2}).withMessage('El nombre debe tener un mínimo de dos caracteres'),
+
+    body('lastName').notEmpty().withMessage('Debes ingresar su apellido')
+    .isLength({min: 2}).withMessage('El apellido debe tener un mínimo de dos caracteres'),
+
+    body('email').notEmpty().withMessage('Debes ingresar un correo electrónico')
+    .isEmail().withMessage("Debe ingresar un formato de email válido"),
+
+    body('birthDate').notEmpty().withMessage('Debes ingresar una fecha de nacimiento'),
+
+    body('adress').notEmpty().withMessage('Debes ingresar tu domicilio actual'),
+
+    body('phoneNumber').notEmpty().withMessage('Debes ingresar tu número telefónico')
+    .isNumeric({no_symbols: true}).withMessage('Debes ingresar un númmero telefónico válido'),
+
+    body('country').notEmpty().withMessage('Debes ingresar tu país de residencia'),
+
+    body('password').notEmpty().withMessage('Debes ingresar una contaseña').bail()
+    .isStrongPassword({minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1, returnScore: false, pointsPerUnique: 1, pointsPerRepeat: 0.5, pointsForContainingLower: 10, pointsForContainingUpper: 10, pointsForContainingNumber: 10, pointsForContainingSymbol: 10 }).withMessage('La contraseña debe contener al menos: una minúscula, una mayúscula, un número y un caracter especial'),
+
+    body('passwordConfirm').notEmpty().withMessage('Debes ingresar una contaseña').bail()
+    .isStrongPassword({minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1, returnScore: false, pointsPerUnique: 1, pointsPerRepeat: 0.5, pointsForContainingLower: 10, pointsForContainingUpper: 10, pointsForContainingNumber: 10, pointsForContainingSymbol: 10 }).withMessage('La contraseña debe contener al menos: una minúscula, una mayúscula, un número y un caracter especial'),
+
+
+    body('medio_de_pago').notEmpty().withMessage('Debes seleccionar al menos un medio de pago'),
+
+
+    body('avatar').custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions =  [
+            '.jpg', '.jpeg', '.png', '.gif'
+        ]            
+     
+        if(!file) {
+            throw new Error ('Tienes que subir una imagen');
+
+        } else {
+            let fileExtension = path.extname(file.originalnanme);
+            if (!acepptedExtensions.includes(fileExtension)){
+                throw new Error (`Las extensiones de archivo permitidas son ${acepptedExtension.join(', ')}`);
+            }
+        }
+    })
+
+
 
 ]
 
@@ -39,7 +88,7 @@ router.get('/logout', userController.logout); // CRUD Sequelize Realizado
 router.get('/:id/edit', [authMiddleware], userController.edit); // CRUD Sequelize Realizado
 router.get('/:id', [adminMiddleware], userController.userDetailAdmin); // CRUD Sequelize Realizado
 
-router.post('/register', upload.single("avatar"), userController.create); // CRUD Sequelize Realizado
+router.post('/register', upload.single("avatar"), validationRegister, userController.create); // CRUD Sequelize Realizado
 router.post('/login',validationLogin, userController.loginProcess); // CRUD Sequelize Realizado
 router.put('/:id/edit', upload.single('avatar'), userController.update); // Falta revisar con Edu y/o Agus
 router.delete("/:id", [adminMiddleware], userController.deleteUser); // CRUD Sequelize Realizado
