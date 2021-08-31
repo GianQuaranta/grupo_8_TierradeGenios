@@ -6,7 +6,16 @@ const guestMiddleware = require('../middlewares/guestMiddleware')
 const router = express.Router();
 const multer = require('multer')
 const path = require ('path')
+const { body } = require('express-validator')
 
+const validationLogin = [
+    body('email').notEmpty().withMessage("Debes ingresar el email con el que estas registrado").bail()
+    .isEmail().withMessage("Debe ingresar un formato de email válido"),
+
+    body('password').notEmpty().withMessage("Debes ingresar tu contraseña")
+    
+
+]
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -31,7 +40,7 @@ router.get('/:id/edit', [authMiddleware], userController.edit); // CRUD Sequeliz
 router.get('/:id', [adminMiddleware], userController.userDetailAdmin); // CRUD Sequelize Realizado
 
 router.post('/register', upload.single("avatar"), userController.create); // CRUD Sequelize Realizado
-router.post('/login', userController.loginProcess); // CRUD Sequelize Realizado
+router.post('/login',validationLogin, userController.loginProcess); // CRUD Sequelize Realizado
 router.put('/:id/edit', upload.single('avatar'), userController.update); // Falta revisar con Edu y/o Agus
 router.delete("/:id", [adminMiddleware], userController.deleteUser); // CRUD Sequelize Realizado
 
