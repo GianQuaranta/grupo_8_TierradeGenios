@@ -95,7 +95,7 @@ router.get('/:id', [adminMiddleware], userController.userDetailAdmin); // CRUD S
 
 router.post('/register', upload.single("avatar"), validationRegister, userController.create); // CRUD Sequelize Realizado
 router.post('/login',validationLogin, userController.loginProcess); // CRUD Sequelize Realizado
-router.put('/:id/edit', upload.single('avatar'), userController.update); // Falta revisar con Edu y/o Agus
+router.put('/:id/edit', [authMiddleware], upload.single('avatar'), validationRegister, userController.update); // CRUD Sequelize Realizado
 router.delete("/:id", [adminMiddleware], userController.deleteUser); // CRUD Sequelize Realizado
 
 

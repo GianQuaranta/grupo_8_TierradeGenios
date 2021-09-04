@@ -214,36 +214,63 @@ const userController = {
 
     },
 
-    update: async function (req, res) {  // Falta solucionar con Agus y/o Edu
+    update: async function (req, res) {  
 
         try {
 
-            let usuarioEditar = await db.User.update({
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                email: req.body.email,
-                birthDate: req.body.birthDate,
-                adress: req.body.adress,
-                phoneNumber: req.body.phoneNumber,
-                country: req.body.country,
-                password: bcrypt.hashSync(req.body.password, 10),
-                avatar: req.file.filename,
-                isAdmin: 0
-            }, {
-                where: { id: req.params.id }
-            });
+            let resultValidation = validationResult(req);
+            console.log(resultValidation)
+            //res.send(errores)
 
-            console.log(usuarioEditar);
+            console.log(resultValidation.isEmpty());
 
-            let numberArray = req.body.medio_de_pago.map(m => parseInt(m))
-            console.log(numberArray);
+            if(resultValidation.isEmpty()){
 
-            let user = await db.User.findByPk(req.params.id);
-            let actualizarMdp = await user.setMedioDePago(numberArray);
+                let usuarioEditar = await db.User.update({
+                    firstName: req.body.firstName,
+                    lastName: req.body.lastName,
+                    avatar: req.file.filename,
+                    email: req.body.email,
+                    birthDate: req.body.birthDate,
+                    adress: req.body.adress,
+                    phoneNumber: req.body.phoneNumber,
+                    country: req.body.country,
+                    password: bcrypt.hashSync(req.body.password, 10),
+                    isAdmin: 0
+                }, {
+                    where: { id: req.params.id }
+                });
 
-            res.redirect('/user/list');
+                console.log(usuarioEditar);
 
-        } catch (e) { res.send(e) };
+                let numberArray = req.body.medio_de_pago.map(m => parseInt(m))
+                console.log(numberArray);
+
+                let user = await db.User.findByPk(req.params.id);
+                let actualizarMdp = await user.setMedioDePago(numberArray);
+
+                res.redirect('/user/list');
+
+            } else{
+                //return res.send("Hasta acá llego")
+
+                const pedidoUser = await db.User.findByPk(req.params.id, {
+                    include: [{ association: "MedioDePago" }]
+                });
+
+                let mediosDePago = await db.MedioDePago.findAll();
+    
+                console.log(mediosDePago);
+
+                return res.render("userEditingForm", {
+                    user: pedidoUser,
+                    errors: resultValidation.mapped(),
+                    old: req.body,
+                    mediosDePago: mediosDePago
+                })
+            }
+
+        } catch (e) { res.send("Soy el catch") };
 
     },
 
