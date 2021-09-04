@@ -59,7 +59,7 @@
 <!--------------------------------------rank1------------------------------------------->
             
                 <label for="name"> 
-                    <input type="text" name="name" id="name" value="<%= (locals.errors && locals.old) ? old.name : "" %>" placeholder="Nombre">
+                    <input type="text" name="name" id="name" value="<%=(locals.errors && locals.old) ? old.name : ""%>" placeholder="Nombre">
             </label>
 
             <% if (locals.errors && errors.name) { %>

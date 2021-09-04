@@ -91,22 +91,44 @@ const productController = {
     update: async (req, res) => {
 
         try {
-            let productoActualizado = await db.Product.update({
-                name: req.body.name,
-                image: req.file != undefined ? req.file.filename : "default.png",
-                min: req.body.min,
-                max: req.body.max,
-                category_id: req.body.category,
-                rango: req.body.rango
-            }, {
-                where: {
-                    id: req.params.id
-                }
-            });
 
-            res.redirect('/products/' + req.params.id);
+            const resultValidation = validationResult(req);
 
-        } catch (e) { res.send(e) };
+            if(!resultValidation.errors.length > 0){
+
+                let productoActualizado = await db.Product.update({
+                    name: req.body.name,
+                    image: req.file != undefined ? req.file.filename : "default.png",
+                    min: req.body.min,
+                    max: req.body.max,
+                    category_id: req.body.category,
+                    rango: req.body.rango
+                }, {
+                    where: {
+                        id: req.params.id
+                    }
+                });
+
+                res.redirect('/products/' + req.params.id);
+
+            } else {
+
+                const pedidoProducts = await db.Product.findByPk(req.params.id, {
+                    include: [{ association: "category" }]
+                });
+                const pedidoCategories = await db.Category.findAll({
+                    include: [{ association: "privileges" }]
+                });
+
+                return res.render('productEditingForm', {
+                    errors: resultValidation.mapped(), 
+                    categories: pedidoCategories,
+                    old: req.body,
+                    product: pedidoProducts
+                });
+
+            }
+        } catch (e) { res.send("soy el catch") };
     },
 
     detailId: async (req, res) => {

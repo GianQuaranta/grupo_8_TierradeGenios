@@ -202,6 +202,7 @@ const userController = {
     edit: async function (req, res) {
 
         try {
+
             const pedidoUser = await db.User.findByPk(req.params.id, {
                 include: [{ association: "MedioDePago" }]
             });
@@ -217,6 +218,8 @@ const userController = {
     update: async function (req, res) {  
 
         try {
+
+            //return res.send(req.body.medio_de_pago)
 
             let resultValidation = validationResult(req);
             console.log(resultValidation)
