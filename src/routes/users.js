@@ -7,18 +7,17 @@ const router = express.Router();
 const multer = require('multer')
 const path = require ('path')
 const { body } = require('express-validator');
-const { isDate } = require('util');
 
 const validationLogin = [
     body('email').notEmpty().withMessage("Debes ingresar el email con el que estas registrado").bail()
     .isEmail().withMessage("Debe ingresar un formato de email válido"),
 
     body('password').notEmpty().withMessage("Debes ingresar tu contraseña")
-]
+];
 
 const validationRegister = [
-    body('firstName').notEmpty().withMessage('Debes ingresar tu nombre').bail()
-    .isLength({min: 2}).withMessage('El nombre debe tener un mínimo de dos caracteres'),
+    body("firstName").notEmpty().withMessage("Debes ingresar tu nombre").bail()
+    .isLength({min: 2}).withMessage("El nombre debe tener un mínimo de dos caracteres"),
 
     body('lastName').notEmpty().withMessage('Debes ingresar su apellido')
     .isLength({min: 2}).withMessage('El apellido debe tener un mínimo de dos caracteres'),
@@ -31,18 +30,23 @@ const validationRegister = [
     body('adress').notEmpty().withMessage('Debes ingresar tu domicilio actual'),
 
     body('phoneNumber').notEmpty().withMessage('Debes ingresar tu número telefónico')
-    .isNumeric({no_symbols: true}).withMessage('Debes ingresar un númmero telefónico válido'),
+    .isNumeric({no_symbols: true}).withMessage('Debes ingresar un número telefónico válido'),
 
     body('country').notEmpty().withMessage('Debes ingresar tu país de residencia'),
 
     body('password').notEmpty().withMessage('Debes ingresar una contaseña').bail()
-    .isStrongPassword({minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1, returnScore: false, pointsPerUnique: 1, pointsPerRepeat: 0.5, pointsForContainingLower: 10, pointsForContainingUpper: 10, pointsForContainingNumber: 10, pointsForContainingSymbol: 10 }).withMessage('La contraseña debe contener al menos: una minúscula, una mayúscula, un número y un caracter especial'),
+    .isLength( {min: 8} ).withMessage('La contraseña debe tener un mínimo de 8 caracteres')
+    .isStrongPassword({minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1 }).withMessage('La contraseña debe contener al menos: una minúscula, una mayúscula, un número y un caracter especial'),
 
     body('passwordConfirm').notEmpty().withMessage('Debes ingresar una contaseña').bail()
-    .isStrongPassword({minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1, returnScore: false, pointsPerUnique: 1, pointsPerRepeat: 0.5, pointsForContainingLower: 10, pointsForContainingUpper: 10, pointsForContainingNumber: 10, pointsForContainingSymbol: 10 }).withMessage('La contraseña debe contener al menos: una minúscula, una mayúscula, un número y un caracter especial'),
+    .custom((value, { req }) => {
+        if (value !== req.body.password) { 
+            throw new Error("Las contraseñas no coinciden") 
+        }
+        return true
+    }), 
 
-
-    body('medio_de_pago').notEmpty().withMessage('Debes seleccionar al menos un medio de pago'),
+    body('medio_de_pago').notEmpty().withMessage('Debes seleccionar al menos un medio de contribución'),
 
 
     body('avatar').custom((value, { req }) => {
@@ -55,14 +59,15 @@ const validationRegister = [
             throw new Error ('Tienes que subir una imagen');
 
         } else {
-            let fileExtension = path.extname(file.originalnanme);
-            if (!acepptedExtensions.includes(fileExtension)){
-                throw new Error (`Las extensiones de archivo permitidas son ${acepptedExtension.join(', ')}`);
+            let fileExtension = path.extname(req.file.originalname);
+
+            if (!acceptedExtensions.includes(fileExtension)){
+                
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
             }
         }
+        return true
     })
-
-
 
 ]
 

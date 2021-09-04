@@ -35,19 +35,32 @@
                     
                     <fieldset>
                     <label>Nombre:</label>
-                    <input type="text" name="firstName" id="firstName" placeholder="Nombre" class= "usuarioNombre" value=" <%= (locals.errors && locals.old) ? old.firstName : "" %>">
+                    <input type="text" name="firstName" id="firstName" placeholder="Nombre" class= "usuarioNombre" value="<%=(locals.errors && locals.old) ? old.firstName : "" %>">
 
                     <% if (locals.errors && errors.firstName) { %>
-                        <p class = "msg-error">
+                        <p id= "text-danger">
                             <%= errors.firstName.msg %> 
                         </p>
                        <% } %>
                     
                     <label>Apellido:</label>
-                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" class= "usuarioNombre"  value=" <%= (locals.errors && locals.old) ? old.lastName : "" %>">
+                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" class= "usuarioNombre"  value="<%= (locals.errors && locals.old) ? old.lastName : "" %>">
+
+                    <% if (locals.errors && errors.lastName) { %>
+                        <p id= "text-danger">
+                            <%= errors.lastName.msg %> 
+                        </p>
+                       <% } %>
 
                     <label for="avatar">Seleccionar imagen de perfil</label>
-                    <input type="file" name="avatar" id="avatar" class= "usuarioNombre" >
+                    <input type="file" name="avatar" id="avatar" class= "usuarioNombre">
+
+                    <% if (locals.errors && !errors.avatar) { %>
+                        <p id="text-danger">
+                            Debes seleccionar una imagen de perfil nuevamente
+                        </p>
+                       <% } %>
+
                     <% if (locals.errors && errors.avatar) { %>
                         <p id="text-danger">
                             <%= errors.avatar.msg %> 
@@ -55,54 +68,98 @@
                        <% } %>
 
                     <label>Email:</label>
-                    <input type="email" name="email" id="email" placeholder= "Email" class="usuarioNombre"  value=" <%= (locals.errors && locals.old) ? old.email : "" %>">
+                    <input type="email" name="email" id="email" placeholder= "Email" class="usuarioNombre"  value=" <%=(locals.errors && locals.old) ? old.email : "" %>">
+
                     <% if (locals.errors && errors.email) { %>
                         <p id="text-danger">
                             <%= errors.email.msg %> 
                         </p>
                        <% } %>
            
-
-
-
                     <label>Fecha de Nacimiento:</label>
                     <input class="fecha-nac" type="date" name="birthDate" value="" min="1930-01-01" max="2019-12-30">
-                    <% if (locals.errors && errors.fecha) { %>
+
+                    <% if (locals.errors && !errors.birdthDate) { %>
+                        <p id="text-danger">
+                            Debes seleccionar tu fecha de nacimiento nuevamente
+                        </p>
+                       <% } %>
+
+                    <% if (locals.errors && errors.birdthDate) { %>
                         <p id="text-danger">
                             <%= errors.birthDate.msg %> 
                         </p>
                        <% } %>
                     
                     <label>Domicilio:</label>
-                    <input type="text" name="adress" id="adress" placeholder="Dirección" class="usuarioNombre"  value=" <%= (locals.errors && locals.old) ? old.adress : "" %>">
+                    <input type="text" name="adress" id="adress" placeholder="Dirección" class="usuarioNombre"  value="<%=(locals.errors && locals.old) ? old.adress : "" %>">
+
+                    <% if (locals.errors && errors.adress) { %>
+                        <p id= "text-danger">
+                            <%= errors.adress.msg %> 
+                        </p>
+                       <% } %>
 
                     <label>Número de contacto:</label>
-                    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Telefono" class= "usuarioNombre"  value=" <%= (locals.errors && locals.old) ? old.phoneNumber : "" %>">
+                    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Telefono" class= "usuarioNombre"  value="<%= (locals.errors && locals.old) ? old.phoneNumber : "" %>">
+
+                    <% if (locals.errors && errors.phoneNumber) { %>
+                        <p id= "text-danger">
+                            <%= errors.phoneNumber.msg %> 
+                        </p>
+                       <% } %>
+
                     
                     <label>País:</label>
                     <input type="text" name="country" id="country" placeholder="Pais" class="usuarioNombre" 
-                    value=" <%= (locals.errors && locals.old) ? old.country : "" %>">
+                    value="<%= (locals.errors && locals.old) ? old.country : "" %>">
+
+                    <% if (locals.errors && errors.country) { %>
+                        <p id= "text-danger">
+                            <%= errors.country.msg %> 
+                        </p>
+                       <% } %>
                     
                     <label>Contraseña:</label>
                     <input type="password" name="password" id="password" placeholder="Contraseña" class="usuarioNombre">
+
+                    <% if (locals.errors && errors.password) { %>
+                        <p id= "text-danger">
+                            <%= errors.password.msg %> 
+                        </p>
+                       <% } %>
 
                     <label>Confirmar contraseña:</label>
                     <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirmar contraseña" class="usuarioNombre">
                     </fieldset>
 
+                    <% if (locals.errors && errors.passwordConfirm) { %>
+                        <p id= "text-danger">
+                            <%= errors.passwordConfirm.msg %> 
+                        </p>
+                       <% } %>
+
                     <fieldset class="opciones-pago">
                         <h3 class="opciones">Seleccionar opciones de contribución</h3>
+
+                        <% if (locals.errors && errors.medio_de_pago) { %>
+                            <p id= "text-danger">
+                                <%= errors.medio_de_pago.msg %> 
+                            </p>
+                           <% } %>
+
                         <% for( let i = 0; i < mediosDePago.length; i++ ) { %>
                             
                             <label for="">
 
-                            <input class="forma-pago" type="checkbox" name="medio_de_pago" value= "<%= mediosDePago[i].id %>" > <%= mediosDePago[i].medio_de_pago %>
+                            <input class="forma-pago" type="checkbox" name="medio_de_pago" value= "<%= mediosDePago[i].id %>"> <%= mediosDePago[i].medio_de_pago %>
                             
                             </label>
-                            
+                             
                         <% } %>
 
                     </fieldset>
+
 
                 <a href="/"><input class="button-dos" type="submit" value="Registrarme"></a>    
                 </form>

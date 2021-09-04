@@ -99,17 +99,6 @@ main {
     margin-bottom: 25px;
 }
 
-/*.usuario-pass {
-    width: 100%;
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    font-size: 18px;
-
-}*/
-
 fieldset{
     border: none;
 }
@@ -221,7 +210,7 @@ input {
 }
 
 #text-danger {
-    color: red;
+    color: crimson;
     font-size: 13px;
 }
 

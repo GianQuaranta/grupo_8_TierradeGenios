@@ -2,13 +2,14 @@ const user = require('../models/user')
 const bcrypt = require("bcryptjs")
 const db = require('../database/models')
 const { validationResult } = require('express-validator');
+const path = require('path');
 
 const userController = {
     register: async function (req, res) {
 
         try {
             let mediosDePago = await db.MedioDePago.findAll();
-            console.log(mediosDePago)
+            //console.log(mediosDePago);
             return res.render('register', { mediosDePago: mediosDePago });
 
         } catch (e) { res.send(e) };
@@ -38,6 +39,9 @@ const userController = {
             });
 
             if (userInDB) {
+
+                let mediosDePago = await db.MedioDePago.findAll();
+
                 return res.render('register',
                     {
                         errors: {
@@ -51,41 +55,49 @@ const userController = {
                                 msg: 'Seleccione nuevamente la fecha de nacimiento'
                             }
                         },
-                        old: req.body
-
+                        old: req.body,
+                        mediosDePago: mediosDePago
                     })
             };
 
             const userToCreate = {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
+                avatar: req.file.filename,
                 email: req.body.email,
                 birthDate: req.body.birthDate,
                 adress: req.body.adress,
                 phoneNumber: req.body.phoneNumber,
                 country: req.body.country,
                 password: bcrypt.hashSync(req.body.password, 10),
-                avatar: req.file.filename,
                 isAdmin: 0
-            };
+            }; 
+
+            console.log(userToCreate); 
 
             let usuarioCreado = await db.User.create(userToCreate);
 
-            let numberArray = req.body.medio_de_pago.map(m => parseInt(m));
-            console.log(numberArray);
+            let numberArray = Array.from(req.body.medio_de_pago).map(m => parseInt(m));
+            
+            console.log(numberArray); 
 
             let agregarMdp = await numberArray.forEach(mdp => {
                 db.UserMediosDePago.create({
                     user_id: usuarioCreado.id,
                     medio_de_pago_id: mdp
                 })
-            });
+            }); 
+
             return res.redirect("/user/login");
 
         } else{
+
+            let mediosDePago = await db.MedioDePago.findAll();
+
             return res.render("register", {
                 errors: resultValidation.mapped(),
-                old: req.body
+                old: req.body,
+                mediosDePago: mediosDePago
             })
         }
 
@@ -158,7 +170,7 @@ const userController = {
             })
         } else{
             res.render('login',{
-                errors: errors.array(),
+                errors: errors.mapped(),
                 old: req.body
             } )
         }

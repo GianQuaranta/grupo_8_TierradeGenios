@@ -25,16 +25,6 @@
                     <p class="dummy-text">El éxito no se mide en el dinero, sino en la diferencia que marcas en las personas. – Michelle Obama</p>
                     <input type="email" name="email" id="email"  placeholder="Email" class="input-campo" value=" <%= (locals.errors && locals.old) ? old.email : ""%>">
 
-                    <% if (locals.errors) { %>
-
-                    <% errors.forEach(error => { %>
-                        <% if (error.param == 'email') { %> 
-                            <p class = "msg-error">
-                                <%= error.msg %> 
-                            </p>
-
-                        <% } %>
-                        <% })} %>
 
 
                     <% if (locals.errors && errors.email) { %>
@@ -45,16 +35,7 @@
 
                     <input type="password" name="password" id="password"  placeholder="Contraseña" class="input-campo">
 
-                    <% if (locals.errors) { %>
-
-                        <% errors.forEach(error => { %>
-                            <% if (error.param == 'password') { %> 
-                                <p class = "msg-error">
-                                    <%= error.msg %> 
-                                </p>
-    
-                            <% } %>
-                            <% })} %>
+                   
 
                     <% if (locals.errors && errors.password) { %>
                         <p class = "msg-error">
