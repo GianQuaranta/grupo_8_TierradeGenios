@@ -23,43 +23,104 @@
 
                 <select name="category" id="category">
                     <option value="" disabled selected>Seleccionar categoria</option>
-                    <% for( let i = 0; i < categories.length; i++ ) { %>
-                        
-                        <option value="<%= categories[i].id %>"><%= categories[i].name %> </option>
 
+                    <% if(locals.errors && locals.old) { %>
+
+                    <% for(let i = 0; i < categories.length; i++ ) { %>
+                        <% if (categories[i].id == old.category) { %>
+                            
+                            <option value="<%= categories[i].id %>" selected ><%= categories[i].name %> </option>
+                            
+                        <% } else { %>        
+    
+                            <option value="<%= categories[i].id %>" ><%= categories[i].name %> </option>
+    
+                        <% } %> 
+    
                     <% } %>
+
+                <% } else { %>
+                <% for( let i = 0; i < categories.length; i++ ) { %>
+                        
+                    <option value="<%= categories[i].id %>"><%= categories[i].name %> </option>
+
+                <% }
+            } %> 
                         
                 </select>
+                
+                <% if (locals.errors && errors.category) { %>
+                    <p id="text-danger">
+                        <%= errors.category.msg %> 
+                    </p>
+                <% } %>
     
                
 <!--------------------------------------rank1------------------------------------------->
             
                 <label for="name"> 
-                    <input type="text" name="name" id="name" value="" placeholder="Nombre">
-            </label>    
+                    <input type="text" name="name" id="name" value="<%= (locals.errors && locals.old) ? old.name : "" %>" placeholder="Nombre">
+            </label>
 
-            <fieldset>
+            <% if (locals.errors && errors.name) { %>
+                <p id="text-danger">
+                    <%= errors.name.msg %> 
+                </p>
+            <% } %>
+
+            <fieldset id="campo-nuevo-privilegio-oculto">
                 <label for="privilege" class="text-label-input-file">Nuevo privilegio</label>
                 <input type="text" name="privilege" id="privilege" value="" class="input-file"> 
         </fieldset>
              
 
-                <fieldset>
+            <fieldset>
                     <label for="image" class="text-label-input-file">Imagen rango 1</label>
                     <input type="file" name="image" id="image" value="" class="input-file"> 
             </fieldset>
 
+                <% if (locals.errors && !errors.image) { %>
+                    <p id="text-danger">
+                        Debes seleccionar la imagen nuevamente
+                    </p>
+                <% } %>
+
+                <% if (locals.errors && errors.image) { %>
+                    <p id="text-danger">
+                        <%= errors.image.msg %> 
+                    </p>
+                <% } %>
+
                  <label for="min"> 
-                    <input type="number" name="min" id="min" value="" placeholder="Contribución mínima rango" required>
+                    <input type="number" name="min" id="min" value="<%= (locals.errors && locals.old) ? old.min : "" %>" placeholder="Contribución mínima rango">
                  </label>
+
+                <% if (locals.errors && errors.min) { %>
+                    <p id="text-danger">
+                        <%= errors.min.msg %> 
+                    </p>
+                <% } %>
 
                  <label for="max"> 
-                    <input type="number" name="max" id="max" value="" placeholder="Contribución maxima rango" required>
+                    <input type="number" name="max" id="max" value="<%= (locals.errors && locals.old) ? old.max : "" %>" placeholder="Contribución maxima rango">
                  </label>
 
+                <% if (locals.errors && errors.max) { %>
+                    <p id="text-danger">
+                        <%= errors.max.msg %> 
+                    </p>
+                <% } %>
+
                  <label for="rango"> 
-                    <input type="number" name="rango" id="rango" value="" min="1" max="3" placeholder="Seleccione un rango dentro de la categoria" required>
+                    <input type="number" name="rango" id="rango" value="<%= (locals.errors && locals.old) ? old.rango : "" %>" min="1" max="3" placeholder="Seleccione un rango dentro de la categoria">
                  </label>
+
+                 <% if (locals.errors && errors.rango) { %>
+                    <p id="text-danger">
+                        <%= errors.rango.msg %> 
+                    </p>
+                <% } %>
+
             <hr>
             
 

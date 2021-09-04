@@ -1,6 +1,6 @@
 const privileges = require('../models/Privilege');
 const db = require('../database/models');
-
+const { validationResult } = require('express-validator');
 
 const productController = {
 
@@ -37,16 +37,36 @@ const productController = {
     saveProduct: async (req, res) => {
 
         try {
-            let productoCreado = await db.Product.create({
-                name: req.body.name,
-                image: req.file != undefined ? req.file.filename : "default.png",
-                min: req.body.min,
-                max: req.body.max,
-                category_id: req.body.category,
-                rango: req.body.rango
-            });
 
-            res.redirect('/products');
+            const resultValidation = validationResult(req);
+
+            if(!resultValidation.errors.length > 0){
+
+                let productoCreado = await db.Product.create({
+                    name: req.body.name,
+                    image: req.file != undefined ? req.file.filename : "default.png",
+                    min: req.body.min,
+                    max: req.body.max,
+                    category_id: req.body.category,
+                    rango: req.body.rango
+                });
+
+                res.redirect('/products');
+
+            } else {
+                //  return res.send(resultValidation.mapped())
+
+                let todasLasCategorias = await db.Category.findAll();
+
+
+                return res.render('productCreationForm', {
+                    errors: resultValidation.mapped(), 
+                    categories: todasLasCategorias,
+                    old: req.body
+                });
+ 
+
+            }
 
         } catch (e) { res.send(e) };
 

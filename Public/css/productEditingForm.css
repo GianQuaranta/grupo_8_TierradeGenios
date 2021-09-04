@@ -169,6 +169,20 @@ main section form fieldset figure {
     align-items: center;
 }
 
+#campo-nuevo-privilegio-oculto{
+    display: none;
+}
+
+#text-danger {
+    color: crimson;
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start !important;
+    align-items: center;
+    width: 90%;
+}
+
 /*-------------------------------------------------------Media Queries----------------------------------------------------------*/
 
 @media(min-width:897px){
