@@ -33,7 +33,7 @@
                     <fieldset>
                     <label>Nombre:</label>
                     <input type="text" name="firstName" id="firstName" placeholder="Nombre" class= "usuarioNombre" value="<%=(locals.errors && locals.old) ? old.firstName : (user.firstName) ? user.firstName : "" %>">
-
+                    <p class="mensajeFirstName"> </p>
                     <% if (locals.errors && errors.firstName) { %>
                         <p id= "text-danger">
                             <%= errors.firstName.msg %> 
@@ -42,6 +42,7 @@
                     
                     <label>Apellido:</label>
                     <input type="text" name="lastName" id="lastName" placeholder="Apellido" class= "usuarioNombre" value="<%=(locals.errors && locals.old) ? old.lastName : (user.lastName) ? user.lastName : "" %>">
+                    <p class="mensajeLastName"> </p>
 
                     <% if (locals.errors && errors.lastName) { %>
                         <p id= "text-danger">
@@ -59,7 +60,7 @@
 
                     <label for="avatar">Seleccionar imagen de perfil</label>
                     <input type="file" name="avatar" id="avatar" class= "usuarioNombre">
-
+                    <p class="mensajeAvatar"> </p>
                     <% if (locals.errors && errors.avatar) { %>
                         <p id="text-danger">
                             <%= errors.avatar.msg %> 
@@ -68,7 +69,7 @@
 
                     <label>Email:</label>
                     <input type="email" name="email" id="email" placeholder= "Email" class="usuarioNombre" value="<%=(locals.errors && locals.old) ? old.email : (user.email) ? user.email : "" %>">
-
+                    <p class="mensajeEmail"> </p>
                     <% if (locals.errors && errors.email) { %>
                         <p id="text-danger">
                             <%= errors.email.msg %> 
@@ -77,7 +78,7 @@
 
                     <label>Fecha de Nacimiento:</label>
                     <input class="fecha-nac" type="date" name="birthDate" min="1930-01-01" max="2019-12-30" value="">
-
+                    <p class="mensajeBirthDate"> </p>
                     <% if (locals.errors && !errors.birdthDate) { %>
                         <p id="text-danger">
                             Debes seleccionar tu fecha de nacimiento nuevamente
@@ -92,7 +93,7 @@
                     
                     <label>Domicilio:</label>
                     <input type="text" name="adress" id="adress" placeholder="Dirección" class="usuarioNombre" value="<%=(locals.errors && locals.old) ? old.adress : (user.adress) ? user.adress : "" %>">
-
+                    <p class="mensajeAdress"> </p>
                     <% if (locals.errors && errors.adress) { %>
                         <p id= "text-danger">
                             <%= errors.adress.msg %> 
@@ -101,7 +102,7 @@
                     
                     <label>Número de contacto:</label>
                     <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Telefono" class= "usuarioNombre" value="<%=(locals.errors && locals.old) ? old.phoneNumber : (user.phoneNumber) ? user.phoneNumber : "" %>"> 
-
+                    <p class="mensajePhoneNumber"> </p>
                     <% if (locals.errors && errors.phoneNumber) { %>
                         <p id= "text-danger">
                             <%= errors.phoneNumber.msg %> 
@@ -111,7 +112,7 @@
                     <label>País:</label>
                     <input type="text" name="country" id="country" placeholder="Pais" class="usuarioNombre"
                     value="<%=(locals.errors && locals.old) ? old.country : (user.country) ? user.country : "" %>"> 
-
+                    <p class="mensajeCountry"> </p>
                     <% if (locals.errors && errors.country) { %>
                         <p id= "text-danger">
                             <%= errors.country.msg %> 
@@ -120,7 +121,7 @@
                     
                     <label>Contraseña:</label>
                     <input type="password" name="password" id="password" placeholder="Contraseña" class="usuarioNombre">
-
+                    <p class="mensajePassword"> </p>
                     <% if (locals.errors && errors.password) { %>
                         <p id= "text-danger">
                             <%= errors.password.msg %> 
@@ -130,7 +131,7 @@
                     <label>Confirmar contraseña:</label>
                     <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirmar contraseña" class="usuarioNombre">
                     </fieldset>
-
+                    <p class="mensajePasswordConfirm"> </p>
                     <% if (locals.errors && errors.passwordConfirm) { %>
                         <p id= "text-danger">
                             <%= errors.passwordConfirm.msg %> 
@@ -139,7 +140,7 @@
 
                     <fieldset class="opciones-pago">
                         <h3 class="opciones">Seleccionar opciones de contribución</h3>
-
+                        <p class="mensajeMediosDePago"> </p>
                         <% if (locals.errors && errors.medio_de_pago) { %>
                             <p id= "text-danger">
                                 <%= errors.medio_de_pago.msg %> 
@@ -216,6 +217,8 @@
         <%- include('./partials/footer') %>
 
     </footer>
+
+    <script src="/js/userEditingForm.js"></script>
 
 </body>
 

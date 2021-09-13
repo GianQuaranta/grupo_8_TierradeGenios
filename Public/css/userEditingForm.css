@@ -4,11 +4,6 @@
     padding: 0;
 }
 
-
-
-
-
-
 /********* MAIN ***********/
 
 main {
@@ -166,6 +161,16 @@ input {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.default {
+    border: 1px solid crimson !important;
+    border-radius: 5px;   
+}
+
+.correct {
+    border: 1px solid green !important;
+    border-radius: 5px;
 }
 
 .form-registro label {
