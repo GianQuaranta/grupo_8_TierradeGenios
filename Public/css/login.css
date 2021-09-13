@@ -42,17 +42,9 @@ text-align: center;
     border-radius: 5px;
 }
 
-.default{
-    background-color: red
+input{
+    border: none;
 }
-
-.correct{
-    background-color: green
-}
-
-    input{
-        border: none;
-    }
 
 .dummy-text{
     width: 100%;
@@ -133,3 +125,12 @@ color: white;
 }
 
 
+.default {
+    border: 1px solid crimson !important;
+    border-radius: 5px;   
+}
+
+.correct {
+    border: 1px solid green !important;
+    border-radius: 5px;
+}

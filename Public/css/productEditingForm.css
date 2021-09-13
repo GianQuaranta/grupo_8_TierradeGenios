@@ -183,6 +183,16 @@ main section form fieldset figure {
     width: 90%;
 }
 
+.default {
+    border: 1px solid crimson !important;
+    border-radius: 5px;   
+}
+
+.correct {
+    border: 1px solid green !important;
+    border-radius: 5px;
+}
+
 /*-------------------------------------------------------Media Queries----------------------------------------------------------*/
 
 @media(min-width:897px){

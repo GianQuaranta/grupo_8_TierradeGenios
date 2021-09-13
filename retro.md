@@ -199,3 +199,41 @@
 
 
 
+# Retrospectiva 6to Sprint
+
+1. ***Comenzar a hacer.*** 
+    - Mejorar nuestra planificación de trabajo individual y en equipo.
+    - Analizar el sitio y ver qué cosas faltan para la entrega final.
+    - Acomodar el sitio para la entrega final.
+    - Repasar los conceptos claves del curso para la presentación final.
+
+2.	***Hacer más.***
+    - Comenzar a guiar nuestra toma de decisiones basada en la metodología de toma de decisiones de la matriz de Eisenhower.
+    - A gestionar mejor nuestras emociones ante la presión.
+    - Ponernos al día con el estudio. (mejoramos pero aún no logramos el ritmo que queremos)
+    - Ponernos al día con los trabajos prácticos. (mejoramos pero aún no logramos el ritmo que queremos)
+    
+3.	***Continuar haciendo.***
+    - Hacer reuniones semanales.
+    - Administrar y dividir el trabajo.
+    - Planificar más.
+    - Informe semanal.
+    - Seguir repasando estudio y práctica de los temas del siguiente sprint para agarrar práctica antes de hacer el sprint.
+    - Aprender de más fuentes de conocimiento además de la información que nos dan en el curso.
+    - Apoyarnos en la comunidad de whatsapp para resolver dudas y crecer.
+    - Consultar a los tutores cuando surge alguna duda.
+    - Participar en clase todos para agarrar más ritmo.
+    - Trabajar más con el código todos juntos.
+    - Organizar más.
+    - Practicar más.    
+    - Utilizar la documentación existente en la nube ( w3School , develop).
+    - Mantener la comunicación por los diferentes medios.
+    - Seguir avisando cuando pusheemos algo.
+
+4.	***Hacer menos.***
+    - Atrasarnos en el playground.
+    - Atrasarnos con la elaboración del sprint.
+ 
+5.	***Dejar de hacer.***
+    - Dejar cosas a medias en la página.
+    - Dejar de hacer las cosas sin planificación previa.

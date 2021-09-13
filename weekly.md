@@ -100,3 +100,32 @@ En la reunión ultimamos detalles para la entrega del sprint número 2.
  - Completamos el controller de user y de product para conectarlo con la base de datos.
  - Finalizamos la actualización del tablero de Trello.
  - Finalizamos la actualización del weekly.
+
+
+**Informe semana 23/08/2021**  **5to Sprint Actualización**
+  - Esperamos la devolución de los profesores.
+  - Repasamos los temas vistos hasta el momento, los mismos serán necesarios para el próximo sprint.
+  - Nos ponemos al día con playground.
+  - Completamos el resumen del módulo 7 y 8.
+  - Hacemos los prácticos del módulo 7 y 8.
+  - Comenzamos a planificar el trabajo. 
+
+**Informe semana 30/08/2021**  **5to Sprint Actualización**
+  - Repasamos Express Validator para realizar las validaciones del backend.
+  - Actualizamos a Sequelize el middleware de userLogged.
+  - Comenzamos con las validaciones del backend.
+  - Validación formulario register y edición de usuario desde express validator realizado.
+
+**Informe semana 06/09/2021**  **5to Sprint Actualización**
+  - Validación formulario product create y edición de producto desde express validator realizado.
+  - Validación formulario Login realizado.
+  - Comenzamos a trabajar con el front-end.
+  - Realizamos las validaciones del formulario de registro de usuario.
+  - Realizamos las validaciones del formulario de login de usuario.
+  - Realizamos las validaciones del formulario de edición y creación de producto.
+
+**Informe semana 13/09/2021**  **5to Sprint Actualización**
+  - Actualizamos el tablero de trabajo.
+  - Actualizamos la retro.
+  - Actualizamos el weekly.
+  - Ultimamos detalles en las validaciones del front.
