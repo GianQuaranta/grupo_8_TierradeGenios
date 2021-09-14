@@ -23,11 +23,16 @@ window.addEventListener('load', function () {
     let passwordConfirm = document.querySelector('#passwordConfirm');
 
     let mediosDePago = document.querySelectorAll('.forma-pago');
+    let mediosDePagoArray = Array.from(mediosDePago);
+    //console.log("array", mediosDePagoArray);
+
+    let fieldsetMediosDePago = document.querySelector('.opciones-pago');
+    //console.log("este",fieldsetMediosDePago);
+
+    let botonRegistrar = document.querySelector('.button-dos');
+    console.log(botonRegistrar);
 
     let errores = [];
-
-
-    //formulario.addEventListener('submit' , function(e){
 
     // firstName 
 
@@ -455,51 +460,72 @@ window.addEventListener('load', function () {
             }
         } else {
             mensajePasswordConfirm.innerHTML = '';
-
+            mediosDePagoArray[0].focus();
         }
     })
-    console.log(mediosDePago);
-    console.log(mediosDePago[0].value);
-    //mediosDePago
+   
+    
 
-    for (let i = 0; i < mediosDePago.length; i++) {
-        if (mediosDePago[i].checked) {
-            console.log(true)
-        }
-    }
-
-    /**
-    mediosDePago.addEventListener('blur', function () {
-
-        let erroresMediosDePago = []
-        console.log(mediosDePago.value);
-
-        if (mediosDePago.value == "") {
-            erroresMediosDePago.push("Debe seleccionar al menos un medio de pago")
-            mediosDePago.classList.remove('correct')
-            mediosDePago.classList.add('default')
-            console.log(erroresMediosDePago)
-
-        } else {
-            erroresMediosDePago = []
-            mediosDePago.classList.remove('default')
-            mediosDePago.classList.add('correct')
-        }
-
-        let mensajeMediosDePago = document.querySelector('.mensajeMediosDePago')
+    // Medios de Pago
 
 
-        if (erroresMediosDePago.length > 0) {
+    let erroresMediosDePago = [];
 
-            for (i = 0; i < erroresMediosDePago.length; i++) {
-                mensajeMediosDePago.innerHTML = erroresMediosDePago[i]
-                mensajeMediosDePago.style.color = "crimson"
+    mediosDePagoArray.forEach((mdp, i) => mdp.addEventListener('blur', () => {
+        
+        if (mediosDePago[i].checked == false) {
+            fieldsetMediosDePago.classList.remove("correct");
+            erroresMediosDePago.push("Medio de pago " + mediosDePago[i].value + " no seleccionado");
+            
+            if(i < mediosDePago.length-1){
+                /**console.log(i);*/    
+                mediosDePago[i + 1].focus();    
+                
             }
         } else {
-            mensajeMediosDePago.innerHTML = ''
-
+            botonRegistrar.focus();
+            mensajeMediosDePago.innerHTML = "";
+            fieldsetMediosDePago.classList.remove("default");
+            fieldsetMediosDePago.classList.add("correct");
+            
         }
-    })**/
+    }));    
+
+    //console.log("lala",erroresMediosDePago);
+
+        let mensajeMediosDePago = document.querySelector('.mensajeMediosDePago');
+        //console.log(mensajeMediosDePago);
+
+    mediosDePago[mediosDePago.length-1].addEventListener('blur', () => {
+
+        if(erroresMediosDePago.length == 4){
+            mensajeMediosDePago.innerHTML = "Debes seleccionar al menos un médio de contribución.";
+            fieldsetMediosDePago.classList.remove("correct");
+            fieldsetMediosDePago.classList.add("default");
+            mensajeMediosDePago.style.color = "crimson";
+            mensajeMediosDePago.style.fontSize = "13px";
+            errores.push("Medio de pago no seleccionado");
+        } else {
+            errores = [];
+            mensajeMediosDePago.innerHTML = "";
+            fieldsetMediosDePago.classList.remove("default");
+            fieldsetMediosDePago.classList.add("correct");
+            
+        }
+
+    })
+
+   
+
+
+
+
+
+
+
+
+
+
 
     formulario.addEventListener('submit', (e) => {
 
