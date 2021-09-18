@@ -14,6 +14,13 @@ const applyScholarship = require('./routes/applyScholarshipRoute')
 const cart = require('./routes/cartRoute');
 const userRoutes = require('./routes/users')
 
+
+// API - Requerimiento de archivos de rutas 
+
+const apiProduct = require('./routes/api/apiProductRoute');
+const apiUser = require('./routes/api/apiUserRoute');
+
+
 /*Configuración template engine*/
 app.set('view engine' , 'ejs');
 
@@ -48,6 +55,16 @@ app.use(applyScholarship);
 app.use("/products",products);
 app.use(cart);
 app.use("/user",  userRoutes);
+
+
+// apiApp.use
+
+//app.use(apiProduct);
+app.use(apiUser);
+
+
+
+
 
 
 
