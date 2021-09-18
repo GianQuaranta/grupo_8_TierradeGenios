@@ -19,7 +19,7 @@ const path = require ('path')
 const upload = multer({storage}) */
 
 router.get('/api/users', apiUserController.list);
-//router.get('/api/users/:id', apiUserController.detail);
+router.get('/api/users/:id', apiUserController.detail);
 
 
 module.exports = router;

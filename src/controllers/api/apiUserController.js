@@ -2,33 +2,49 @@ const db = require('../../database/models')
 const path = require('path');
 
 const apiUserController = {
-list: async (req, res) => {
-    try {
+    list: async (req, res) => {
+        try {
 
-    let user = await db.User.findAll();
+            let user = await db.User.findAll();
 
-    let usersNew = user.map(function (us) {
-        return {
-            id: us.id,
-            name: us.firstName,
-            email: us.email,
-            detail: 'http://localhost:3000/api/users/' + us.id
+            let usersNew = user.map(function (us) {
+                return {
+                    id: us.id,
+                    name: us.firstName,
+                    email: us.email,
+                    detail: 'http://localhost:3000/api/users/' + us.id
+                }
+            })
+
+            console.log("userNew", usersNew);
+
+            console.log("usersLength", usersNew.length);
+
+            return res.status(200).json({
+                count: usersNew.length,
+                users: usersNew
+            })
+
+        } catch (e) {
+            res.send(e)
         }
-    })
+    },
 
-    console.log("userNew",usersNew);
+    detail: async (req, res) => {
 
-    console.log("usersLength", usersNew.length);
-        
-    return res.status(200).json({
-        count: usersNew.length,
-        users: usersNew
-    })
-        
-    } catch (e){
-        res.send(e)
+        try{
+
+            let user = await db.User.findByPk(req.params.id, {include: [{ association: "MedioDePago" }]});
+
+            console.log(user);
+
+            return res.send(user);
+
+        } catch (e) {
+            res.send(e);
+        }
+
     }
-}
 
 }
 
