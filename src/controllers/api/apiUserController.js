@@ -5,41 +5,26 @@ const apiUserController = {
 list: async (req, res) => {
     try {
 
-    db.User.findAll()
+    let user = await db.User.findAll();
 
-    .then (user => {
-
-        let allUsers =
-
-        user.map(us => {
-
-        console.log('us', us)
-            us.id = us.id,
-            us.firstName = us.firstName,
-            us.email = us.email,
-            us.detail = 'URL'
-            
-        })
-
-        console.log('allUsers', allUsers);
-
-    
-        return res.send (user)
-
+    let usersNew = user.map(function (us) {
+        return {
+            id: us.id,
+            name: us.firstName,
+            email: us.email,
+            detail: 'http://localhost:3000/api/users/' + us.id
+        }
     })
-        /*return res.status(200).json({
-            count: user.length,
-            users: [
-                {
-                    id: user[0].id,
-                    name: user.firstName,
-                    email: user.email,
-                    detail: 'URL'
-                }
-            ]})
-    
-    })*/
 
+    console.log("userNew",usersNew);
+
+    console.log("usersLength", usersNew.length);
+        
+    return res.status(200).json({
+        count: usersNew.length,
+        users: usersNew
+    })
+        
     } catch (e){
         res.send(e)
     }
