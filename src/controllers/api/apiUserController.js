@@ -16,9 +16,9 @@ const apiUserController = {
                 }
             })
 
-            console.log("userNew", usersNew);
+            //console.log("userNew", usersNew);
 
-            console.log("usersLength", usersNew.length);
+            //console.log("usersLength", usersNew.length);
 
             return res.status(200).json({
                 count: usersNew.length,
@@ -34,9 +34,13 @@ const apiUserController = {
 
         try{
 
-            let user = await db.User.findByPk(req.params.id, {include: [{ association: "MedioDePago" }]});
+            let user = await db.User.findByPk(req.params.id, {include: [{ association: "MedioDePago" }],
+                attributes: { 
+                    exclude: ['password', 'isAdmin']
+                }
+            });
 
-            console.log(user);
+            //console.log(user);
 
             return res.send(user);
 

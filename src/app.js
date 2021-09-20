@@ -59,7 +59,7 @@ app.use("/user",  userRoutes);
 
 // apiApp.use
 
-//app.use(apiProduct);
+app.use(apiProduct);
 app.use(apiUser);
 
 
