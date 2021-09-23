@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "name": "Ciudadano Emblema",
+    "privileges": [
+      1,
+      2,
+      3
+    ],
+    "image": "default.png",
+    "min": "1",
+    "max": "50",
+    "category": 1,
+    "range": "1"
+  },
+  {
+    "id": 2,
+    "name": "Ciudadano Ilustre",
+    "privileges": [
+      1,
+      2,
+      3
+    ],
+    "image": "default.png",
+    "min": "51",
+    "max": "100",
+    "category": 1,
+    "range": "2"
+  },
+  {
+    "id": 3,
+    "name": "Patriota",
+    "privileges": [
+      1,
+      2,
+      3
+    ],
+    "image": "default.png",
+    "min": "101",
+    "max": "150",
+    "category": 1,
+    "range": "1"
+  },
+  {
+    "id": 4,
+    "name": "Icono",
+    "privileges": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "image": "default.png",
+    "min": "151",
+    "max": "200",
+    "category": 2,
+    "range": "2"
+  },
+  {
+    "id": 5,
+    "name": "Eminencia",
+    "privileges": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "image": "default.png",
+    "min": "200",
+    "max": "250",
+    "category": 2,
+    "range": "2"
+  },
+  {
+    "id": 6,
+    "name": "Prócer",
+    "privileges": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "image": "default.png",
+    "min": "251",
+    "max": "300",
+    "category": 2,
+    "range": "2"
+  },
+  {
+    "id": 7,
+    "name": "Magno",
+    "privileges": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "image": "default.png",
+    "min": "301",
+    "max": "350",
+    "category": 3,
+    "range": "3"
+  },
+  {
+    "id": 8,
+    "name": "Egregio",
+    "privileges": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "image": "default.png",
+    "min": "351",
+    "max": "400",
+    "category": 3,
+    "range": "3"
+  }
+]

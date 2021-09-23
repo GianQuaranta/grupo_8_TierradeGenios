@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--------------------------------------------------head------------------------------------------------------------->
+
+<head>
+    <%- include('./partials/head') %>
+
+    <link rel="stylesheet" href="/css/productDetail.css" />
+    <title>Detalle de producto</title>
+</head>
+<!--------------------------------------------------body------------------------------------------------------------->
+
+<body>
+    <!-------------------------------------------------header------------------------------------------------------------>
+    <header>
+        
+        <%- include('./partials/header') %>
+
+    </header> <!-- FIN HEADER -->
+
+    <main>
+        <!-- PRODUCTOS -->
+
+        <section class="fourth-section">
+            <h3 class="h3-fourth-section">¡Vos también podes ser parte!</h3>
+            <article class="article-suscription">
+                <!-----------1er Article------------>
+                <h3>Suscripción Bronce</h3>
+                <section>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </section>
+                <p>*Los rangos de nuestra comunidad de contribuyentes son según el aporte mensual. Cada estrella es un
+                    rango.</p>
+                <form action="" method="">
+                    <fieldset>
+                        <label for="monto-por-mes" class="label-input-form-aporte-mensual">
+                            <input type="number" name="monto-por-mes" min="150" placeholder="Aporte por cuota" required>
+                            <i class="fas fa-dollar-sign"></i>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label class="leyenda-cantidad-de-cuotas-a-aportar">Cantidad de cuotas a aportar</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" id="bronce-una-cuota" value="1">
+                        <label for="bronce-una-cuota" class="label-cuotas">1</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" value="3" id="bronce-tres-cuotas">
+                        <label for="bronce-tres-cuotas" class="label-cuotas">3</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" value="6" id="bronce-seis-cuotas">
+                        <label for="bronce-seis-cuotas" class="label-cuotas">6</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" value="12" id="bronce-doce-cuotas">
+                        <label for="bronce-doce-cuotas" class="label-cuotas">12</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="output-aporte" class="label-output-aporte-total-form">
+                            <output id="output-aporte" for="resultado-contribucion-total" class=""></output>
+                            <i class="fas fa-dollar-sign"></i>
+                        </label>
+                        <label class="leyenda-total-luego-de-output">Total</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <button type="submit">Contribuir</button>
+                    </fieldset>
+                </form>
+
+                <section class="section-detalle-producto">
+                    <ul>
+                        <li>Acceso tablero de becados propio.</li>
+                        <li>Acceso flujo de dinero.</li>
+                        <li>Certificado digital.</li>
+                        <li>Acceso al tablero de becados universal </li>
+                    </ul>
+                </section>
+
+
+            </article>
+
+            <article class="second-article article-suscription">
+                <!-----------2do Article------------>
+                <p class="mas-elegido-suscripcion-plata">Más elegido</p>
+                <h3>Suscripción Plata</h3>
+                <section>
+                    <i class="fas fa-star color-estrellas-plata"></i>
+                    <i class="fas fa-star color-estrellas-plata"></i>
+                    <i class="fas fa-star color-estrellas-plata"></i>
+                </section>
+                <p>*Los rangos de nuestra comunidad de contribuyentes son según el aporte mensual. Cada estrella es un
+                    rango.</p>
+                <form action="" method="">
+                    <fieldset>
+                        <label for="monto-por-mes" class="label-input-form-aporte-mensual">
+                            <input type="number" name="monto-por-mes" min="150" placeholder="Aporte por cuota" required>
+                            <i class="fas fa-dollar-sign"></i>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label class="leyenda-cantidad-de-cuotas-a-aportar">Cantidad de cuotas a aportar</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" id="plata-una-cuota" value="1">
+                        <label for="plata-una-cuota" class="label-cuotas">1</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" value="3" id="plata-tres-cuotas">
+                        <label for="plata-tres-cuotas" class="label-cuotas">3</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" value="6" id="plata-seis-cuotas">
+                        <label for="plata-seis-cuotas" class="label-cuotas">6</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" value="12" id="plata-doce-cuotas">
+                        <label for="plata-doce-cuotas" class="label-cuotas">12</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="output-aporte" class="label-output-aporte-total-form">
+                            <output id="output-aporte" for="resultado-contribucion-total" class=""></output>
+                            <i class="fas fa-dollar-sign"></i>
+                        </label>
+                        <label class="leyenda-total-luego-de-output">Total</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <button type="submit">Contribuir</button>
+                    </fieldset>
+                </form>
+
+                <section class="section-detalle-producto">
+                    <ul>
+                        <li>Acceso tablero de becados propio.</li>
+                        <li>Acceso flujo de dinero.</li>
+                        <li>Certificado digital.</li>
+                        <li>Acceso al tablero de becados universal</li>
+                    </ul>
+                </section>
+
+            </article>
+
+
+            <article class="article-suscription" >
+                <!-----------3er Article------------>
+                <h3>Suscripción Oro</h3>
+                <section>
+                    <i class="fas fa-star color-estrellas-oro"></i>
+                    <i class="fas fa-star color-estrellas-oro"></i>
+                </section>
+                <p>*Los rangos de nuestra comunidad de contribuyentes son según el aporte mensual. Cada estrella es un
+                    rango.</p>
+                <form action="" method="">
+                    <fieldset>
+                        <label for="monto-por-mes" class="label-input-form-aporte-mensual">
+                            <input type="number" name="monto-por-mes" min="150" placeholder="Aporte por cuota" required>
+                            <i class="fas fa-dollar-sign"></i>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label class="leyenda-cantidad-de-cuotas-a-aportar">Cantidad de cuotas a aportar</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" id="oro-una-cuota" value="1">
+                        <label for="oro-una-cuota" class="label-cuotas">1</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" value="3" id="oro-tres-cuotas">
+                        <label for="oro-tres-cuotas" class="label-cuotas">3</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" value="6" id="oro-seis-cuotas">
+                        <label for="oro-seis-cuotas" class="label-cuotas">6</label>
+                    </fieldset>
+
+                    <fieldset class="radio-cantidad-de-cuotas">
+                        <input type="radio" name="cuotas-por-mes" value="12" id="oro-doce-cuotas">
+                        <label for="oro-doce-cuotas" class="label-cuotas">12</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="output-aporte" class="label-output-aporte-total-form">
+                            <output id="output-aporte" for="resultado-contribucion-total" class=""></output>
+                            <i class="fas fa-dollar-sign"></i>
+                        </label>
+                        <label class="leyenda-total-luego-de-output">Total</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <button type="submit">Contribuir</button>
+                    </fieldset>
+                </form>
+
+                <section class="section-detalle-producto">
+                    <ul>
+                        <li>Acceso tablero de becados propio.</li>
+                        <li>Acceso flujo de dinero.</li>
+                        <li>Certificado digital</li>
+                        <li>Acceso al tablero de becados universal</li>
+                        
+                    </ul>
+                </section>
+
+            </article>
+
+        </section>
+
+
+    </main>
+    <!-- FIN DE LOS PRODUCTOS -->
+
+    <section class="info">
+        <!-- ARTICLE 1 -->
+        <article class="info-article">
+            <figure>
+                <img src="/img/productDetail3.jpeg" alt="">
+            </figure>
+            <section class="descripcion">
+                <h3>Acceso a tablero de becarios propios</h3>
+                <p>Al contribuir con nuestra causa,los contribuyentes quieren saber que sucede con ese dinero
+                    ,en ese caso , saber si becamos como dijimos que hariamos y la evolucion del becado hasta
+                    que se recibe e inserta laboralmente . Encontra todo eso en este punto. </p>
+            </section>
+        </article>
+        <hr>
+        <!-- ARTICLE 2 -->
+        <article class="info-article">
+            <section class="descripcion">
+                <h3>Acceso al flujo de dinero</h3>
+                <p>La transparencia es nuestra mayor apuesta de valor, en el acceso al flujo de dinero que recibimos
+                    y como lo invertimos en la creacion de oportunidades para el futuro </p>
+            </section>
+            <figure>
+                <img src="/img/productDetail4.jpeg" alt="">
+            </figure>
+
+        </article>
+        <hr>
+        <!-- ARTICLE 3 -->
+        <article class="info-article">
+            <figure>
+                <img src="/img/productDetail2.jpeg" alt="">
+            </figure>
+            <section class="descripcion">
+                <h3>Certificado digital</h3>
+                <p>Al contribuir con nuesta causa, esta ayudando a que una persona estudie y se inserte laboralmente,
+                    por lo que en el momento en el que lo logramos, usted recibe un certificado por ayudar a lograrlo!.
+                    Todos los certificados se guardan en su perfil ,en la seccion de certificados. </p>
+            </section>
+        </article>
+        <hr>
+        <!-- ARTICLE 4 -->
+        <article class="info-article">
+            <section class="descripcion">
+                <h3>Acceso al tablero universal</h3>
+                <p>Asi como en el primer item usted puede ver el tablero donde ver el progreso de sus becados,en esta
+                    seccion
+                    puede ver los de toda la comunidad y saber quienes apoyaron a quien! </p>
+            </section>
+            <figure>
+                <img src="/img/productDetail1.jpeg" alt="">
+            </figure>
+
+        </article>
+        <hr>
+        <!-- ARTICLE 5 -->
+        <article class="info-article">
+            <figure>
+                <img src="/img/productDetail.jpeg" alt="">
+            </figure>
+            <section class="descripcion">
+                <h3>Participacion en seleccion </h3>
+
+                <p>Al alcanzar uno de los rangos mas altos de nuestra comunidad de contribuyentes aportando
+                    significativamente a nuestra causa, usted tiene la posibilidad de contar con un panel especial
+                    donde ademas de ver a todos los solicitantes a beca, puede conocer su historia , interiorizarse
+                    y puntuar a cada postulantes.
+                    Creemos en la inteligencia colectiva y que entre todos podemos seleccionar de manera mas justa
+                    a quienes percibiran la beca.
+                </p>
+            </section>
+
+        </article>
+    </section>
+
+    <footer>
+    
+        <%- include('./partials/footer') %>
+
+    </footer>
+</body>
+
+</html>

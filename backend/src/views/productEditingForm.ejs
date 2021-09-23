@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/productEditingForm.css">
+    <title>ProductEditingForm</title>
+</head>
+<body>
+     <header>
+        
+        <%- include('./partials/header') %>
+
+    </header> <!-- FIN HEADER -->
+        
+    <main>
+        <section>
+        <h2>Formulario edición de productos</h2>
+        <hr class="hr-debajo-h2">
+
+  
+        <form action="/products/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data" id="form">
+            <h3>Editar producto</h3>
+
+            <select name="category" id="category">
+                <option value="" disabled>Seleccionar categoria</option>
+
+            <% if(locals.errors && locals.old) { %> 
+
+                <% for( let i = 0; i < categories.length; i++ ) { %>
+                    <% if (categories[i].id == old.category) { %>
+                        
+                        <option value="<%= categories[i].id %>" selected ><%= categories[i].name %> </option>
+                    <% } else { %>
+                        <option value="<%= categories[i].id %>" ><%= categories[i].name %> </option>
+                    <% } %> 
+            <% } %>
+        <% } else { %>
+
+                <% for( let i = 0; i < categories.length; i++ ) { %>
+                    <% if (categories[i].id == product.category_id) { %>
+                        
+                        <option value="<%= categories[i].id %>" selected ><%= categories[i].name %> </option>
+                    <% } else { %>
+                        <option value="<%= categories[i].id %>" ><%= categories[i].name %> </option>
+                    <% } %> 
+            
+            <% } %>
+        <% } %> 
+
+            </select>
+            <p class="mensajeSelectError"> </p>
+
+            <% if (locals.errors && errors.category) { %>
+                <p id="text-danger">
+                    <%= errors.category.msg %> 
+                </p>
+            <% } %>
+
+           
+<!--------------------------------------rank1------------------------------------------->
+        
+            <label for="name"> 
+                <input type="text" name="name" id="name" value="<%=(locals.errors && locals.old) ? old.name : (product.name) ? product.name : "" %>" placeholder="Nombre" >
+        </label>    
+        <p class="mensajename"> </p>
+
+        <% if (locals.errors && errors.name) { %>
+            <p id="text-danger">
+                <%= errors.name.msg %> 
+            </p>
+        <% } %>
+
+        <fieldset id="campo-nuevo-privilegio-oculto">
+            <label for="privilege" class="text-label-input-file">Nuevo privilegio</label>
+            <input type="text" name="privilege" id="privilege" value="" class="input-file"> 
+    </fieldset>
+
+    <fieldset><figure><img src="/img/products/<%=product.image%>" alt="" id="imagen-form"></figure></fieldset>
+
+            <fieldset>
+                <label for="image" class="text-label-input-file">Imagen rango 1</label>
+                <input type="file" name="image" id="image" value="" class="input-file"> 
+        </fieldset>
+        <p class="mensajeimage"> </p>
+
+        <% if (locals.errors && !errors.image) { %>
+            <p id="text-danger">
+                Debes seleccionar la imagen nuevamente
+            </p>
+        <% } %>
+
+        <% if (locals.errors && errors.image) { %>
+            <p id="text-danger">
+                <%= errors.image.msg %> 
+            </p>
+        <% } %>
+
+             <label for="min"> 
+                <input type="number" name="min" id="min" value="<%=(locals.errors && locals.old) ? old.min : (product.min) ? product.min : "" %>" placeholder="Contribución mínima rango" >
+             </label>
+             <p class="mensajeMin"> </p>
+
+             <% if (locals.errors && errors.min) { %>
+                <p id="text-danger">
+                    <%= errors.min.msg %> 
+                </p>
+            <% } %>
+
+             <label for="max"> 
+                <input type="number" name="max" id="max" value="<%=(locals.errors && locals.old) ? old.max : (product.max) ? product.max : "" %>" placeholder="Contribución maxima rango" >
+             </label>
+             <p class="mensajeMax"> </p>
+
+             <% if (locals.errors && errors.max) { %>
+                <p id="text-danger">
+                    <%= errors.max.msg %> 
+                </p>
+            <% } %>
+
+             <label for="range"> 
+                <input type="number" name="rango" id="range" value="<%=(locals.errors && locals.old) ? old.rango : (product.rango) ? product.rango : "" %>" min="1" max="3" placeholder="Seleccione un rango dentro de la categoria" >
+             </label>
+             <p class="mensajeRango"> </p>
+
+             <% if (locals.errors && errors.rango) { %>
+                <p id="text-danger">
+                    <%= errors.rango.msg %> 
+                </p>
+            <% } %>
+
+        <hr>
+            <fieldset class="fieldset-button">
+                <button type="submit" class="button-form">Enviar</button>
+            
+        </fieldset>
+
+        </form>
+
+        <article id="article-form">
+        <form action="/products/<%= product.id %>?_method=DELETE" method="post" class="form-button">
+            <button type="submit" class="button-form-reset">Borrar</button>
+        </form>
+    </article>
+                
+    </section>      
+    
+    
+        
+    </main>
+
+
+    <footer>
+    
+        <%- include('./partials/footer') %>
+
+    </footer>
+
+    <script src="/js/productEditingForm.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+ <section class="tarjeta bronce">
+    <figure>
+        <img src="/img/products/<%= product.image ? product.image : "default.png" %>" alt="">
+    </figure>
+     <article class="detalle-producto"> 
+         <section class="detalle-producto-descripcion">
+             <h3>Categoria suscripción: <b><%= product.category.name %>  </b> </b></h3>
+            <p>Rango: <b><%= product.name %></b></p>
+            <p>Rango de donacion : <b> AR$ <%=product.min %> - <%= product.max %></b></p>
+          </section>
+        <ul>
+            
+            <li><b id="detalle-ul-privileges">Privilegios de la categoría: </b></li>
+            
+            <% if (product.category_id == 1) { %>
+
+                <% category[0].privileges.forEach(des => { %>
+                
+                    <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
+                           
+                <% }) %>
+
+            <% } else if (product.category_id == 2) { %>
+
+                <% category[1].privileges.forEach(des => { %>
+                
+                    <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
+                           
+                <% }) %>
+
+
+            <% } else { %>
+
+                <% category[2].privileges.forEach(des => { %>
+                
+                    <li><i class="fas fa-check"></i><%= des.privilege %>  </li>
+                           
+                <% }) %>
+
+            <% } %>
+            
+        </ul>
+
+        
+    </article>
+    
+    
+    <article class="contribuir">
+        <button type="button" class="etiqueta-button-ver-producto"><a href="/products/<%= product.id %>" class="ver-producto-button">Detalle</a></button>
+        <button type="submit"><a href="/cart" class="button-contribuir">Contribuir</a></button>
+    </article>
+   
+</section>

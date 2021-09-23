@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--------------------------------------------------head------------------------------------------------------------->
+<head>
+    <%- include('./partials/head') %>
+
+    <link rel="stylesheet" href="/css/contrasenia.css">
+    <title>About-us</title>
+</head>
+<!--------------------------------------------------body------------------------------------------------------------->
+<body>
+<!-------------------------------------------------header------------------------------------------------------------>
+    <header>
+      
+        <%- include('./partials/header') %>
+             
+    </header>
+<!--------------------------------------------------main------------------------------------------------------------->
+    <main>
+            <section class= "section-original">
+
+                <form class= "form-recuperar" action="/contrasenia" method="POST"> 
+                    <p class="titular"><strong>Recuperar contraseña</strong></p>
+                    <p class="dummy-text">Por favor, ingrese su email y le enviaremos los pasos para recuperar su contraseña</p>
+                    <p class="usuario-pass">
+                    <input type="text" name="usuario" id="usuario" placeholder="usuario" required>
+                    </p>
+                   <a href="/"><input class="button" type="submit" value="Recuperar"></a>
+                </form>        
+
+            </section>
+    </main>
+<!--------------------------------------------------footer------------------------------------------------------------->
+    <footer>
+        
+        <%- include('./partials/footer') %>  
+        
+    </footer>
+
+</body>
+
+</html>

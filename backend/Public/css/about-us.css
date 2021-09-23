@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*------------------------------Mai---------------------------------*/
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main section {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+main section h2 {
+    width: 100%;
+    text-align: left;
+    font-family: "Noto", "Sans-serif";
+    font-size: 20px;
+    color: black;
+}
+
+main section p {
+    width: 100%;
+    font-family: "Saira", "Sans-serif";
+    font-size: 16px;
+    text-align: left;
+    margin: 5px 0 20px 0;
+}
+
+main section h3 {
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-family: "Noto","Sans-serif";
+}
+
+main section ul {
+    width: 70%;
+    font-family: "Saira","Sans-serif";
+    font-size: 16px;
+    margin-top: 3px;
+    margin-bottom: 30px;
+}
+
+main section article {
+    width: 100%;
+}
+
+#titulo-equipo-tierra-de-genios {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+#article-box-integrantes-equipo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main section article img {
+    width: 100%;
+}
+
+.nombre-integrante {
+    width: 100%;
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+}
+
+.box-integrante-equipo {
+    border-top: 1px solid #DC2D2D; 
+    border-right: 1px solid #DC2D2D;
+    border-bottom: 1px solid #04398c;
+    border-left: 1px solid #04398c;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: all 1s;
+}
+
+.box-integrante-equipo:hover {
+    box-shadow:0px 0px 10px rgba(100,100,100,0.70);
+}
+
+
+/*----------------------------Second Section----------------------------*/
+
+main section form {
+    width: 100%;
+    padding: 8px;
+    max-width: 567px;
+    border-top: 1px solid #04398c; 
+    border-right: 1px solid #04398c;
+    border-bottom: 1px solid #DC2D2D;
+    border-left: 1px solid #DC2D2D;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: all 1s;
+}
+
+main > section > form:hover {
+    box-shadow:0px 0px 10px rgba(100,100,100,0.70);
+}
+
+#titulo-formulario {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main section form label {
+    width:100%;    
+}
+
+main section form label input {
+    width: 100%;
+    margin:4px 0;
+    padding: 4px;
+}
+
+.label-fecha-de-nacimiento {
+    font-size: 11px;
+    margin-left: 3px;
+    color: rgba(0,0,0,0.7);
+}
+
+main section form label textarea {
+    width: 100%;
+    padding: 4px;
+}
+
+main section form fieldset {
+    border:none;
+    border-radius: 3px;
+    margin: 2px 0 4px 0;
+}
+
+main section form fieldset label {
+    font-size: 11px;
+    margin-left: 3px;
+    color: rgba(0,0,0,0.7);
+}
+
+main section form fieldset input {
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.6);
+    border-radius: 2px;
+    padding: 4px;
+    margin-top: 2px;
+}
+
+.p-consentimiento-datos{
+    width: 100%;
+    font-size: 14px;
+    font-family: "Saira", "Sans-serif";
+    margin-top: 15px;
+}
+
+.label-checkbox {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-label-consentimiento-datos {
+    width: 10%;
+}
+
+.p-input-label-consentimiento-datos {
+    width: 80%;
+}
+
+.fieldset-button {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+    
+.button-form {
+    width: 70%;
+    background-color: #DC2D2D;
+    padding: 2px;
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 8px;
+    color: #ffffffff;
+    border:none;
+    align-self: center;
+    transition: all 1s;
+}
+
+.button-form:hover {
+    background-color: #04398c;
+}
+
+
+/*------------------------Media Query------------------------*/
+
+/*--------------------1ra Media Query--------------------*/
+
+@media(min-width:500px){
+
+    #article-box-integrantes-equipo {
+        justify-content: space-between;
+    }
+
+    .box-integrante-equipo {
+        width: 49%;
+    }
+
+}
+
+/*--------------------2da Media Query--------------------*/
+
+@media(min-width:769px){
+    .box-integrante-equipo {
+        width: 30%;
+    }
+
+    main section ul {
+        width: 88%;
+    }
+}
+
+/*--------------------3ra Media Query--------------------*/
+
+@media(min-width:1000px){
+    .box-integrante-equipo {
+        width:19%;
+    }
+
+    main section {
+        max-width: 1083px;
+    }
+}

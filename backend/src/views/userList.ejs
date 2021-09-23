@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--------------------------------------------------head------------------------------------------------------------->
+
+<head>
+
+    <%- include('./partials/head') %>
+
+        <link rel="stylesheet" href="/css/userList.css">
+        <title>userList</title>
+</head>
+<!--------------------------------------------------body------------------------------------------------------------->
+
+<body>
+    <header>
+
+        <%- include('./partials/header') %>
+
+    </header>
+
+    <main>
+
+        <% for(let i=0; i < user.length; i++){%>
+
+            <article id="article-tjta-user">
+
+                <section id="section-1">
+                    <figure><img src="/img/users/<%=user[i].avatar%>" alt=""></figure>
+
+                    <ul>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                    </ul>
+
+                    <h3>Bronce</h3>
+
+                </section>
+
+                <section id="section-2">
+
+                    <ul>
+                        <li><b>Id usuario: </b>
+                            <%= user[i].id %>
+                        </li>
+                        <li><b>Nombre de usuario: </b>
+                            <%= user[i].firstName %>
+                                <%= user[i].lastName %>
+                        </li>
+                        <li><b>Fecha de nacimiento: </b>
+                            <%= user[i].birthDate %>
+                        </li>
+                        <li><b>Correo electrónico: </b>
+                            <%= user[i].email %>
+                        </li>
+                        <li><b>Teléfono: </b>
+                            <%= user[i].phoneNumber %>
+                        </li>
+                        <li><b>Dirección: </b>
+                            <%= user[i].adress %>
+                        </li>
+                        <li><b>País: </b>
+                            <%= user[i].country %>
+                        </li>
+                        <li><b>Métodos de pago: </b>
+
+                            <ul>
+                                <% for( let j=0; j < user[i].MedioDePago.length; j++ ) { %>
+                                    <li> - <%= user[i].MedioDePago[j].medio_de_pago %>
+                                    </li>
+                                    <% } %>
+                            </ul>
+
+                        </li>
+                    </ul>
+
+                    <div id="div-buttons">
+
+                        <button type="button" class="button-user-detail"><a
+                                href="/user/<%= user[i].id %>">Detail</a></button>
+
+                        <button type="button" class="button-user-edit"><a
+                                href="/user/<%= user[i].id %>/edit">Editar</a></button>
+
+                        <form action="/user/<%= user[i].id %>?_method=DELETE" method="post">
+                            <button type="submit">Borrar</button>
+                        </form>
+
+                    </div>
+
+                </section>
+
+            </article>
+
+            <%}%>
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <!--------------------------------------------------footer------------------------------------------------------------->
+    <footer>
+
+        <%- include('./partials/footer') %>
+
+    </footer>
+
+
+</body>
+
+</html>

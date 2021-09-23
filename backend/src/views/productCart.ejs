@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--------------------------------------------------head------------------------------------------------------------->
+
+<head>
+    
+    <%- include('./partials/head') %>
+
+    <link rel="stylesheet" href="/css/productCart.css">
+    <title>ProductCart</title>
+</head>
+<!--------------------------------------------------body------------------------------------------------------------->
+
+<body>
+
+    <header>
+        
+        
+        <%- include('./partials/header') %>
+
+
+    </header>
+
+
+     <main>
+        <!--SECCION A -->
+        <section id="seccionA">
+            <h2>ARTICULOS SELECCIONADOS</h2>
+            <article class="articulo">
+                <figure id="figure-img-producto">
+                    <img src="/img/estrella-producto.jpg" alt="">
+                </figure>
+                <ul>
+                    <p class="articulo-titulo-suscripcion">Usted ha seleccionado la suscripcion tipo: 'BRONCE' </p>
+                    <p>A continuacion podra ver sus principales beneficios:</p>
+                    <li><i class="fas fa-check"></i> Acceder al tablero de becados</li>
+                    <li><i class="fas fa-check"></i> Acceder al flujo de dinero</li>
+                    <li><i class="fas fa-check"></i> Certificado digital</li>
+                </ul>
+
+            </article>
+        </section>
+        <!-- FIN SECCION A -->
+
+        <!-- SECCION B -->
+        <section class="seccionB">
+            <h2>FORMA DE PAGO</h2>
+
+            <form class="formulario-de-pago" action="" method="POST">
+                <p>Monto de la donacion<p>
+                        <!-- FORM FIELDSET -->
+                        <fieldset class="form-fieldset">
+                            <label class="legend">Donacion</label>
+                            <output class="output">$200</output>
+                        </fieldset>
+                        <hr>
+                        <fieldset class="form-fieldset cuotas">
+                            <label>Cuotas</label>
+                            <output>3</output>
+                            
+                        </fieldset>
+                        <hr>
+                        <fieldset class="form-fieldset">
+                            <label>Total</label>
+                            <output>$900</output>
+                        </fieldset>
+                        <!--FIN FORM FIELDSET -->
+
+                        <!-- FORMULARIO PAGO ELEGIR -->
+                        <fieldset class="formulario-pago-elegir">
+                            <p>Seleciona el tipo de pago</p>
+                            <div class="formulario-pago-elegir-1">
+                                <label for="seleccion">Tarjeta de credito</label>
+                                <input type="radio" name="pago" id="seleccion">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                            </div>
+
+                            <div class="formulario-pago-elegir-2">
+                                <label>Deposito Paypal</label>
+                                <input type="radio" name="pago" id="">
+                                <i class="fab fa-cc-paypal"></i>
+                            </div>
+
+                            <div class="formulario-pago-elegir-3">
+                                <label>Deposito RapiPago</label>
+                                <input type="radio" name="" id="">
+                                <i class="fab fa-cc-apple-pay"></i>
+                            </div>
+                        </fieldset>
+                        <!--FIN FORMULARIO PAGO ELEGIR -->
+                        <button type="submit">DONAR</button>
+            </form>
+
+        </section>
+        <!-- FIN SECCION B-->
+    </main>
+
+
+    <!--------------------------------------------------footer------------------------------------------------------------->
+    <footer>
+
+        <%- include('./partials/footer') %>
+
+    </footer>
+
+</body>
+
+</html>
