@@ -4,8 +4,8 @@ const adminMiddleware = require('../middlewares/authAdminMiddleware')
 const authMiddleware = require('../middlewares/authMiddleware')
 const guestMiddleware = require('../middlewares/guestMiddleware')
 const router = express.Router();
-const multer = require('multer')
-const path = require ('path')
+const multer = require('multer');
+const path = require ('path');
 const { body } = require('express-validator');
 
 const validationLogin = [

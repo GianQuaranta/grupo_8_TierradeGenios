@@ -64,15 +64,15 @@ router.get('/detail', productController.vistaDeLosProductos);  // Falta agregar 
 
 router.get('/' , productController.productList); // CRUD Sequelize Realizado
 
-router.get("/create",/**[adminMiddleware],**/ productController.create); // CRUD Sequelize Realizado
+router.get("/create", [adminMiddleware], productController.create); // CRUD Sequelize Realizado
 
 router.get('/:id', productController.detailId); // CRUD Sequelize Realizado
 
-router.get("/:id/edit", /**[adminMiddleware],**/ productController.edit); // CRUD Sequelize Realizado
+router.get("/:id/edit", [adminMiddleware], productController.edit); // CRUD Sequelize Realizado
 
-router.post("/create", /**[adminMiddleware],**/ upload.single('image'), validationsProduct,productController.saveProduct); // CRUD Sequelize Realizado
+router.post("/create", [adminMiddleware], upload.single('image'), validationsProduct,productController.saveProduct); // CRUD Sequelize Realizado
 
-router.put("/:id", /**[adminMiddleware],**/ upload.single('image'), validationsProduct, productController.update); // CRUD Sequelize Realizado
+router.put("/:id", [adminMiddleware], upload.single('image'), validationsProduct, productController.update); // CRUD Sequelize Realizado
 
 router.delete("/:id", [adminMiddleware], productController.delete); // CRUD Sequelize Realizado
 
