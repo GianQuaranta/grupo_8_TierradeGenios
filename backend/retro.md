@@ -237,3 +237,37 @@
 5.	***Dejar de hacer.***
     - Dejar cosas a medias en la página.
     - Dejar de hacer las cosas sin planificación previa.
+
+
+
+# Retrospectiva 7mo Sprint
+
+1. ***Comenzar a hacer.*** 
+
+2.	***Hacer más.***
+    
+3.	***Continuar haciendo.***
+    - Ir al día con el estudio.
+    - Ir al día con los trabajos prácticos.
+    - Mejorar nuestra planificación de trabajo individual y en equipo.
+    - Gestionar nuestras emociones ante la presión.
+    - Guiar nuestra toma de decisiones basada en la metodología de toma de decisiones de la matriz de Eisenhower.
+    - Hacer reuniones semanales.
+    - Administrar y dividir el trabajo.
+    - Planificar más.
+    - Informe semanal.
+    - Seguir repasando estudio y práctica de los temas del siguiente sprint para agarrar práctica antes de hacer el sprint.
+    - Aprender de más fuentes de conocimiento además de la información que nos dan en el curso.
+    - Apoyarnos en la comunidad de whatsapp para resolver dudas y crecer.
+    - Consultar a los tutores cuando surge alguna duda.
+    - Participar en clase todos para agarrar más ritmo.
+    - Trabajar más con el código todos juntos.
+    - Organizar más.
+    - Practicar más.    
+    - Utilizar la documentación existente en la nube ( w3School , develop).
+    - Mantener la comunicación por los diferentes medios.
+    - Seguir avisando cuando pusheemos algo.
+
+4.	***Hacer menos.***
+ 
+5.	***Dejar de hacer.***

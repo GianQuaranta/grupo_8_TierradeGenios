@@ -93,7 +93,7 @@ En la reunión ultimamos detalles para la entrega del sprint número 2.
  - Comenzamos con el CRUD.
 
 
-**Informe semana 16/08/2021**  **5to Sprint Actualización**
+**Informe semana 16/08/2021**  **6to Sprint Actualización**
  - Desarrollamos el CRUD.
  - Creamos las vistas faltantes de User y de Product.
  - Creamos las rutas faltantes de User y de Product.
@@ -102,7 +102,7 @@ En la reunión ultimamos detalles para la entrega del sprint número 2.
  - Finalizamos la actualización del weekly.
 
 
-**Informe semana 23/08/2021**  **5to Sprint Actualización**
+**Informe semana 23/08/2021**  **6to Sprint Actualización**
   - Esperamos la devolución de los profesores.
   - Repasamos los temas vistos hasta el momento, los mismos serán necesarios para el próximo sprint.
   - Nos ponemos al día con playground.
@@ -110,13 +110,13 @@ En la reunión ultimamos detalles para la entrega del sprint número 2.
   - Hacemos los prácticos del módulo 7 y 8.
   - Comenzamos a planificar el trabajo. 
 
-**Informe semana 30/08/2021**  **5to Sprint Actualización**
+**Informe semana 30/08/2021**  **6to Sprint Actualización**
   - Repasamos Express Validator para realizar las validaciones del backend.
   - Actualizamos a Sequelize el middleware de userLogged.
   - Comenzamos con las validaciones del backend.
   - Validación formulario register y edición de usuario desde express validator realizado.
 
-**Informe semana 06/09/2021**  **5to Sprint Actualización**
+**Informe semana 06/09/2021**  **6to Sprint Actualización**
   - Validación formulario product create y edición de producto desde express validator realizado.
   - Validación formulario Login realizado.
   - Comenzamos a trabajar con el front-end.
@@ -124,8 +124,20 @@ En la reunión ultimamos detalles para la entrega del sprint número 2.
   - Realizamos las validaciones del formulario de login de usuario.
   - Realizamos las validaciones del formulario de edición y creación de producto.
 
-**Informe semana 13/09/2021**  **5to Sprint Actualización**
+**Informe semana 13/09/2021**  **6to Sprint Actualización**
   - Actualizamos el tablero de trabajo.
   - Actualizamos la retro.
   - Actualizamos el weekly.
   - Ultimamos detalles en las validaciones del front.
+
+
+**Informe última entrega**
+  - Actualizamos el tablero de trabajo.
+  - Actualizamos la retro.
+  - Actualizamos el weekly.
+  - Repasamos todo lo necesario para realizar el último sprint.
+  - Realizamos los prácticos correspondientes al material de estudio a APIs y React.
+  - Realizamos el diseño de las APIs.
+  - Realizamos las APIs.
+  - Realizamos el dashboard en React.
+  - Preparamos la presentación final.
