@@ -1,7 +1,7 @@
 const db = require('../../database/models')
 const path = require('path');
 
-const apiUserController = {
+const apiUserController = { 
     list: async (req, res) => {
         try {
 
@@ -12,7 +12,7 @@ const apiUserController = {
                     id: us.id,
                     name: us.firstName,
                     email: us.email,
-                    detail: 'http://localhost:3000/api/users/' + us.id
+                    detail: 'http://localhost:3001/api/users/' + us.id
                 }
             })
 
@@ -34,7 +34,9 @@ const apiUserController = {
 
         try{
 
-            let user = await db.User.findByPk(req.params.id, {include: [{ association: "MedioDePago" }],
+            let id = req.params.id;
+
+            let user = await db.User.findByPk(id, {include: [{ association: "MedioDePago" }],
                 attributes: { 
                     exclude: ['password', 'isAdmin']
                 }
@@ -46,7 +48,9 @@ const apiUserController = {
 
             return res.status(200).json({
                 user:user, 
-                image_perfil:"C:\\Users\\Gian Quaranta\\Documents\\Curso Desarrollo Web Full Stack - Digital House\\PracticoIntegrador\\RepositorioLocalPracticoIntegrador\\clon_grupo_8_tierradegenios\\grupo_8_TierradeGenios\\backend\\Public\\img\\users\\" + user.avatar
+                image_perfil:'http://localhost:3001/image/user/' + id   
+                
+                /**("C:\\Users\\Gian Quaranta\\Documents\\Curso Desarrollo Web Full Stack - Digital House\\PracticoIntegrador\\RepositorioLocalPracticoIntegrador\\clon_grupo_8_tierradegenios\\grupo_8_TierradeGenios\\backend\\Public\\img\\users\\" + user.avatar)**/
             })
 
         } catch (e) {

@@ -16,6 +16,7 @@ const products = require('./routes/productRoute');
 const applyScholarship = require('./routes/applyScholarshipRoute')
 const cart = require('./routes/cartRoute');
 const userRoutes = require('./routes/users')
+const imageURL = require('./routes/imageURL/imageURLRoute')
 
 
 // API - Requerimiento de archivos de rutas 
@@ -58,6 +59,7 @@ app.use(applyScholarship);
 app.use("/products",products);
 app.use(cart);
 app.use("/user",  userRoutes);
+app.use("/", imageURL)
 
 
 // apiApp.use
