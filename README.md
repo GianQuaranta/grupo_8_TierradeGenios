@@ -2,6 +2,7 @@
 
 ![Logotipo Tierra de Genios](./Public/img/logo-fondo-blanco-largo.jpg)
 
+# Aplicación del front complementaria: https://github.com/GianQuaranta/dashboard-tdg-DH/
 
 ## Presentación de Proyecto
 
