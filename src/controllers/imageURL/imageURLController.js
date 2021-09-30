@@ -1,9 +1,9 @@
 const db = require('../../database/models')
 const path = require('path');
 
-const imageUserController = {
+const ImageURLController = {
 
-    imageShow: async (req,res) => {
+    imageUser: async (req,res) => {
         
         let id = req.params.id;
 
@@ -20,9 +20,28 @@ const imageUserController = {
         
 
 
+    },
+
+    imageProduct: async (req,res) => {
+        
+        let id = req.params.id;
+
+        //console.log("id",id);
+
+        let product = await db.Product.findByPk(id);
+
+        //console.log("product",product);
+
+        let imageProduct = product.image;
+        //console.log(imageProduct);
+
+        return res.sendFile("C:\\Users\\Gian Quaranta\\Documents\\Curso Desarrollo Web Full Stack - Digital House\\PracticoIntegrador\\RepositorioLocalPracticoIntegrador\\clon_grupo_8_tierradegenios\\grupo_8_TierradeGenios\\Public\\img\\products\\"+ imageProduct);
+        
+
+
     }
 }
-module.exports = imageUserController;
+module.exports = ImageURLController;
 
 
 
