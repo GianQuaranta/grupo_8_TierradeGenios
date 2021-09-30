@@ -60,7 +60,7 @@ CREATE TABLE userMediosDePago (
   user_id INT NOT NULL,
   medio_de_pago_id INT NOT NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   FOREIGN KEY (medio_de_pago_id) REFERENCES mediosDePago(id));
 
 CREATE TABLE donations (
