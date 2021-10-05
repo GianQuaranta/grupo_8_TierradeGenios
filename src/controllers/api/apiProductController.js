@@ -57,7 +57,7 @@ const apiUserController = {
                     id: prod.id,
                     name: prod.name,
                     description: arrayPrivilegios,
-                    detail: 'http://localhost:3001/api/products/' + prod.id
+                    detail: 'http://localhost:3050/api/products/' + prod.id
                 }
             })
 
@@ -108,7 +108,7 @@ const apiUserController = {
                 return {
                     id: produ.id,
                     name: produ.name,   
-                    image: 'http://localhost:3001/image/product/' + id ,
+                    image: 'http://localhost:3050/image/product/' + id ,
                     min: produ.min,
                     max: produ.max,
                     category_id: produ.category_id,
